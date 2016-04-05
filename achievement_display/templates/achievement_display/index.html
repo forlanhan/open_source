@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>数据采集结果展示系统</title>
+	<!--  css link -->
+	<!-- 动态背景 -->
+	<link rel="stylesheet" href="/statics/plugin/juqery-background/css/style.css" />
+	<!-- 引入 Bootstrap -->
+	<link href="/statics/achievement_display/css/font.css" rel="stylesheet">
+    <link href="/statics/achievement_display/plugin/bootstrap/bootstrap3-3-0.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/statics/achievement_display/css/index.css">
+	<!--  js  link -->
+	<!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+    <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+	<!--[if lt IE 9]>
+　　　　<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+　　<![endif]-->
+	<script src="/statics/achievement_display/plugin/jquery/jquery2.0.0min.js"></script>
+    <script src="/statics/achievement_display/plugin/bootstrap/bootstrap3.3.0.min.js"></script>
+
+	<!-- 动态背景 -->
+    <script type='text/javascript' src='/statics/achievement_display/plugin/juqery-background/js/jquery.particleground.min.js'></script>
+  	<script type='text/javascript' src='/statics/achievement_display/plugin/juqery-background/js/demo.js'></script>
+
+</head>
+<body>
+	<!--   div header -->
+	<div id="header">
+		<div id="header-content">
+			<div id="logo-sys-desc">
+				<div id="logo"><img src="http://lab.westilian.com/falgun/images/logo-falgun.png"></div>
+				<div id="sys-desc"><span><strong>数据采集结果展示系统</strong></span></div>
+			</div>
+		</div>
+	</div>
+	<!-- div search	-->
+	<div id="search-main">
+		<div id="search">
+			<form role="form" class="form-inline" method="post" action="http://blog.chiao.me">
+				<div class="input-group">
+					<input type="text" class="form-control" id="input1" placeholder="请输入搜索内容" />
+					<span class="input-group-btn">
+						<button  type="submit" name="submit" class="btn" id="button1">
+							<span class="glyphicon glyphicon-search">搜索</span>
+						</button>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- div main -->
+	<div id="main">
+			<div class="container-fluid" id="m-ct1">
+				<div class="row" id="m-ct1-r1">
+				  <div class="col-lg-3 data-content"  id="m-ct1-r1-co1">
+				  	<div><i class="iconfont">&#xe604;</i></div>
+				  	<div class="icon-desc"><i class="heiti-normal1">文库</i></div>
+				  	<div class="spe-content  container-fluid" id="spe-content1">
+				  			<table class="table table-hover" id="wenku-table">
+						   		<tbody>
+							      <tr >
+							         <td>总采集</td>
+							         <td class="wenku-td-right"><span class="badge"  style="font-size: 0.8rem">{{ all_collection }}</span></td>
+							      </tr>
+							      <tr >
+                                     <td>昨天采集</td>
+							         <td class="wenku-td-right"><span class="badge"  style="font-size: 0.8rem">{{ yesterday_collection }}</span></td>
+							      </tr>
+							      <tr >
+							         <td>已保密检查</td>
+							         <td class="wenku-td-right"><span class="badge"  style="font-size: 0.8rem">0</span></td>
+							      </tr>
+                                  <tr>
+                                     <td>已隐写检查</td>
+							         <td class="wenku-td-right"><span class="badge"  style="font-size: 0.8rem">0</span></td>
+                                  </tr>
+                                  <tr>
+							         <td>保密检查告警</td>
+							         <td class="wenku-td-right"><span class="badge"  style="font-size: 0.8rem">0</span></td>
+                                  </tr>
+                                  <tr>
+                                     <td>隐写检查告警</td>
+							         <td class="wenku-td-right"><span class="badge"  style="font-size: 0.8rem">0</span></td>
+                                  </tr>
+							    </tbody>
+							</table>
+				  	</div>
+				  </div>
+				  <div class="col-lg-3 data-content" id="m-ct1-r1-co2">
+				  	<div><i class="iconfont">&#xe609;</i></div>
+				  	<div class="icon-desc"><i class="heiti-normal1">学术</i></div>
+				  	<div class="spe-content " id="spe-content2">
+                        <table class="table table-hover" id="wenku-table">
+						   		<tbody>
+							      <tr >
+							         <td>总采集</td>
+							         <td class="wenku-td-right"><span class="badge"  style="font-size: 0.8rem">{{ all_collection }}</span></td>
+							      </tr>
+							      <tr >
+                                     <td>昨天采集</td>
+							         <td class="wenku-td-right"><span class="badge"  style="font-size: 0.8rem">{{ yesterday_collection }}</span></td>
+							      </tr>
+							      <tr >
+							         <td>已保密检查</td>
+							         <td class="wenku-td-right"><span class="badge"  style="font-size: 0.8rem">0</span></td>
+							      </tr>
+                                  <tr>
+                                     <td>已隐写检查</td>
+							         <td class="wenku-td-right"><span class="badge"  style="font-size: 0.8rem">0</span></td>
+                                  </tr>
+                                  <tr>
+							         <td>保密检查告警</td>
+							         <td class="wenku-td-right"><span class="badge"  style="font-size: 0.8rem">0</span></td>
+                                  </tr>
+                                  <tr>
+                                     <td>隐写检查告警</td>
+							         <td class="wenku-td-right"><span class="badge"  style="font-size: 0.8rem">0</span></td>
+                                  </tr>
+							    </tbody>
+                        </table>
+				  	</div>
+				  </div>
+				  <div class="col-lg-3 data-content" id="m-ct1-r1-co3">
+				  	<div><i class="iconfont">&#xe601;</i></div>
+				  	<div class="icon-desc"><i class="heiti-normal1">百科</i></div>
+				  	<div class="spe-content container-fluid" id="spe-content3">
+                        <!--第一行开始 -->
+                        <div class="row baike-content-row" id="baike-content-row1">
+                            <div class="col-lg-6" id="baike-content-row1-col1">
+                                <div class="inner">
+                                    <div id="day-number" class="timer-number">{{ all_collection }}2938490</div>
+                                    <div class="timer-text">总采集</div>
+                                </div>
+                            </div>
+                                <div class="col-lg-6" id="baike-content-row1-col2">
+                                <div class="inner">
+                                    <div id="day-number" class="timer-number">{{ yesterday_collection }}</div>
+                                    <div class="timer-text">昨天采集</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--第二行开始 -->
+                        <div class="row baike-content-row" id="baike-content-row2">
+                            <div class="col-lg-6" id="baike-content-row2-col1">
+                                <div class="inner">
+                                    <div id="day-number" class="timer-number">0</div>
+                                    <div class="timer-text">已保密检查</div>
+                                </div>
+                            </div>
+                                <div class="col-lg-6" id="baike-content-row2-col2">
+                                <div class="inner">
+                                    <div id="day-number" class="timer-number">0</div>
+                                    <div class="timer-text">已隐写检查</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--第三行开始 -->
+                        <div class="row baike-content-row" id="baike-content-row3">
+                            <div class="col-lg-6" id="baike-content-row3-col1">
+                                <div class="inner">
+                                    <div id="day-number" class="timer-number">0</div>
+                                    <div class="timer-text">保密检查告警</div>
+                                </div>
+                            </div>
+                                <div class="col-lg-6" id="baike-content-row3-col2">
+                                <div class="inner">
+                                    <div id="day-number" class="timer-number">0</div>
+                                    <div class="timer-text">隐写检查告警</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+				  </div>
+				  <div class="col-lg-3 data-content" id="m-ct1-r1-co4">
+				  	<div><i class="iconfont">&#xe603;</i></div>
+				  	<div class="icon-desc"><i class="heiti-normal1">主页</i></div>
+				  	<div class="spe-content" id="spe-content4">
+				  		<ul class="list-group ul1">
+						   <li class="list-group-item ul1-li">
+						   		<button class="btn btn-success " >
+						   			总采集
+						   		</button>
+                                <span class="badge"  style="font-size: 1.5rem">11122556342</span>
+						   	</li>
+						   <li class="list-group-item ul1-li">
+						   		<button class="btn btn-success " >
+						   			已保密检查
+						   		</button>
+                               <span class="badge" style="font-size: 1.5rem">11142</span>
+						   </li>
+						   <li class="list-group-item ul1-li">
+                                <button class="btn btn-success " >
+						   			已保密检查
+						   		</button>
+                                <span class="badge"  style="font-size: 1.5rem">111556342</span>
+                           </li>
+						   <li class="list-group-item ul1-li">
+                                <button class="btn btn-success " >
+						   			已隐写检查
+						   		</button>
+                                <span class="badge"  style="font-size: 1.5rem">111556342</span>
+                           </li>
+						   <li class="list-group-item ul1-li">
+                                <button class="btn btn-success " >
+						   			保密检查告警
+						   		</button>
+                                <span class="badge"  style="font-size: 1.5rem">111556342</span>
+                           </li>
+						   <li class="list-group-item ul1-li">
+                                <button class="btn btn-success " >
+						   			隐写检查告警
+						   		</button>
+                                <span class="badge"  style="font-size: 1.5rem">111556342</span>
+                           </li>
+						</ul>
+				  	</div>
+				  </div>
+				</div>
+			</div>
+	</div>
+</body>
+</html>
