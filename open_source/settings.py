@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/dev/ref/settings/
 """
 
 import os
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -75,6 +76,7 @@ WSGI_APPLICATION = 'open_source.wsgi.application'
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
 DATABASES = {
+
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'WenkuInfoBase',
@@ -82,10 +84,19 @@ DATABASES = {
         'PASSWORD': '123456',
         'HOST': '192.168.120.90',
         'PORT':'3306',
+    },
+    'ScholarInfoBase': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ScholarInfoBase',
+        'USER': 'root',
+        'PASSWORD': '123456',
+        'HOST': '192.168.120.90',
+        'PORT':'3306',
     }
-}
 
+}
 """
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -94,9 +105,17 @@ DATABASES = {
         'PASSWORD': 'zhao7528377zz',
         'HOST': '127.0.0.1',
         'PORT':'3306',
-    }
-}
-"""
+    },
+    'kankan': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'kankan',
+        'USER': 'root',
+        'PASSWORD': 'zhao7528377zz',
+        'HOST': '127.0.0.1',
+        'PORT':'3306',
+    },
+
+}"""
 # Password validation
 # https://docs.djangoproject.com/en/dev/ref/settings/#auth-password-validators
 
