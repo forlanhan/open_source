@@ -74,7 +74,7 @@ WSGI_APPLICATION = 'open_source.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
-
+"""
 DATABASES = {
 
     'default': {
@@ -115,7 +115,7 @@ DATABASES = {
         'PORT':'3306',
     },
 
-}"""
+}
 # Password validation
 # https://docs.djangoproject.com/en/dev/ref/settings/#auth-password-validators
 
