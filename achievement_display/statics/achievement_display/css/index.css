@@ -89,7 +89,7 @@ body{
     /*border-right: 1px dotted grey;*/
     margin: auto;
     text-align: center;
-    height: 100rem;
+    height: auto;
 
     
 }
@@ -189,6 +189,10 @@ body{
     letter-spacing: 0.1rem;
     color: rgb(163, 163, 163);
 	margin-top: 0.3rem;
+}
+.data-span{/*数据现实气泡的样式*/
+	font-size: 0.8rem;
+	letter-spacing: 0.15rem;
 }
 
 
