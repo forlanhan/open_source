@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba6f7428-b4d9-4030-9aa3-43e8301be553" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/index.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/templates/achievement_display/index.html" afterPath="$PROJECT_DIR$/achievement_display/templates/achievement_display/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/tests.py" afterPath="$PROJECT_DIR$/achievement_display/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/views.py" afterPath="$PROJECT_DIR$/achievement_display/views.py" />
-    </list>
+    <list default="true" id="ba6f7428-b4d9-4030-9aa3-43e8301be553" name="Default" comment="" />
     <ignored path="open_source.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -64,8 +59,8 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7940075">
-              <caret line="193" column="18" selection-start-line="193" selection-start-column="18" selection-end-line="193" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.6441948">
+              <caret line="185" column="13" selection-start-line="185" selection-start-column="13" selection-end-line="185" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -1147,8 +1142,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7940075">
-          <caret line="193" column="18" selection-start-line="193" selection-start-column="18" selection-end-line="193" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.6441948">
+          <caret line="185" column="13" selection-start-line="185" selection-start-column="13" selection-end-line="185" selection-end-column="13" />
           <folding />
         </state>
       </provider>
