@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>数据采集结果展示系统</title>
+	<title>互联网信息XX检查原型系统</title>
 	<!--  css link -->
 	<!-- 动态背景 -->
 	<link rel="stylesheet" href="/statics/plugin/juqery-background/css/style.css" />
@@ -33,7 +33,7 @@
 		<div id="header-content">
 			<div id="logo-sys-desc">
 				<div id="logo"><img src="http://lab.westilian.com/falgun/images/logo-falgun.png"></div>
-				<div id="sys-desc"><span><strong>数据采集结果展示系统</strong></span></div>
+				<div id="sys-desc"><span><strong>互联网信息XX检查原型系统</strong></span></div>
 			</div>
 		</div>
 	</div>
@@ -54,38 +54,41 @@
 	</div>
 	<!-- div main -->
 	<div id="main">
+            <div class="container-fluid "  id="alert-container">
+                <div class="row" id="alert-row">
+                    <div class="col-lg-3 alert-col" id="alert-col1">
+                        <div class="alert-title">保密检查告警&nbsp;&nbsp;<span class="label label-danger alert-title-data">0</span></div>
+                    </div>
+                    <div class="col-lg-3 alert-col" id="alert-col2">
+                        <div class="alert-title">隐写检查告警&nbsp;&nbsp;<span class="label label-danger alert-title-data">0</span></div>
+                    </div>
+                    <div class="col-lg-3 alert-col" id="alert-col3">
+                        <div class="alert-title">已保密检查&nbsp;&nbsp;<span class="label label-danger alert-title-data">0</span></div>
+                    </div>
+                    <div class="col-lg-3 alert-col" id="alert-col4">
+                        <div class="alert-title">已隐写检查&nbsp;&nbsp;<span class="label label-danger alert-title-data">0</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 文库\学术\百科\主页总的把内容 -->
 			<div class="container-fluid" id="m-ct1">
 				<div class="row" id="m-ct1-r1">
-				  <div class="col-lg-3 data-content"  id="m-ct1-r1-co1">
+				  <div class="col-lg-3 data-content" style="" id="m-ct1-r1-co1">
 				  	<div><i class="iconfont">&#xe604;</i></div>
-				  	<div class="icon-desc"><i class="heiti-normal1">文库</i></div>
+				  	<div class="icon-desc" ><i class="heiti-normal1">文库</i></div>
 				  	<div class="spe-content  container-fluid" id="spe-content1">
 				  			<table class="table table-hover" id="wenku-table">
 						   		<tbody>
-							      <tr >
-							         <td>总采集</td>
-							         <td class="wenku-td-right"><span class="badge data-span"  >{{ wenku_all_collection }}</span></td>
-							      </tr>
-							      <tr >
+                                  <tr >
                                      <td>昨天采集</td>
 							         <td class="wenku-td-right"><span class="badge  data-span"  >{{ wenku_yesterday_collection }}</span></td>
 							      </tr>
 							      <tr >
-							         <td>已保密检查</td>
-							         <td class="wenku-td-right"><span class="badge  data-span"  >0</span></td>
+							         <td>总采集</td>
+							         <td class="wenku-td-right"><span class="badge data-span"  >{{ wenku_all_collection }}</span></td>
 							      </tr>
-                                  <tr>
-                                     <td>已隐写检查</td>
-							         <td class="wenku-td-right"><span class="badge  data-span"  >0</span></td>
-                                  </tr>
-                                  <tr>
-							         <td>保密检查告警</td>
-							         <td class="wenku-td-right"><span class="badge  data-span"  >0</span></td>
-                                  </tr>
-                                  <tr>
-                                     <td>隐写检查告警</td>
-							         <td class="wenku-td-right"><span class="badge  data-span"  >0</span></td>
-                                  </tr>
+
 							    </tbody>
 							</table>
 				  	</div>
@@ -96,14 +99,15 @@
 				  	<div class="spe-content " id="spe-content2">
                         <table class="table table-hover" id="wenku-table">
 						   		<tbody>
-							      <tr >
-							         <td>总采集</td>
-							         <td class="wenku-td-right"><span class="badge  data-span"  >8</span></td>
-							      </tr>
-							      <tr >
+                                  <tr >
                                      <td>昨天采集</td>
 							         <td class="wenku-td-right"><span class="badge  data-span"  >4</span></td>
 							      </tr>
+							      <tr >
+							         <td>总采集</td>
+							         <td class="wenku-td-right"><span class="badge  data-span"  >{{ scholar_all_collection }}</span></td>
+							      </tr>
+
 
 							    </tbody>
                         </table>
@@ -115,14 +119,15 @@
 				  	<div class="spe-content container-fluid" id="spe-content3">
                         <table class="table table-hover" id="wenku-table">
 						   		<tbody>
+                                  <tr >
+                                     <td>昨天采集</td>
+							         <td class="wenku-td-right"><span class="badge  data-span"  >0</span></td>
+							      </tr>
 							      <tr >
 							         <td>总采集</td>
 							         <td class="wenku-td-right"><span class="badge  data-span"  >1132716</span></td>
 							      </tr>
-							      <tr >
-                                     <td>昨天采集</td>
-							         <td class="wenku-td-right"><span class="badge  data-span"  >0</span></td>
-							      </tr>
+
 
 							    </tbody>
                         </table>
@@ -135,14 +140,15 @@
 				  	<div class="spe-content" id="spe-content4">
                         <table class="table table-hover" id="wenku-table">
 						   		<tbody>
+                                  <tr >
+                                     <td>昨天采集</td>
+							         <td class="wenku-td-right"><span class="badge  data-span"  >{{ homepage_yesterday_collection }}</span></td>
+							      </tr>
 							      <tr >
 							         <td>总采集</td>
 							         <td class="wenku-td-right"><span class="badge  data-span"  >{{ homepage_all_collection }}</span></td>
 							      </tr>
-							      <tr >
-                                     <td>昨天采集</td>
-							         <td class="wenku-td-right"><span class="badge  data-span"  >{{ homepage_yesterday_collection }}</span></td>
-							      </tr>
+
 
 							    </tbody>
                         </table>

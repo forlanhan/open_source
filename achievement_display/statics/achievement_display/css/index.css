@@ -7,6 +7,7 @@ html{
 body{
 	margin:0px;
 	/*background-color: rgb(223, 229, 233);*/
+
 	
 }
 /* header */
@@ -49,7 +50,7 @@ body{
 }
 #search{
 	height: auto;
-	width: 44rem;	
+	width: 55rem;
 	margin: auto;
   	margin-top: -10.5rem;
   	
@@ -74,32 +75,61 @@ body{
 /*  main  */
 #main{
 	width: 100%;
-	height: auto;	
-	
+	height: auto;
+	line-height: 6rem;
 
 }
-
-#m-ct1 {
-	width: 83% !important;
+#alert-container{
+	width: 70% !important;
 	margin: auto;
 
 }
+.alert-col{
+	text-align: center;
+	/*border-bottom: solid 0.2rem rgb(223, 229, 233);*/
+	border-bottom: solid 0.2rem rgb(223, 229, 233);
+
+}
+.alert-title{
+	width:13rem;
+	margin: auto;
+	height: 5rem;
+	color: #52646c;
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+.alert-title-data{
+	font-size: 1.25rem;
+}
+/*文库.百科.主页.学术总的部分*/
+#m-ct1 {
+	width: 83% !important;
+	margin: auto;
+	margin-top: 5rem;
+
+}
 .data-content{
-    padding: 0.4rem;
-    /*border-right: 1px dotted grey;*/
-    margin: auto;
     text-align: center;
     height: auto;
-
-    
+	padding: 0rem;
+	margin: 0rem;
 }
+
+
 .spe-content{
-	margin-top: 1rem;
+
 	
 }
+
 /*知识文库*/
 #m-ct1-r1-co1{
 	margin-left:-1rem;
+	padding: 0rem;margin: 0rem;
+
+}
+#m-ct1-r1-co2{
+
+	padding: 0rem;margin: 0rem;
 
 }
 .cls-wenku-col{
@@ -115,10 +145,11 @@ body{
 
 }
 #wenku-table{
-	font-size: 0.9rem;
+	font-size: 1rem;
 	text-align: center;
 	border-bottom: rgb(221, 221, 221) 1px solid;
 	color: rgb(163, 163, 163);
+	font-weight: 900;
 }
 .wenku-td-right{
 	color: #ff9466;
@@ -193,6 +224,7 @@ body{
 .data-span{/*数据现实气泡的样式*/
 	font-size: 0.8rem;
 	letter-spacing: 0.15rem;
+
 }
 
 

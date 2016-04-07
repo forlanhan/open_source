@@ -24,7 +24,7 @@ class Baidumetasource(models.Model):
     readcount = models.IntegerField(db_column='readCount')  # Field name made lowercase.
 
     class Meta:
-        managed = True
+        managed = False
         db_table = 'BaiduMetaSource'
 
 
@@ -77,3 +77,16 @@ class DjangoMigrations(models.Model):
     class Meta:
         managed = False
         db_table = 'django_migrations'
+
+
+
+class Wanfangmetasource(models.Model):
+    id = models.CharField(db_column='ID', primary_key=True, max_length=64)  # Field name made lowercase.
+    title = models.CharField(max_length=128, blank=True, null=True)
+    detailpageid = models.CharField(db_column='detailPageId', max_length=24)  # Field name made lowercase.
+    detailpageurl = models.CharField(db_column='detailPageUrl', max_length=256)  # Field name made lowercase.
+    crawltime = models.DateTimeField(db_column='crawlTime')  # Field name made lowercase.
+
+    class Meta:
+        managed = False
+        db_table = 'WanFangMetaSource'

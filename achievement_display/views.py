@@ -1,6 +1,6 @@
 #!encoding: utf-8
 from django.shortcuts import render
-from achievement_display.models import Baidumetasource
+from achievement_display.models import *
 import time
 import linkedin
 
@@ -16,6 +16,9 @@ def index(request):
     #获取文库昨天采集总数
     yesterday = time.strftime('%Y-%m-%d',time.localtime(time.time()-86400))
     context['wenku_yesterday_collection'] = Baidumetasource.objects.filter(crawltime=yesterday).count()
+
+    #获取学术总数
+    context['scholar_all_collection'] = Wanfangmetasource.objects.all().using('ScholarInfoBase').count()
 
     #获取主页采集总数
     today = time.strftime('%Y-%m-%d', time.localtime(time.time()))
