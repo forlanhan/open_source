@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>互联网信息XX检查原型系统</title>
+	<!--  css link -->
+    <!-- highchart -->
+    <link href="/statics/achievement_display/plugin/highchart/css/highchar.css" rel="stylesheet" type="text/css" />
+    <script src="/statics/achievement_display/plugin/jquery/jquery2.0.0min.js"></script>
+    <script src="/statics/achievement_display/plugin/highchart/js/highcharts.js"></script>
+    <script src="/statics/achievement_display/plugin/highchart/js/themes/grid.js"></script>
+
+
+
+    <!-- js 测试 -->
+    <script type="text/javascript">
+
+            //文库
+            var wenkucaiji_date_list = {{ wenkucaiji_date_list | default:"['2016-04-12']"| safe }};
+            var wenkucaiji_data_list = {{ wenkucaiji_data_list | default:"[0]" | safe }};
+
+            var secret_check_alert_data = {{ secret_check_alert_data | default:"[0]"| safe}};
+
+            var secret_check_data = {{ secret_check_data | default:"[0]"| safe}};
+
+            var yx_check_data = {{ yx_check_data | default:"[0]"| safe }};
+
+            var yx_check_alert_data = {{ yx_check_alert_data| default:"[0]" | safe  }};
+
+            //学术
+            var wanfang_data = {{ wanfang_data | default:"[0]" |safe }};
+            var wanfang_date = {{ wanfang_date | default:"['2016-04-12']" |safe }};
+
+    </script>
+
+
+</head>
+<body>
+
+    <div id="{{ name }}" style="width: 600px; height: 250px;"></div>
+
+    <!-- index.js -->
+    <script src="/statics/achievement_display/js/highchart.js"></script>
+
+
+</body>
+
+</html>
