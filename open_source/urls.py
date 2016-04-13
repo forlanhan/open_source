@@ -26,8 +26,9 @@ urlpatterns = [
 '''
 #achievement_display
 urlpatterns = patterns('achievement_display.views',
-                       (r'', 'index'),
-                       (r'^index/$', 'index'),
+                       (r'^index/?$', 'index'),
+                       (r'^highchart/?$', 'highchart'),
+                       (r'', 'index')
                        )
 
 

@@ -91,7 +91,7 @@
                 <!-- 文库 -->
 				<div class="row" id="m-ct1-r1">
 				  <div class="col-lg-1-5 data-content" style="" id="m-ct1-r1-co1">
-				  	<div><i class="iconfont">&#xe604;</i></div>
+				  	<div><i class="iconfont"  data-toggle="popover"  id="wenku-pop" >&#xe604;</i></div>
 				  	<div class="icon-desc" ><i class="heiti-normal1">文库</i></div>
 				  	<div class="spe-content  container-fluid" id="spe-content1">
 				  			<table class="table table-hover con-table" id="wenku-table">
@@ -108,13 +108,12 @@
 							    </tbody>
 							</table>
 				  	</div>
-                      <!-- 表格显示 -->
-                    <div class="chart-display" id="wenku-chart-display"></div>
+
 				  </div>
                     <!-- 学术 -->
 				  <div class="col-lg-1-5 data-content" id="m-ct1-r1-co2">
-				  	<div><i class="iconfont">&#xe609;</i></div>
-				  	<div class="icon-desc"><i class="heiti-normal1">学术</i></div>
+				  	<div><i class="iconfont" data-toggle="popover"  id="schoolar-pop">&#xe609;</i></div>
+				  	<div class="icon-desc"><i class="heiti-normal1" >学术</i></div>
 				  	<div class="spe-content " id="spe-content2">
                         <table class="table table-hover con-table" id="schoolar-table">
 						   		<tbody>
@@ -130,13 +129,12 @@
 							    </tbody>
                         </table>
 				  	</div>
-                      <!-- 表格显示 -->
-                    <div class="chart-display" id="scholar-chart-display"></div>
+
 				  </div>
                     <!-- 百科 -->
 				  <div class="col-lg-1-5 data-content" id="m-ct1-r1-co3">
-				  	<div><i class="iconfont">&#xe601;</i></div>
-				  	<div class="icon-desc"><i class="heiti-normal1">百科</i></div>
+				  	<div><i class="iconfont" data-toggle="popover"  id="baike-pop">&#xe601;</i></div>
+				  	<div class="icon-desc"><i class="heiti-normal1" >百科</i></div>
 				  	<div class="spe-content container-fluid" id="spe-content3">
                         <table class="table table-hover con-table" id="baike-table">
 						   		<tbody>
@@ -154,13 +152,12 @@
                         </table>
 
                     </div>
-                      <!-- 表格显示 -->
-                    <div class="chart-display" id="baike-chart-display"></div>
+
 				  </div>
                     <!-- 主页 -->
 				  <div class="col-lg-1-5 data-content"  id="m-ct1-r1-co4">
-				  	<div><i class="iconfont">&#xe603;</i></div>
-				  	<div class="icon-desc"><i class="heiti-normal1">主页</i></div>
+				  	<div><i class="iconfont" data-toggle="popover"  id="homepage-pop">&#xe603;</i></div>
+				  	<div class="icon-desc"><i class="heiti-normal1" >主页</i></div>
 				  	<div class="spe-content" id="spe-content4">
                         <table class="table table-hover con-table" id="homepage-table">
 						   		<tbody>
@@ -177,13 +174,12 @@
 							    </tbody>
                         </table>
 				  	</div>
-                      <!-- 表格显示 -->
-                    <div class="chart-display" id="homepage-chart-display"></div>
+
 				  </div>
                     <!-- 暗网 -->
 				  <div class="col-lg-1-5 data-content" id="m-ct1-r1-co5">
-				  	<div><i class="iconfont anwang-icon">&#xe60a;</i></div>
-				  	<div class="icon-desc"><i class="heiti-normal1">暗网</i></div>
+				  	<div><i class="iconfont anwang-icon" data-toggle="popover"  id="anwang-pop">&#xe60a;</i></div>
+				  	<div class="icon-desc"><i class="heiti-normal1" >暗网</i></div>
 				  	<div class="spe-content" id="spe-content5">
                         <table class="table table-hover con-table" id="anwang-table">
 						   		<tbody>
@@ -200,8 +196,7 @@
 							    </tbody>
                         </table>
 				  	</div>
-                      <!-- 表格显示 -->
-                    <div class="chart-display" id="anwang-chart-display"></div>
+
 				  </div>
                     <!-- 结束-->
                 </div>
@@ -210,8 +205,53 @@
 
 
 <!-- 测试  -->
-<div>{{ scholar_yesterday_collection | safe }}</div>
+
     <!-- index.js -->
     <script src="/statics/achievement_display/js/index.js"></script>
+    <script type="text/javascript">
+     $(function () {
+         $("#wenku-pop").popover({
+             placement: 'top',
+             trigger: 'hover',
+             html : true,
+             container: "#wenku-pop",
+             content: "<iframe src='/highchart/?name=wenku' frameborder=0 width='620px' height='260px' ></iframe>"
+
+        });
+
+         $("#schoolar-pop").popover({
+             placement: 'top',
+             trigger: 'hover',
+             html : true,
+             container: "#schoolar-pop",
+             content: "<iframe src='/highchart/?name=schoolar' frameborder=0 width='620px' height='260px' ></iframe>"
+
+        });
+         $("#baike-pop").popover({
+             placement: 'top',
+             trigger: 'hover',
+             html : true,
+             container: "#baike-pop",
+             content: "<iframe src='/highchart/?name=wenku' frameborder=0 width='620px' height='260px' ></iframe>"
+
+        });
+         $("#homepage-pop").popover({
+             placement: 'top',
+             trigger: 'hover',
+             html : true,
+             container: "#homepage-pop",
+             content: "<iframe src='/highchart/?name=wenku' frameborder=0 width='620px' height='260px' ></iframe>"
+
+        });
+         $("#anwang-pop").popover({
+             placement: 'top',
+             trigger: 'hover',
+             html : true,
+             container: "#anwang-pop",
+             content: "<iframe src='/highchart/?name=wenku' frameborder=0 width='620px' height='260px' ></iframe>"
+
+        });
+     });
+    </script>
 </body>
 </html>

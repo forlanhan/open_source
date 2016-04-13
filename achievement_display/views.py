@@ -1,6 +1,8 @@
 #!encoding: utf-8
 from django.shortcuts import render
 from achievement_display.models import *
+from django.http import HttpResponse
+from achievement_display.pyclass.GetHighChartData import GetHighChartData
 import time
 import linkedin
 import tor
@@ -14,6 +16,11 @@ import json
 def return_n_day(n=0):
     return time.strftime('%Y-%m-%d',time.localtime(time.time()-86400*n))
 
+def return_hour_day(n=0):
+    return time.strftime('%Y-%m-%d 23:59:59',time.localtime(time.time()-86400*n))
+
+def return_hour_morning_day(n=0):
+    return time.strftime('%Y-%m-%d 00:00:00',time.localtime(time.time()-86400*n))
 # Create your views here.
 
 def index(request):
@@ -44,7 +51,7 @@ def index(request):
 
     #获取学术总数
     context['scholar_all_collection'] = Wanfangmetasource.objects.all().using('ScholarInfoBase').count()
-    context['scholar_yesterday_collection'] = Wanfangmetasource.objects.using('ScholarInfoBase').filter(crawltime=today_1).count()
+    context['scholar_yesterday_collection'] = Wanfangmetasource.objects.using('ScholarInfoBase').filter(crawltime__lte=return_hour_day(1)).filter(crawltime__gte=return_hour_morning_day(1)).count()
     today_1_data_schoolar = Wanfangmetasource.objects.using('ScholarInfoBase').filter(crawltime__lte=today_1).count()
     today_2_data_schoolar = Wanfangmetasource.objects.using('ScholarInfoBase').filter(crawltime__lte=today_2).count()
     today_3_data_schoolar = Wanfangmetasource.objects.using('ScholarInfoBase').filter(crawltime__lte=today_3).count()
@@ -62,3 +69,41 @@ def index(request):
     #context['homepage_yesterday_collection'] = linkedin.search(uri, yesterday, today)
 
     return render(request, 'achievement_display/index.html', context)
+
+"""
+dict['date_no_hour'] = date_no_hour
+dict['wenku_caiji_data'] = data_list
+dict['secret_check_alert'] = data_list
+dict['secret_check'] = data_list
+dict['yx_check_alert'] = data_list
+dict['yx_check'] = data_list
+dict['date_no_hour'] = date_no_hour
+dict['wanfang'] = data_list
+"""
+
+def highchart(request):
+    get_data = GetHighChartData()
+    name = request.GET.get('name')
+    context = {}
+    context['name'] = name
+
+    """
+    文库数据赋值
+    """
+    dict = get_data.wenku(7, name)
+    context['date_no_hour'] = dict['date_no_hour']
+    context['wenku_caiji_data'] = dict['wenku_caiji_data']
+    context['secret_check_alert'] = dict['secret_check_alert']
+    context['secret_check'] = dict['secret_check']
+    context['yx_check_alert'] = dict['yx_check_alert']
+    context['yx_check'] = dict['yx_check']
+
+    """
+    万方数据采集
+    """
+    dict = get_data.schoolar(7, name)
+    context['date_no_hour_schoolar'] = dict['date_no_hour']
+    context['wanfang'] = dict['wanfang']
+
+
+    return render(request, 'achievement_display/highchart.html', context)
