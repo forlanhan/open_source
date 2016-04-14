@@ -2,6 +2,9 @@
 from achievement_display.models import *
 import time
 import json
+from achievement_display import linkedin
+from achievement_display import tor
+
 """
 获取数据库中的数据
 """
@@ -105,6 +108,69 @@ class GetHighChartData:
             num = Wanfangmetasource.objects.using("ScholarInfoBase").filter(crawltime__lte=x).all().count()
             data_list.append(num)
         dict['wanfang'] = data_list
+
+        return dict
+
+
+    def baike(self, day, name):
+        """
+        百科数据处理
+        :param name:
+        :return:字典
+        """
+        date_no_hour = [x[-5:] for x in self.g_get_no_hour_date(day)]
+        date_hour = [x for x in self.g_get_hour_date(day)  ]
+        dict = {}
+        dict['date_no_hour'] = date_no_hour
+
+        """
+        万方数据
+        """
+        data_list = []
+        for x in date_hour:
+            num = 1132716
+            data_list.append(num)
+        dict['baike'] = data_list
+
+        return dict
+
+    def homepage(self, day, name):
+        """
+        百科数据处理
+        :param name:
+        :return:字典
+        """
+        date_no_hour = [x for x in self.g_get_no_hour_date(day)]
+        dict = {}
+        dict['date_no_hour'] = [x[-5:] for x in self.g_get_no_hour_date(day)]
+        uri = 'http://192.168.120.17:9206/datahouse/records/_search?pretty'
+        """
+        万方数据
+        """
+        data_list = []
+        num = linkedin.get_total(uri)
+        data_list.append(num)
+        dict['linkedin'] = data_list * 7
+
+        return dict
+
+    def anwang(self, day, name):
+        """
+        百科数据处理
+        :param name:
+        :return:字典
+        """
+        date_no_hour = [x for x in self.g_get_no_hour_date(day)]
+        dict = {}
+        dict['date_no_hour'] = [x[-5:] for x in self.g_get_no_hour_date(day)]
+        uri2 = 'http://192.168.120.17:9206/hiddenwebs/hiddenwebpages/_search?pretty'
+        """
+        万方数据
+        """
+        data_list = []
+        num = tor.get_total(uri2)
+        data_list.append(num)
+        dict['anwang'] = data_list * 7
 
         return dict
 

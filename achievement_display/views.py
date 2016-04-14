@@ -97,5 +97,28 @@ def highchart(request):
         context['date_no_hour_schoolar'] = dict['date_no_hour']
         context['wanfang'] = dict['wanfang']
 
+    """
+    百科数据采集
+    """
+    if name == 'baike':
+        dict = get_data.baike(7, name)
+        context['date_no_hour_baike'] = dict['date_no_hour']
+        context['baike'] = dict['baike']
+
+    """
+    linkedIn数据采集
+    """
+    if name == 'homepage':
+        dict = get_data.homepage(7, name)
+        context['date_no_hour_homepage'] = dict['date_no_hour']
+        context['homepage'] = dict['linkedin']
+
+    """
+    anwang数据采集
+    """
+    if name == 'anwang':
+        dict = get_data.anwang(7, name)
+        context['date_no_hour_anwang'] = dict['date_no_hour']
+        context['anwang'] = dict['anwang']
 
     return render(request, 'achievement_display/highchart.html', context)
