@@ -43,6 +43,7 @@
 
 </head>
 <body>
+
 	<!--   div header -->
 	<div id="header">
 		<div id="header-content">
@@ -215,8 +216,7 @@
              trigger: 'hover',
              html : true,
              container: "#wenku-pop",
-             content: "<iframe src='/highchart/?name=wenku' frameborder=0 width='620px' height='260px' ></iframe>"
-
+             content: '<img  id="loadingMessage" src="/statics/achievement_display/img/477.gif" /><iframe src="/highchart/?name=wenku"  id="schoolar1"  onload="document.getElementById(\'loadingMessage\').style.display=\'none\'" frameborder=0 width="620px" height="260px" ></iframe>'
         });
 
          $("#schoolar-pop").popover({
@@ -224,7 +224,7 @@
              trigger: 'hover',
              html : true,
              container: "#schoolar-pop",
-             content: "<iframe src='/highchart/?name=schoolar' frameborder=0 width='620px' height='260px' ></iframe>"
+             content: '<img  id="loadingMessage" src="/statics/achievement_display/img/477.gif" /><iframe src="/highchart/?name=schoolar"  id="schoolar1"  onload="document.getElementById(\'loadingMessage\').style.display=\'none\'" frameborder=0 width="620px" height="260px" ></iframe>'
 
         });
          $("#baike-pop").popover({
@@ -232,7 +232,7 @@
              trigger: 'hover',
              html : true,
              container: "#baike-pop",
-             content: "<iframe src='/highchart/?name=wenku' frameborder=0 width='620px' height='260px' ></iframe>"
+             content: '<img  id="loadingMessage" src="/statics/achievement_display/img/477.gif" /><iframe src="/highchart/?name=wenku"  id="schoolar1"  onload="document.getElementById(\'loadingMessage\').style.display=\'none\'" frameborder=0 width="620px" height="260px" ></iframe>'
 
         });
          $("#homepage-pop").popover({
@@ -240,7 +240,7 @@
              trigger: 'hover',
              html : true,
              container: "#homepage-pop",
-             content: "<iframe src='/highchart/?name=wenku' frameborder=0 width='620px' height='260px' ></iframe>"
+             content: '<img  id="loadingMessage" src="/statics/achievement_display/img/477.gif" /><iframe src="/highchart/?name=wenku"  id="schoolar1"  onload="document.getElementById(\'loadingMessage\').style.display=\'none\'" frameborder=0 width="620px" height="260px" ></iframe>'
 
         });
          $("#anwang-pop").popover({
@@ -248,10 +248,19 @@
              trigger: 'hover',
              html : true,
              container: "#anwang-pop",
-             content: "<iframe src='/highchart/?name=wenku' frameborder=0 width='620px' height='260px' ></iframe>"
+             content: '<img  id="loadingMessage" src="/statics/achievement_display/img/477.gif" /><iframe src="/highchart/?name=wenku"  id="schoolar1"  onload="document.getElementById(\'loadingMessage\').style.display=\'none\'" frameborder=0 width="620px" height="260px" ></iframe>'
 
         });
+         $("#loadingMessage").hide();
+
      });
+        ////////////////////////////////////
+        $('#schoolar1').load(function(){
+            alert(1);
+            $("#loadingMessage").hide();
+            alert(1);
+            });
+
     </script>
 </body>
 </html>

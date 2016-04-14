@@ -283,6 +283,13 @@ body{
 	height: 17.5rem;
 }
 
+/*loadingMessageloadingMessageloadingMessageloadingMessage*/
+#loadingMessage{
+	position: absolute;
+	left: 45%;
+	top: 30%;
+}
+
 
 
 

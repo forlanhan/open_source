@@ -70,16 +70,6 @@ def index(request):
 
     return render(request, 'achievement_display/index.html', context)
 
-"""
-dict['date_no_hour'] = date_no_hour
-dict['wenku_caiji_data'] = data_list
-dict['secret_check_alert'] = data_list
-dict['secret_check'] = data_list
-dict['yx_check_alert'] = data_list
-dict['yx_check'] = data_list
-dict['date_no_hour'] = date_no_hour
-dict['wanfang'] = data_list
-"""
 
 def highchart(request):
     get_data = GetHighChartData()
@@ -90,20 +80,22 @@ def highchart(request):
     """
     文库数据赋值
     """
-    dict = get_data.wenku(7, name)
-    context['date_no_hour'] = dict['date_no_hour']
-    context['wenku_caiji_data'] = dict['wenku_caiji_data']
-    context['secret_check_alert'] = dict['secret_check_alert']
-    context['secret_check'] = dict['secret_check']
-    context['yx_check_alert'] = dict['yx_check_alert']
-    context['yx_check'] = dict['yx_check']
+    if name == 'wenku':
+        dict = get_data.wenku(7, name)
+        context['date_no_hour'] = dict['date_no_hour']
+        context['wenku_caiji_data'] = dict['wenku_caiji_data']
+        context['secret_check_alert'] = dict['secret_check_alert']
+        context['secret_check'] = dict['secret_check']
+        context['yx_check_alert'] = dict['yx_check_alert']
+        context['yx_check'] = dict['yx_check']
 
     """
     万方数据采集
     """
-    dict = get_data.schoolar(7, name)
-    context['date_no_hour_schoolar'] = dict['date_no_hour']
-    context['wanfang'] = dict['wanfang']
+    if name == 'schoolar':
+        dict = get_data.schoolar(7, name)
+        context['date_no_hour_schoolar'] = dict['date_no_hour']
+        context['wanfang'] = dict['wanfang']
 
 
     return render(request, 'achievement_display/highchart.html', context)
