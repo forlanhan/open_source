@@ -44,7 +44,7 @@ $(function () {
           enabled:false
         },
         series: [{
-            name: '文库采集数据',
+            name: '文库采集',
             data: wenku_caiji_data
         }, {
             name: '保密检查告警',
@@ -106,7 +106,7 @@ $(function () {
           enabled:false
         },
         series: [{
-            name: '学术采集数据',
+            name: '学术采集',
             data: wanfang
         }]
     });
@@ -157,7 +157,7 @@ $(function () {
           enabled:false
         },
         series: [{
-            name: '百科采集数据',
+            name: '百科采集',
             data: baike1
         }]
     });
@@ -207,7 +207,7 @@ $(function () {
           enabled:false
         },
         series: [{
-            name: '主页采集数据',
+            name: 'LinkedIn采集',
             data: linkedin
         }]
     });
@@ -258,7 +258,7 @@ $(function () {
           enabled:false
         },
         series: [{
-            name: '主页采集数据',
+            name: '暗网采集',
             data: anwang1
         }]
     });

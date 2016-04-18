@@ -122,3 +122,23 @@ def highchart(request):
         context['anwang'] = dict['anwang']
 
     return render(request, 'achievement_display/highchart.html', context)
+
+def wenku(request):
+    """
+    保密检查的界面
+    :param request:
+    :return:
+    """
+    context = {}
+
+    return render(request, 'achievement_display/wenku.html', context)
+
+def datatables_iframe(request):
+    """
+    保密检查的界面
+    :param request:
+    :return:
+    """
+    context = {}
+
+    return render(request, 'achievement_display/datatables_iframe.html', context)
