@@ -96,6 +96,8 @@ def highchart(request):
         dict = get_data.schoolar(7, name)
         context['date_no_hour_schoolar'] = dict['date_no_hour']
         context['wanfang'] = dict['wanfang']
+        context['acm'] = dict['acm']
+        context['ieee'] = dict['ieee']
 
     """
     百科数据采集

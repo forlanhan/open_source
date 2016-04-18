@@ -109,6 +109,25 @@ class GetHighChartData:
             data_list.append(num)
         dict['wanfang'] = data_list
 
+        """
+        ACM数据采集
+        """
+        data_list = []
+        for x in date_hour:
+            num = Acmmetasource.objects.using("ScholarInfoBase").filter(crawltime__lte=x).all().count()
+            data_list.append(num)
+        dict['acm'] = data_list
+
+        """
+        IEEE数据采集
+        """
+        data_list = []
+        for x in date_hour:
+            num = Ieeemetasource.objects.using("ScholarInfoBase").filter(crawltime__lte=x).all().count()
+            data_list.append(num)
+        dict['ieee'] = data_list
+
+
         return dict
 
 

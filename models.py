@@ -10,10 +10,33 @@ from __future__ import unicode_literals
 from django.db import models
 
 
+class Acmmetasource(models.Model):
+    id = models.CharField(db_column='ID', primary_key=True, max_length=64)  # Field name made lowercase.
+    title = models.CharField(max_length=128, blank=True, null=True)
+    detailpageid = models.CharField(db_column='detailPageId', max_length=24)  # Field name made lowercase.
+    detailpageurl = models.CharField(db_column='detailPageUrl', max_length=256)  # Field name made lowercase.
+    crawltime = models.DateTimeField(db_column='crawlTime')  # Field name made lowercase.
+
+    class Meta:
+        managed = False
+        db_table = 'ACMMetaSource'
+
+
+class Ieeemetasource(models.Model):
+    id = models.CharField(db_column='ID', primary_key=True, max_length=64)  # Field name made lowercase.
+    title = models.CharField(max_length=128, blank=True, null=True)
+    detailpageid = models.CharField(db_column='detailPageId', max_length=24)  # Field name made lowercase.
+    detailpageurl = models.CharField(db_column='detailPageUrl', max_length=256)  # Field name made lowercase.
+    crawltime = models.DateTimeField(db_column='crawlTime')  # Field name made lowercase.
+
+    class Meta:
+        managed = False
+        db_table = 'IEEEMetaSource'
+
+
 class Wanfangmetasource(models.Model):
     id = models.CharField(db_column='ID', primary_key=True, max_length=64)  # Field name made lowercase.
     title = models.CharField(max_length=128, blank=True, null=True)
-    detailpagecollection = models.CharField(db_column='detailPageCollection', max_length=64, blank=True, null=True)  # Field name made lowercase.
     detailpageid = models.CharField(db_column='detailPageId', max_length=24)  # Field name made lowercase.
     detailpageurl = models.CharField(db_column='detailPageUrl', max_length=256)  # Field name made lowercase.
     crawltime = models.DateTimeField(db_column='crawlTime')  # Field name made lowercase.

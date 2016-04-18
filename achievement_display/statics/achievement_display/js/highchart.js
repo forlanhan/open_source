@@ -93,22 +93,31 @@ $(function () {
             align: 'center',
             verticalAlign: 'bottom',
             borderWidth: 0
-        },
-        plotOptions: {
-            line: {
-                dataLabels: {
-                    enabled: true
-                },
-                enableMouseTracking: true
-            }
-        },
+        }
+        //  ,
+        //plotOptions: {
+        //    line: {
+        //        dataLabels: {
+        //            enabled: true
+        //        },
+        //        enableMouseTracking: true
+        //    }
+        //}
+          ,
         credits:{
           enabled:false
         },
         series: [{
-            name: '学术采集',
+            name: '万方采集',
             data: wanfang
-        }]
+        },{
+            name: 'ACM采集',
+            data: acm
+        },{
+            name: 'IEEE采集',
+            data: ieee
+        }
+        ]
     });
     //////////////////////
         //////////
