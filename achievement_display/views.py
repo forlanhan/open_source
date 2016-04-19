@@ -58,7 +58,7 @@ def index(request):
 
     #获取暗网采集总数
     context['anwang_all_collection'] = tor.get_total(uri2)
-    context['anwang_yesterday_collection'] = tor.search(uri, yesterday, today)
+    context['anwang_yesterday_collection'] = tor.search(uri2, yesterday, today)
 
     return render(request, 'achievement_display/index.html', context)
 
