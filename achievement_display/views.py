@@ -25,7 +25,7 @@ def return_hour_morning_day(n=0):
 
 def index(request):
     uri = 'http://192.168.120.17:9206/datahouse/records/_search?pretty'
-    uri2 = 'http://192.168.120.17:9206/hiddenwebs/hiddenwebpages/_search?pretty'
+    uri2 = 'http://192.168.120.17:9206/hiddenwebs_v2/hiddenwebpages/_search?pretty'
 
     #define time
     today = return_n_day(0)
@@ -39,24 +39,17 @@ def index(request):
     #获取文库总的采集总数
     context['wenku_all_collection'] = Baidumetasource.objects.all().count()
     context['wenku_yesterday_collection'] = Baidumetasource.objects.filter(crawltime=today_1).count()
-    today_1_data = Baidumetasource.objects.filter(crawltime__lte=today_1).count()
-    today_2_data = Baidumetasource.objects.filter(crawltime__lte=today_2).count()
-    today_3_data = Baidumetasource.objects.filter(crawltime__lte=today_3).count()
 
     #获取文库昨天采集总数
     yesterday = return_n_day(1)
-    #文库图表
-    context['wenku_x'] = json.dumps([today_3[-5:], today_2[-5:], today_1[-5:], today[-5:]])
-    context['wenku_y'] = json.dumps([today_3_data, today_2_data, today_1_data, context['wenku_all_collection']])
+
 
     #获取学术总数
-    context['scholar_all_collection'] = Wanfangmetasource.objects.all().using('ScholarInfoBase').count()
-    context['scholar_yesterday_collection'] = Wanfangmetasource.objects.using('ScholarInfoBase').filter(crawltime__lte=return_hour_day(1)).filter(crawltime__gte=return_hour_morning_day(1)).count()
-    today_1_data_schoolar = Wanfangmetasource.objects.using('ScholarInfoBase').filter(crawltime__lte=today_1).count()
-    today_2_data_schoolar = Wanfangmetasource.objects.using('ScholarInfoBase').filter(crawltime__lte=today_2).count()
-    today_3_data_schoolar = Wanfangmetasource.objects.using('ScholarInfoBase').filter(crawltime__lte=today_3).count()
-    context['scholar_x'] = json.dumps([today_3[-5:], today_2[-5:], today_1[-5:], today[-5:]])
-    context['scholar_y'] = json.dumps([today_3_data_schoolar, today_2_data_schoolar, today_1_data_schoolar, context['scholar_all_collection']])
+    context['scholar_all_collection'] = Wanfangmetasource.objects.all().using('ScholarInfoBase').count() + Acmmetasource.objects.all().using('ScholarInfoBase').count() + Ieeemetasource.objects.all().using('ScholarInfoBase').count()
+    wanfang_num = Wanfangmetasource.objects.using('ScholarInfoBase').filter(crawltime__lte=return_hour_day(1)).filter(crawltime__gte=return_hour_morning_day(1)).count()
+    acm_num = Acmmetasource.objects.using('ScholarInfoBase').filter(crawltime__lte=return_hour_day(1)).filter(crawltime__gte=return_hour_morning_day(1)).count()
+    ieee_num = Ieeemetasource.objects.using('ScholarInfoBase').filter(crawltime__lte=return_hour_day(1)).filter(crawltime__gte=return_hour_morning_day(1)).count()
+    context['scholar_yesterday_collection'] = wanfang_num + acm_num + ieee_num
 
     #获取主页采集总数
     today = time.strftime('%Y-%m-%d', time.localtime(time.time()))
@@ -64,9 +57,8 @@ def index(request):
     context['homepage_yesterday_collection'] = linkedin.search(uri, yesterday, today)
 
     #获取暗网采集总数
-    #today = time.strftime('%Y-%m-%d', time.localtime(time.time()))
     context['anwang_all_collection'] = tor.get_total(uri2)
-    #context['homepage_yesterday_collection'] = linkedin.search(uri, yesterday, today)
+    context['anwang_yesterday_collection'] = tor.search(uri, yesterday, today)
 
     return render(request, 'achievement_display/index.html', context)
 
@@ -132,6 +124,8 @@ def wenku(request):
     :return:
     """
     context = {}
+    name = request.GET.get('name')
+    context['name'] = name
 
     return render(request, 'achievement_display/wenku.html', context)
 

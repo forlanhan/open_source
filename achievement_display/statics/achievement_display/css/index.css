@@ -98,6 +98,13 @@ body{
 	font-size: 1.1rem;
 	font-weight: 600;
 }
+.alert-title a{
+	color: #52646c;
+}
+.alert-title a:hover{
+	color: #4694D1 ;
+	text-decoration: none;
+}
 .alert-title-data{
 	font-size: 1.25rem;
 }

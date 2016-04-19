@@ -164,7 +164,7 @@ class GetHighChartData:
         dict['date_no_hour'] = [x[-5:] for x in self.g_get_no_hour_date(day)]
         uri = 'http://192.168.120.17:9206/datahouse/records/_search?pretty'
         """
-        万方数据
+        linkedIn数据
         """
         data_list = []
         num = linkedin.get_total(uri)
@@ -182,14 +182,17 @@ class GetHighChartData:
         date_no_hour = [x for x in self.g_get_no_hour_date(day)]
         dict = {}
         dict['date_no_hour'] = [x[-5:] for x in self.g_get_no_hour_date(day)]
-        uri2 = 'http://192.168.120.17:9206/hiddenwebs/hiddenwebpages/_search?pretty'
+        uri2 = 'http://192.168.120.17:9206/hiddenwebs_v2/hiddenwebpages/_search?pretty'
+
         """
-        万方数据
+        暗网数据
         """
         data_list = []
-        num = tor.get_total(uri2)
-        data_list.append(num)
-        dict['anwang'] = data_list * 7
+
+        for x in date_no_hour:
+            num = tor.search(uri2, "1900-12-12", x)
+            data_list.append(num)
+        dict['anwang'] = data_list
 
         return dict
 

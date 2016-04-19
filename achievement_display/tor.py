@@ -11,7 +11,7 @@ def search(uri, fromDate, toDate):
                 "filtered": {
                     "filter": {
                         "range": {
-                            "scrapy_time": {
+                            "create_time": {
                                 "gte": fromDate,
                                 "lte": toDate
                             }
@@ -30,6 +30,31 @@ def search(uri, fromDate, toDate):
         return -1
 
 
+
+
+# def get_total(uri):
+#     try:
+#         query = json.dumps({
+#             "from": 0,
+#             "size": 1,
+#
+#             "query": {
+#                 "regexp": {
+#                     "create_time": "2016",
+#
+#
+#             }
+#         }
+#
+#         })
+#         response = requests.get(uri, data=query)
+#         results = response.content
+#         results = json.loads(results)
+#         return results['hits']['total']
+#     except Exception, e:
+#         print 'post es errors and e : ' % e
+#         return -1
+
 def get_total(uri):
     try:
         query = json.dumps({
@@ -46,9 +71,8 @@ def get_total(uri):
 
 
 if __name__ == "__main__":
-    uri = 'http://192.168.120.17:9206/hiddenwebs/hiddenwebpages/_search?pretty'
-
-    fromDate, toDate = '2015-1-1', '2016-10-1'
-    # print search(uri, fromDate, toDate)
+    uri = 'http://192.168.120.17:9206/hiddenwebs_v2/hiddenwebpages/_search?pretty'
+    fromDate, toDate = '1900-10-01', '2016-04-19'
+    print search(uri, fromDate, toDate)
     # now-1d/d now/d
     print get_total(uri)

@@ -10,7 +10,7 @@
 	<!-- 引入 Bootstrap -->
 	<link href="/statics/achievement_display/css/font.css" rel="stylesheet">
     <link href="/statics/achievement_display/plugin/bootstrap/bootstrap3-3-0.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/statics/achievement_display/css/bm_check.css">
+    <link rel="stylesheet" type="text/css" href="/statics/achievement_display/css/wenku.css">
 	<!--  js  link -->
 	<!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
     <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
@@ -28,87 +28,192 @@
     <link href="/statics/achievement_display/plugin/highchart/css/highchar.css" rel="stylesheet" type="text/css" />
     <script src="/statics/achievement_display/plugin/highchart/js/highcharts.js"></script>
 
-    <!-- datatable -->
-    <link href="/statics/achievement_display/plugin/datatable/css/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
-{#    <link href="/statics/achievement_display/plugin/datatable/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />#}
-    <script src="/statics/achievement_display/plugin/datatable/js/jquery.dataTables.js"></script>
-    <script src="/statics/achievement_display/plugin/datatable/js/dataTables.bootstrap.js"></script>
+     <!-- datatable -->
+    <link href="/statics/achievement_display/plugin/media/css/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
+    <script src="/statics/achievement_display/plugin/media/js/jquery.dataTables.js"></script>
+    <script src="/statics/achievement_display/plugin/media/js/dataTables.bootstrap.js"></script>
 
     <!-- 动态背景 -->
     <script type='text/javascript' src='/statics/achievement_display/plugin/juqery-background/js/jquery.particleground.min.js'></script>
   	<script type='text/javascript' src='/statics/achievement_display/plugin/juqery-background/js/demo.js'></script>
 
-    <!-- js 测试 -->
     <script>
-        var wenku_x = {{ wenku_x | safe }};
-        var wenku_y = {{ wenku_y | safe }};
-        var scholar_x = {{ scholar_x | safe}}
-        var scholar_y = {{ scholar_y | safe}}
+        var active = {{ name }};
+       function a_href_add(flag){
+             var ele = document.getElementById('alert-col'+flag)
+             ele.style.borderBottomColor = '#4694D1';
+        }
+        function a_href_plus(flag){
+             var ele = document.getElementById('alert-col'+flag)
+             ele.style.borderBottomColor = 'rgb(223, 229, 233)';
+             document.getElementById('alert-col'+active).style.borderBottomColor = '#4694D1';
+        }
+
+
+
 
 
     </script>
 
 </head>
-<body>
+<body onload="a_href_add({{ name }})">
 
 	<!--   div header -->
 	<div id="header">
 		<div id="header-content">
 			<div id="logo-sys-desc">
-				<div id="logo"><img src="http://lab.westilian.com/falgun/images/logo-falgun.png"></div>
-				<div id="sys-desc"><span><strong>互联网信息XX检查原型系统</strong></span></div>
+				<div id="logo"><img src="/statics/achievement_display/img/logo-falgun.png"></div>
+				<div id="sys-desc"><span><strong><a href="/">互联网信息XX检查原型系统</a></strong></span></div>
 			</div>
 		</div>
 	</div>
-	<!-- div search	-->
-	<div id="search-main">
-		<div id="search">
-			<form role="form" class="form-inline" method="post" action="http://blog.chiao.me">
-				<div class="input-group">
-					<input type="text" class="form-control" id="input1" placeholder="请输入搜索内容" />
-					<span class="input-group-btn">
-						<button  type="submit" name="submit" class="btn" id="button1">
-							<span class="glyphicon glyphicon-search">搜索</span>
-						</button>
-					</span>
-				</div>
-			</form>
-		</div>
-	</div>
+
 	<!-- div main -->
 	<div id="main">
             <div class="container-fluid "  id="alert-container">
                 <div class="row" id="alert-row">
-                    <div class="col-lg-3 col-md-3 col-sm-3 alert-col" id="alert-col1">
-                        <div class="alert-title ">保密检查告警&nbsp;&nbsp;<span class="label label-danger alert-title-data ">0</span></div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 alert-col" id="alert-col1" onmouseover="a_href_add(1)" onmouseout="a_href_plus(1)">
+                        <div class="alert-title "><a href="/wenku?name=1">保密检查告警&nbsp;&nbsp;<span class="label label-danger alert-title-data ">0</span></a></div>
                     </div>
-                    <div class="col-lg-3 col-md-3 col-sm-3 alert-col" id="alert-col2">
-                        <div class="alert-title">隐写检查告警&nbsp;&nbsp;<span class="label label-danger alert-title-data">0</span></div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 alert-col" id="alert-col2" onmouseover="a_href_add(2)" onmouseout="a_href_plus(2)">
+                        <div class="alert-title"><a href="/wenku?name=2">隐写检查告警&nbsp;&nbsp;<span class="label label-danger alert-title-data">0</span></a></div>
                     </div>
-                    <div class="col-lg-3 col-md-3 col-sm-3 alert-col active-click"  id="alert-col3">
-                        <div class="alert-title ">已保密检查&nbsp;&nbsp;<span class="label label-danger alert-title-data">0</span></div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 alert-col"  id="alert-col3" onmouseover="a_href_add(3)" onmouseout="a_href_plus(3)">
+                        <div class="alert-title "><a href="/wenku?name=3">已保密检查&nbsp;&nbsp;<span class="label label-danger alert-title-data">0</span></a></div>
                     </div>
-                    <div class="col-lg-3 col-md-3 col-sm-3 alert-col" id="alert-col4">
-                        <div class="alert-title">已隐写检查&nbsp;&nbsp;<span class="label label-danger alert-title-data">0</span></div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 alert-col" id="alert-col4" onmouseover="a_href_add(4)" onmouseout="a_href_plus(4)">
+                        <div class="alert-title"><a href="/wenku?name=4">已隐写检查&nbsp;&nbsp;<span class="label label-danger alert-title-data">0</span></a></div>
                     </div>
                 </div>
             </div>
             <!-- datatables -->
-            <div id="datatables-content">
-                <iframe src="/datatables_iframe/" frameborder="0" width="100%" height="1000px"></iframe>
-            </div>
+               <div class="container">
+                    <table class=" table table-bordered  table-hover" id="table-content">
+                        <!-- 保密检查告警开始 -->
+                        {% ifequal name '1' %}
+                            <thead>
+                                 <tr>
+                                    <th>文档名称</th>
+                                    <th>告警数量</th>
+                                    <th>打分</th>
+                                     <th>处理时间</th>
+                                    <th>处理结果状态</th>
+                                 </tr>
+                            </thead>
+                            <tbody>
+{#                                 <tr>#}
+{#                                    <td>3F2504E04F8911D3</td>#}
+{#                                    <td><span class="badge">3</span></td>#}
+{#                                    <td>78</td>#}
+{#                                     <td>2016-04-15 23:22:33</td>#}
+{#                                    <td><button type="button" class="btn btn-danger">有问题</button></td>#}
+{##}
+{#                                 </tr>#}
+
+                            </tbody>
+                        {% endifequal %}
+
+                        <!-- 隐写检查告警开始 -->
+                        {% ifequal name '2' %}
+                            <thead>
+                                 <tr>
+                                    <th>所属文档名称</th>
+                                    <th>图片类型</th>
+                                    <th>隐藏软件名称</th>
+                                    <th>隐藏文件编号</th>
+                                     <th>处理时间</th>
+                                     <th>查看</th>
+
+                                 </tr>
+                            </thead>
+{#                            <tbody>#}
+{#                                 <tr>#}
+{#                                    <td>3F2504E04F8911D3</td>#}
+{#                                    <td>jpg</td>#}
+{#                                    <td>xxx软件</td>#}
+{#                                     <td>100</td>#}
+{#                                     <td>2016-04-15 23:22:33</td>#}
+{#                                    <td><a href="" type="button" class="btn btn-danger">查看</a></td>#}
+{##}
+{#                                 </tr>#}
+{##}
+{#                            </tbody>#}
+                        {% endifequal %}
+
+                        <!-- 已隐写检查开始 -->
+                        {% ifequal name '4' %}
+                            <thead>
+                                 <tr>
+                                    <th>隐藏文件原始名称</th>
+                                    <th>隐藏文件的存储名称</th>
+                                    <th>隐藏文件的长度</th>
+                                    <th>隐藏文件存储路径</th>
+                                 </tr>
+                            </thead>
+{#                            <tbody>#}
+{#                                 <tr>#}
+{#                                    <td>3F2504E04F8911D3</td>#}
+{#                                    <td>3F2504E04F8911D3</td>#}
+{#                                    <td>3F2504E04F8911D3</td>#}
+{#                                     <td>3F2504E04F8911D3</td>#}
+{#                                 </tr>#}
+{#                            </tbody>#}
+                        {% endifequal %}
+
+                        <!-- 已经保密检查开始 -->
+                        {% ifequal name '3' %}
+                            <thead>
+                                 <tr>
+                                    <th>文档名称</th>
+                                    <th>告警数量</th>
+                                    <th>打分</th>
+                                    <th>处理结果状态</th>
+                                     <th>处理时间</th>
+                                 </tr>
+                            </thead>
+                            <tbody>
+{#                                 <tr>#}
+{#                                    <td>3F2504E04F8911D3</td>#}
+{##}
+{#                                    <td><span class="badge">3</span></td>#}
+{#                                    <td>78</td>#}
+{#                                     <td>2016-04-15 23:22:33</td>#}
+{#                                    <td><button type="button" class="btn btn-danger">有问题</button></td>#}
+{##}
+{#                                 </tr>#}
+{#                                 <tr>#}
+{#                                    <td>3F2504E04F8911D3</td>#}
+{##}
+{#                                    <td><span class="badge">0</span></td>#}
+{#                                    <td>78</td>#}
+{#                                     <td>2016-04-15 23:22:33</td>#}
+{#                                    <td><button type="button" class="btn btn-success">无问题</button></td>#}
+{##}
+{#                                 </tr>#}
+                            </tbody>
+                        {% endifequal %}
+
+                        {% if not name %}
+                            数据参数不对暂无数据
+                        {% endif %}
+
+                    </table>
+    </div>
+
+
 	</div>
 
 
 <!-- 测试  -->
 
     <!-- index.js -->
-    <script src="/statics/achievement_display/js/bm_check.js"></script>
+    <script src="/statics/achievement_display/js/wenku.js"></script>
     <script type="text/javascript">
       $(document).ready( function () {
             $('#table-content').DataTable({
 
             });
+
 
 
         } );

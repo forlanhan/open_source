@@ -31,15 +31,18 @@ body{
 	line-height: 4.5rem;
 }
 
-#sys-desc{
+#sys-desc a{
 	color: #FFFFCC;
 	line-height: 4.5rem;
 
 }
-#sys-desc span{
+#sys-desc span a{
 	font-size: 1.2rem;
 	font-family: "SimHei", "STSong";
 	font-weight: 900;
+}
+#sys-desc span a:hover{
+	text-decoration: none;
 }
 /*  search  */
 #search-main{
@@ -98,6 +101,13 @@ body{
 	font-size: 1.1rem;
 	font-weight: 600;
 }
+.alert-title a{
+	color: #52646c;
+}
+.alert-title a:hover{
+	color: #4694D1 ;
+	text-decoration: none;
+}
 .active-click{
 	border-bottom: solid 0.2rem #4694D1;
 }
@@ -111,10 +121,6 @@ body{
 	padding-top: 1rem;
 }
 /*表格结束*/
-
-
-
-
 .iconfont{
     font-family:"iconfont" !important;
     font-size:9.375rem;font-style:normal;

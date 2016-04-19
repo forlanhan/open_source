@@ -32,14 +32,7 @@
 
 
     <!-- js 测试 -->
-    <script>
-        var wenku_x = {{ wenku_x | safe }};
-        var wenku_y = {{ wenku_y | safe }};
-        var scholar_x = {{ scholar_x | safe}}
-        var scholar_y = {{ scholar_y | safe}}
 
-
-    </script>
 
 </head>
 <body>
@@ -48,7 +41,7 @@
 	<div id="header">
 		<div id="header-content">
 			<div id="logo-sys-desc">
-				<div id="logo"><img src="http://lab.westilian.com/falgun/images/logo-falgun.png"></div>
+				<div id="logo"><img src="/statics/achievement_display/img/logo-falgun.png"></div>
 				<div id="sys-desc"><span><strong>互联网信息XX检查原型系统</strong></span></div>
 			</div>
 		</div>
@@ -73,16 +66,16 @@
             <div class="container-fluid "  id="alert-container">
                 <div class="row" id="alert-row">
                     <div class="col-lg-3 alert-col" id="alert-col1">
-                        <div class="alert-title">保密检查告警&nbsp;&nbsp;<span class="label label-danger alert-title-data">0</span></div>
+                        <div class="alert-title"><a href="/wenku?name=1" target="_blank">保密检查告警&nbsp;&nbsp;<span class="label label-danger alert-title-data">0</span></a></div>
                     </div>
                     <div class="col-lg-3 alert-col" id="alert-col2">
-                        <div class="alert-title">隐写检查告警&nbsp;&nbsp;<span class="label label-danger alert-title-data">0</span></div>
+                        <div class="alert-title"><a href="/wenku?name=2" target="_blank">隐写检查告警&nbsp;&nbsp;<span class="label label-danger alert-title-data">0</span></a></div>
                     </div>
                     <div class="col-lg-3 alert-col" id="alert-col3">
-                        <div class="alert-title">已保密检查&nbsp;&nbsp;<span class="label label-danger alert-title-data">0</span></div>
+                        <div class="alert-title"><a href="/wenku?name=3" target="_blank">已保密检查&nbsp;&nbsp;<span class="label label-danger alert-title-data">0</span></a></div>
                     </div>
                     <div class="col-lg-3 alert-col" id="alert-col4">
-                        <div class="alert-title">已隐写检查&nbsp;&nbsp;<span class="label label-danger alert-title-data">0</span></div>
+                        <div class="alert-title"><a href="/wenku?name=4" target="_blank">已隐写检查&nbsp;&nbsp;<span class="label label-danger alert-title-data">0</span></a></div>
                     </div>
                 </div>
             </div>
@@ -183,7 +176,7 @@
 						   		<tbody>
                                   <tr >
                                      <td>昨天采集</td>
-							         <td class="wenku-td-right"><span class="badge  data-span"  >0</span></td>
+							         <td class="wenku-td-right"><span class="badge  data-span"  >{{ anwang_yesterday_collection }}</span></td>
 							      </tr>
 							      <tr >
 							         <td>总采集</td>
