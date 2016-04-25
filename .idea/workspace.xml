@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba6f7428-b4d9-4030-9aa3-43e8301be553" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/views.py" afterPath="$PROJECT_DIR$/achievement_display/views.py" />
-    </list>
+    <list default="true" id="ba6f7428-b4d9-4030-9aa3-43e8301be553" name="Default" comment="" />
     <ignored path="open_source.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
