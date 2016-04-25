@@ -90,6 +90,8 @@ def highchart(request):
         context['wanfang'] = dict['wanfang']
         context['acm'] = dict['acm']
         context['ieee'] = dict['ieee']
+        context['cnki'] = dict['cnki']
+        # context['cnki'] = [1 ,2, 3, 4, 5, 6, 7]
 
     """
     百科数据采集

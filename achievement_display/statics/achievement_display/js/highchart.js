@@ -116,6 +116,9 @@ $(function () {
         },{
             name: 'IEEE采集',
             data: ieee
+        },{
+            name: 'CNKI采集',
+            data: cnki
         }
         ]
     });

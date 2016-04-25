@@ -128,6 +128,16 @@ class GetHighChartData:
         dict['ieee'] = data_list
 
 
+        """
+        CNKI数据采集
+        """
+        data_list = []
+        for x in date_hour:
+            num = Cnkimetasource.objects.using("ScholarInfoBase").filter(crawltime__lte=x).all().count()
+            data_list.append(num)
+        dict['cnki'] = data_list
+
+
         return dict
 
 
