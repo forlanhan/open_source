@@ -14,7 +14,7 @@ class Baidumetasource(models.Model):
     id = models.CharField(db_column='ID', primary_key=True, max_length=36)  # Field name made lowercase.
     filename = models.CharField(db_column='fileName', max_length=200)  # Field name made lowercase.
     storeloc = models.CharField(db_column='storeLoc', max_length=500)  # Field name made lowercase.
-    crawltime = models.DateField(db_column='crawlTime')  # Field name made lowercase.
+    crawltime = models.DateTimeField(db_column='crawlTime')  # Field name made lowercase.
     fileabstract = models.CharField(db_column='fileAbstract', max_length=2000)  # Field name made lowercase.
     filetype = models.CharField(db_column='fileType', max_length=50)  # Field name made lowercase.
     originalurl = models.CharField(db_column='originalUrl', max_length=200)  # Field name made lowercase.

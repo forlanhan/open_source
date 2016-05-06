@@ -1,0 +1,15 @@
+/*字体声明*/
+@font-face {font-family: 'heiti-normal';
+    src: url('../fonts/heiti-normal/webfont.eot'); /* IE9*/
+    src: url('../fonts/heiti-normal/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/heiti-normal/webfont.woff') format('woff'), /* chrome、firefox */
+    url('../fonts/heiti-normal/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../fonts/heiti-normal/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+}
+@font-face {font-family: "iconfont";
+  src: url('../fonts/icon/iconfont.eot?t=1460098408'); /* IE9*/
+  src: url('../fonts/icon/iconfont.eot?t=1460098408#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/icon/iconfont.woff?t=1460098408') format('woff'), /* chrome, firefox */
+  url('i../fonts/icon/confont.ttf?t=1460098408') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../fonts/icon/iconfont.svg?t=1460098408#iconfont') format('svg'); /* iOS 4.1- */
+}

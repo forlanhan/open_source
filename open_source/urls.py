@@ -30,6 +30,7 @@ urlpatterns = patterns('achievement_display.views',
                        (r'^highchart/?$', 'highchart'),
                        (r'wenku/?$', 'wenku'),
                        (r'datatables_iframe/?$', 'datatables_iframe'),
+                       (r'search/?$', 'search'),
                        (r'', 'index')
                        )
 

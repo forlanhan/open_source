@@ -1,0 +1,203 @@
+/* CSS used here will be applied after bootstrap.css */
+
+html{
+	margin:0px;
+	font-size: 16px;
+	font-size:100%;
+    font-family: arial;
+
+}
+/* header */
+#header{
+	width: 100%;
+	height: 55px;
+	background-color: white;
+}
+#nav-wrap{
+    background-color: white;
+    border-radius: 0px;
+}
+.navbar-header{
+
+
+}
+.navbar-header a{
+
+    margin-top: -5px;
+}
+.navbar-header img{
+    width: 70px;
+
+}
+#input1 {
+    height: 34px;
+    width: 460px;
+    font-family: arial;
+    font-size: 16px;
+    line-height: 18px;
+    border-radius: 0px;
+}
+#button1{
+	height: 100px;
+	height: 34px;
+	background-color: rgb(91, 192, 222);
+    background-color: #38f;
+	color: white;
+	font-family: 'heiti-normal';
+	font-size: 14px;
+    border-radius: 0px;
+
+}
+#sousuo{
+     font-weight: 700;
+}
+.glyphicon-search::before{/*为了使搜索框前面的图标去掉*/
+	content: "";
+
+}
+/*  search  */
+/*.app-usagovsearch .result-container{*/
+	/*position:relative;*/
+	/*display:block;*/
+/*}*/
+/*.app-usagovsearch .result-area .list-unstyled a{*/
+	/*font-size:initial;*/
+	/*line-height:inherit;*/
+	/*margin-bottom:0;*/
+	/*font-weight:normal;*/
+	/*text-decoration:underline;*/
+/*}*/
+/*.app-usagovsearch .result-area p {*/
+	/*color:#333;*/
+/*}*/
+
+/*.app-usagovsearch .result-area cite {*/
+	/*display:block;*/
+	/*color:#093;*/
+/*}*/
+/*.app-usagovsearch .result-area {*/
+	/*min-height:600px;*/
+	/*padding:0px 10px;*/
+/*}*/
+/*.app-usagovsearch .results-window {*/
+	/*margin-bottom:15px;*/
+/*}*/
+
+/*.app-usagovsearch .highlight {*/
+	/*font-weight:bold;*/
+/*}*/
+#main{
+    width: 100%;
+    height:auto;
+    /*background-color: #f8ffff;*/
+}
+#main-contain{
+    width: 88%;
+}
+#search-review{
+    color: rgb(153, 153, 153);
+    font-size: 12px;
+    height: 42px;
+    line-height: 42px;
+
+}
+#main-left{
+    border-right: rgb(225, 225, 225) 1px solid;
+}
+.search-content{
+    width: 550px;
+    margin-top: 15px;
+}
+.s-t a{
+    font-family: arial;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(0, 0, 204);
+    line-height: 24.6333px;
+    text-decoration: underline;
+}
+.s-c{
+    color: rgb(51, 51, 51);
+    font-size: 13px;
+    line-height: 20.0167px;
+
+}
+.s-s a{
+    color: rgb(0, 128, 0);
+    font-size: 13px;
+    line-height: 20.0167px;
+    text-decoration: none;
+
+}
+#main-right{
+    border-right: rgb(225, 225, 225) 1px solid;
+    border-left: rgb(225, 225, 225) 1px solid;
+    height: 700px;
+}
+#rel{
+
+}
+.rel-title{
+    background-color: rgb(224, 236, 255);
+    height: 25px;
+    border-top: rgb(192, 218, 255) 1px solid;
+    text-align: left;
+    margin-top: 20px;
+
+}
+.rel-title span{
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: 700;
+
+}
+.rel-content{
+    background-color: rgb(240, 246, 255);
+}
+.same_ul{
+    padding: 0 10px 20px;
+    margin: 0;
+    list-style: none;
+}
+.same_ul li {
+    border-bottom: 1px dotted #C4DCFF;
+    padding: 3px 0 5px;
+
+
+}
+.same_ul li span {
+    float: right;
+    width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: rgb(102, 102, 102);
+    font-family: "宋体",Arial;
+    font-size: 13px;
+    line-height: 18px;
+}
+.same_ul li a {
+    display: inline-block;
+    width: 55px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "宋体",Arial;
+    font-size: 13px;
+    line-height: 18px;
+    color: rgb(0, 51, 153);
+
+}
+.same_ul li .org {
+    display: inline-block;
+    width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "宋体",Arial;
+    font-size: 13px;
+    line-height: 18px;
+    color: rgb(0, 51, 153);
+
+}
+/*  search  */

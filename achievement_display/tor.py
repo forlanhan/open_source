@@ -72,7 +72,7 @@ def get_total(uri):
 
 if __name__ == "__main__":
     uri = 'http://192.168.120.17:9206/hiddenwebs_v2/hiddenwebpages/_search?pretty'
-    fromDate, toDate = '1900-10-01', '2016-04-19'
+    fromDate, toDate = '2016-04-27', '2016-04-27'
     print search(uri, fromDate, toDate)
     # now-1d/d now/d
     print get_total(uri)

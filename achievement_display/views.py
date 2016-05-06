@@ -9,6 +9,7 @@ import tor
 import json
 
 
+
 """
 该函数返回N天以前得日期,例如n = 1就是返回一天
 以前得日期,也就是昨天
@@ -18,6 +19,8 @@ def return_n_day(n=0):
 
 def return_hour_day(n=0):
     return time.strftime('%Y-%m-%d 23:59:59',time.localtime(time.time()-86400*n))
+    #return time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()-86400*n))
+    #return str(int(time.time()-86400*n))
 
 def return_hour_morning_day(n=0):
     return time.strftime('%Y-%m-%d 00:00:00',time.localtime(time.time()-86400*n))
@@ -38,27 +41,28 @@ def index(request):
 
     #获取文库总的采集总数
     context['wenku_all_collection'] = Baidumetasource.objects.all().count()
-    context['wenku_yesterday_collection'] = Baidumetasource.objects.filter(crawltime=today_1).count()
+    context['wenku_yesterday_collection'] = Baidumetasource.objects.filter(crawltime__lte=return_hour_day(1)).filter(crawltime__gte=return_hour_morning_day(1)).count()
 
     #获取文库昨天采集总数
     yesterday = return_n_day(1)
 
 
     #获取学术总数
-    context['scholar_all_collection'] = Wanfangmetasource.objects.all().using('ScholarInfoBase').count() + Acmmetasource.objects.all().using('ScholarInfoBase').count() + Ieeemetasource.objects.all().using('ScholarInfoBase').count()
+    context['scholar_all_collection'] = Wanfangmetasource.objects.all().using('ScholarInfoBase').count() + Acmmetasource.objects.all().using('ScholarInfoBase').count() + Ieeemetasource.objects.all().using('ScholarInfoBase').count()+ Cnkimetasource.objects.all().using('ScholarInfoBase').count()
     wanfang_num = Wanfangmetasource.objects.using('ScholarInfoBase').filter(crawltime__lte=return_hour_day(1)).filter(crawltime__gte=return_hour_morning_day(1)).count()
     acm_num = Acmmetasource.objects.using('ScholarInfoBase').filter(crawltime__lte=return_hour_day(1)).filter(crawltime__gte=return_hour_morning_day(1)).count()
     ieee_num = Ieeemetasource.objects.using('ScholarInfoBase').filter(crawltime__lte=return_hour_day(1)).filter(crawltime__gte=return_hour_morning_day(1)).count()
-    context['scholar_yesterday_collection'] = wanfang_num + acm_num + ieee_num
+    cnki_num = Cnkimetasource.objects.using('ScholarInfoBase').filter(crawltime__lte=return_hour_day(1)).filter(crawltime__gte=return_hour_morning_day(1)).count()
+    context['scholar_yesterday_collection'] = wanfang_num + acm_num + ieee_num + cnki_num
 
     #获取主页采集总数
     today = time.strftime('%Y-%m-%d', time.localtime(time.time()))
     context['homepage_all_collection'] = linkedin.get_total(uri)
-    context['homepage_yesterday_collection'] = linkedin.search(uri, yesterday, today)
+    context['homepage_yesterday_collection'] = linkedin.search(uri, yesterday, yesterday)
 
     #获取暗网采集总数
     context['anwang_all_collection'] = tor.get_total(uri2)
-    context['anwang_yesterday_collection'] = tor.search(uri2, yesterday, today)
+    context['anwang_yesterday_collection'] = tor.search(uri2, yesterday, yesterday)
 
     return render(request, 'achievement_display/index.html', context)
 
@@ -140,3 +144,11 @@ def datatables_iframe(request):
     context = {}
 
     return render(request, 'achievement_display/datatables_iframe.html', context)
+
+def search(request):
+    """
+    搜索界面
+    """
+    context = {}
+
+    return render(request, 'achievement_display/search.html', context)

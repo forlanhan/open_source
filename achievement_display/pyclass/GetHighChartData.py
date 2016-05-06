@@ -46,7 +46,7 @@ class GetHighChartData:
         文库数据采集
         """
         data_list = []
-        for x in date_no_hour:
+        for x in date_hour:
             num = Baidumetasource.objects.filter(crawltime__lte=x).all().count()
             data_list.append(num)
         dict['wenku_caiji_data'] = data_list
@@ -127,7 +127,6 @@ class GetHighChartData:
             data_list.append(num)
         dict['ieee'] = data_list
 
-
         """
         CNKI数据采集
         """
@@ -177,9 +176,10 @@ class GetHighChartData:
         linkedIn数据
         """
         data_list = []
-        num = linkedin.get_total(uri)
-        data_list.append(num)
-        dict['linkedin'] = data_list * 7
+        for x in date_no_hour:
+            num = linkedin.search(uri, "1900-12-12", x)
+            data_list.append(num)
+        dict['linkedin'] = data_list
 
         return dict
 
