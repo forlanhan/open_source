@@ -49,9 +49,9 @@
 	<!-- div search	-->
 	<div id="search-main">
 		<div id="search">
-			<form role="form" class="form-inline" method="post" action="/search" >{% csrf_token %}
+			<form role="form" class="form-inline" method="get" action="/search" >{% csrf_token %}
 				<div class="input-group">
-					<input type="text" class="form-control" id="input1" placeholder="请输入搜索内容" />
+					<input type="text" class="form-control" id="input1" name="keyvalue" placeholder="请输入搜索内容" />
 					<span class="input-group-btn">
 						<button  type="submit" name="submit" class="btn" id="button1">
 							<span class="glyphicon glyphicon-search">搜索</span>

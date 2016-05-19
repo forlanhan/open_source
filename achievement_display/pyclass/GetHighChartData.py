@@ -185,7 +185,7 @@ class GetHighChartData:
 
     def anwang(self, day, name):
         """
-        百科数据处理
+        暗网数据处理
         :param name:
         :return:字典
         """

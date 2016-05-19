@@ -31,8 +31,11 @@ urlpatterns = patterns('achievement_display.views',
                        (r'wenku/?$', 'wenku'),
                        (r'datatables_iframe/?$', 'datatables_iframe'),
                        (r'search/?$', 'search'),
+                       (r'ajax_page/?$', 'ajax_page'),
                        (r'', 'index')
                        )
+
+
 
 
 

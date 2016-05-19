@@ -92,7 +92,11 @@ html{
     /*background-color: #f8ffff;*/
 }
 #main-contain{
-    width: 88%;
+    width: 95%;
+    margin: auto;
+    /*background-color: #f8ffff;*/
+    padding: 0px;
+
 }
 #search-review{
     color: rgb(153, 153, 153);
@@ -101,8 +105,18 @@ html{
     line-height: 42px;
 
 }
+#main-condition{
+    /*height: 200px;*/
+    /*background-color: navy;*/
+    padding: 0px;
+    /*box-shadow: inset -5px 0 5px #f5f5f5;*/
+
+
+
+}
 #main-left{
     border-right: rgb(225, 225, 225) 1px solid;
+    /*border-left: rgb(225, 225, 225) 1px solid;*/
 }
 .search-content{
     width: 550px;
@@ -131,11 +145,12 @@ html{
 }
 #main-right{
     border-right: rgb(225, 225, 225) 1px solid;
-    border-left: rgb(225, 225, 225) 1px solid;
+    /*border-left: rgb(225, 225, 225) 1px solid;*/
     height: 700px;
+
 }
 #rel{
-
+    width: 100%;
 }
 .rel-title{
     background-color: rgb(224, 236, 255);

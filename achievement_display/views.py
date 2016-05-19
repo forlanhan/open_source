@@ -1,16 +1,19 @@
 #!encoding: utf-8
 from django.shortcuts import render
 from achievement_display.models import *
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from achievement_display.pyclass.GetHighChartData import GetHighChartData
+from achievement_display.pyclass.Search import Search
 import time
 import linkedin
 import tor
 import json
+import types
 
 
 
 """
+功能性函数
 该函数返回N天以前得日期,例如n = 1就是返回一天
 以前得日期,也就是昨天
 """
@@ -25,6 +28,17 @@ def return_hour_day(n=0):
 def return_hour_morning_day(n=0):
     return time.strftime('%Y-%m-%d 00:00:00',time.localtime(time.time()-86400*n))
 # Create your views here.
+
+
+"""
+视图型函数
+"""
+def judge_type(date_type):
+    if "worksFor" in date_type:
+        return "person"
+    else:
+        return "organization"
+
 
 def index(request):
     uri = 'http://192.168.120.17:9206/datahouse/records/_search?pretty'
@@ -149,6 +163,61 @@ def search(request):
     """
     搜索界面
     """
-    context = {}
+    from_size = 0
+    page_size = 20
+    if "keyvalue" in request.GET:
+        s = Search()
+        res = s.search(request.GET['keyvalue'], from_size,  page_size)
+        context = {}
+        source = []
+        context['input_value'] = request.GET['keyvalue']
+        for x in res['result_content']:
+            dict = x['_source']
+            dict['judge_type'] = judge_type(dict)
+            source.append(dict)
+        context['content'] = source
+        context['total'] = res['total']
+        context['time'] = res['time']
+        return render(request, 'achievement_display/search.html', context)
+    else:
+        return HttpResponseRedirect("index")
 
-    return render(request, 'achievement_display/search.html', context)
+def ajax_page(request):
+    """
+    ajax分页
+    大坑!!!get接受的是字符串类型,在进行加减乘除的时候一定要进行整型转换
+    :param request:
+    :return:
+    """
+    try:
+        if "page" in request.GET:
+            curr = request.GET['page']
+            keyvalue = request.GET['keyvalue']
+        else:
+            curr = 1
+    except:
+        curr = 1
+    pagesize = 6
+    fromsize = (int(curr)-1) * pagesize
+    s = Search()
+    res = s.search(keyvalue, fromsize, pagesize)
+    res['total'] = int(res['total']) / pagesize
+    """
+    测试参数
+    """
+    # try:
+    #     if "page" in request.GET:
+    #         curr = request.GET['page']
+    #         keyvalue = request.GET['keyvalue']
+    #     else:
+    #         curr = 1
+    #         keyvalue = "null"
+    # except:
+    #     curr = 1
+    #     keyvalue = "1"
+    #
+    # res = {}
+    # res['par'] = keyvalue
+
+
+    return HttpResponse(json.dumps(res))
