@@ -2,16 +2,187 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba6f7428-b4d9-4030-9aa3-43e8301be553" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/fonts/heiti-normal/webfont.eot" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/fonts/heiti-normal/webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/fonts/heiti-normal/webfont.ttf" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/fonts/heiti-normal/webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/fonts/heiti-normal/webfont.woff" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/fonts/heiti-normal/webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/fonts/heiti-super-strong/webfont.eot" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/fonts/heiti-super-strong/webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/fonts/heiti-super-strong/webfont.ttf" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/fonts/heiti-super-strong/webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/fonts/heiti-super-strong/webfont.woff" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/fonts/heiti-super-strong/webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/fonts/icon/iconfont.eot" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/fonts/icon/iconfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/fonts/icon/iconfont.ttf" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/fonts/icon/iconfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/fonts/icon/iconfont.woff" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/fonts/icon/iconfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/img/477.gif" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/img/477.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/img/712.gif" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/img/712.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/img/icon/iconfont-appraisalhome2x.png" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/img/icon/iconfont-appraisalhome2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/img/icon/iconfont-boshizhuanjiaxueshu.png" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/img/icon/iconfont-boshizhuanjiaxueshu.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/img/icon/iconfont-wiki.png" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/img/icon/iconfont-wiki.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/img/icon/iconfont-zhishijilei.png" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/img/icon/iconfont-zhishijilei.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/img/icon/iconfont-zhishiwenku.png" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/img/icon/iconfont-zhishiwenku.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/img/logo-falgun.png" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/img/logo-falgun.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/img/logo-falgun1.png" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/img/logo-falgun1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/img/logo-green.png" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/img/logo-green.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/img/logo-red.png" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/img/logo-red.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/gfx/vml-radial-gradient.png" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/gfx/vml-radial-gradient.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/graphics/meteogram-symbols-30px.png" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/graphics/meteogram-symbols-30px.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/graphics/skies.jpg" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/graphics/skies.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/graphics/snow.png" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/graphics/snow.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/graphics/sun.png" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/graphics/sun.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/layer/skin/default/icon-ext.png" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/layer/skin/default/icon-ext.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/layer/skin/default/icon.png" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/layer/skin/default/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/layer/skin/default/loading-0.gif" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/layer/skin/default/loading-0.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/layer/skin/default/loading-1.gif" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/layer/skin/default/loading-1.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/layer/skin/default/loading-2.gif" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/layer/skin/default/loading-2.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/images/Sorting icons.psd" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/images/Sorting icons.psd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/images/favicon.ico" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/images/favicon.ico" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/images/sort_asc.png" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/images/sort_asc.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/images/sort_asc_disabled.png" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/images/sort_asc_disabled.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/images/sort_both.png" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/images/sort_both.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/images/sort_desc.png" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/images/sort_desc.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/images/sort_desc_disabled.png" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/images/sort_desc_disabled.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/achievement_display/fonts/icon/iconfont.eot" afterPath="$PROJECT_DIR$/statics/achievement_display/fonts/icon/iconfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/achievement_display/fonts/icon/iconfont.ttf" afterPath="$PROJECT_DIR$/statics/achievement_display/fonts/icon/iconfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/achievement_display/fonts/icon/iconfont.woff" afterPath="$PROJECT_DIR$/statics/achievement_display/fonts/icon/iconfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/open_source.iml" afterPath="$PROJECT_DIR$/.idea/open_source.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/__init__.py" afterPath="$PROJECT_DIR$/achievement_display/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/admin.py" afterPath="$PROJECT_DIR$/achievement_display/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/apps.py" afterPath="$PROJECT_DIR$/achievement_display/apps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/db_router.py" afterPath="$PROJECT_DIR$/achievement_display/db_router.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/linkedin.py" afterPath="$PROJECT_DIR$/achievement_display/linkedin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/achievement_display/migrations/0001_initial.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/migrations/__init__.py" afterPath="$PROJECT_DIR$/achievement_display/migrations/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/models.py" afterPath="$PROJECT_DIR$/achievement_display/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/pyclass/GetHighChartData.py" afterPath="$PROJECT_DIR$/achievement_display/pyclass/GetHighChartData.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/pyclass/Search.py" afterPath="$PROJECT_DIR$/achievement_display/pyclass/Search.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/pyclass/__init__.py" afterPath="$PROJECT_DIR$/achievement_display/pyclass/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/datatables_iframe.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/datatables_iframe.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/font.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/font.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/index.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/search.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/search.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/wenku.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/wenku.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/fonts/heiti-normal/webfont.svg" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/fonts/heiti-normal/webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/fonts/heiti-super-strong/webfont.svg" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/fonts/heiti-super-strong/webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/fonts/icon/iconfont.svg" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/fonts/icon/iconfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/img/icon/illussion" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/img/icon/illussion" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/js/datatables_iframe.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/js/datatables_iframe.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/js/highchart.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/js/highchart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/js/index.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/js/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/js/search.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/js/search.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/js/wenku.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/js/wenku.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/bootstrap/bootstrap3-3-0.min.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/bootstrap/bootstrap3-3-0.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/bootstrap/bootstrap3.3.0.min.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/bootstrap/bootstrap3.3.0.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/css/highchar.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/css/highchar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/adapters/standalone-framework.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/adapters/standalone-framework.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/adapters/standalone-framework.src.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/adapters/standalone-framework.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/highcharts-3d.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/highcharts-3d.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/highcharts-3d.src.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/highcharts-3d.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/highcharts-all.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/highcharts-all.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/highcharts-more.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/highcharts-more.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/highcharts-more.src.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/highcharts-more.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/highcharts.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/highcharts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/highcharts.src.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/highcharts.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/jQuery1.8.2.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/jQuery1.8.2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/canvas-tools.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/canvas-tools.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/canvas-tools.src.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/canvas-tools.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/data.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/data.src.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/data.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/drilldown.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/drilldown.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/drilldown.src.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/drilldown.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/exporting.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/exporting.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/exporting.src.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/exporting.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/funnel.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/funnel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/funnel.src.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/funnel.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/heatmap.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/heatmap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/heatmap.src.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/heatmap.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/no-data-to-display.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/no-data-to-display.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/no-data-to-display.src.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/no-data-to-display.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/solid-gauge.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/solid-gauge.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/solid-gauge.src.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/modules/solid-gauge.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/themes/dark-blue.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/themes/dark-blue.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/themes/dark-green.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/themes/dark-green.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/themes/dark-unica.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/themes/dark-unica.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/themes/gray.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/themes/gray.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/themes/grid-light.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/themes/grid-light.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/themes/grid.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/themes/grid.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/themes/sand-signika.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/themes/sand-signika.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/themes/skies.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/highchart/js/themes/skies.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/jquery/jquery2.0.0min.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/jquery/jquery2.0.0min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/juqery-background/css/style.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/juqery-background/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/juqery-background/js/demo.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/juqery-background/js/demo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/juqery-background/js/jquery-1.11.1.min.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/juqery-background/js/jquery-1.11.1.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/juqery-background/js/jquery.particleground.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/juqery-background/js/jquery.particleground.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/juqery-background/js/jquery.particleground.min.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/juqery-background/js/jquery.particleground.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/layer/extend/layer.ext.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/layer/extend/layer.ext.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/layer/layer.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/layer/layer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/layer/skin/layer.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/layer/skin/layer.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/layer/skin/layer.ext.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/layer/skin/layer.ext.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/dataTables.bootstrap.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/dataTables.bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/dataTables.bootstrap.min.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/dataTables.bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/dataTables.bootstrap4.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/dataTables.bootstrap4.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/dataTables.bootstrap4.min.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/dataTables.bootstrap4.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/dataTables.foundation.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/dataTables.foundation.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/dataTables.foundation.min.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/dataTables.foundation.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/dataTables.jqueryui.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/dataTables.jqueryui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/dataTables.jqueryui.min.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/dataTables.jqueryui.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/dataTables.material.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/dataTables.material.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/dataTables.material.min.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/dataTables.material.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/dataTables.semanticui.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/dataTables.semanticui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/dataTables.semanticui.min.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/dataTables.semanticui.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/dataTables.uikit.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/dataTables.uikit.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/dataTables.uikit.min.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/dataTables.uikit.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/jquery.dataTables.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/jquery.dataTables.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/jquery.dataTables.min.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/jquery.dataTables.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/jquery.dataTables_themeroller.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/css/jquery.dataTables_themeroller.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/dataTables.bootstrap.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/dataTables.bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/dataTables.bootstrap.min.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/dataTables.bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/dataTables.bootstrap4.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/dataTables.bootstrap4.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/dataTables.bootstrap4.min.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/dataTables.bootstrap4.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/dataTables.foundation.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/dataTables.foundation.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/dataTables.foundation.min.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/dataTables.foundation.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/dataTables.jqueryui.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/dataTables.jqueryui.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/dataTables.jqueryui.min.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/dataTables.jqueryui.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/dataTables.material.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/dataTables.material.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/dataTables.material.min.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/dataTables.material.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/dataTables.semanticui.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/dataTables.semanticui.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/dataTables.semanticui.min.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/dataTables.semanticui.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/dataTables.uikit.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/dataTables.uikit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/dataTables.uikit.min.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/dataTables.uikit.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/jquery.dataTables.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/jquery.dataTables.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/jquery.dataTables.min.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/jquery.dataTables.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/jquery.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/media/js/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/templates/achievement_display/datatables_iframe.html" afterPath="$PROJECT_DIR$/achievement_display/templates/achievement_display/datatables_iframe.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/templates/achievement_display/highchart.html" afterPath="$PROJECT_DIR$/achievement_display/templates/achievement_display/highchart.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/templates/achievement_display/index.html" afterPath="$PROJECT_DIR$/achievement_display/templates/achievement_display/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/templates/achievement_display/search.html" afterPath="$PROJECT_DIR$/achievement_display/templates/achievement_display/search.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/templates/achievement_display/wenku.html" afterPath="$PROJECT_DIR$/achievement_display/templates/achievement_display/wenku.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/templatetags/__init__.py" afterPath="$PROJECT_DIR$/achievement_display/templatetags/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/templatetags/new_filter.py" afterPath="$PROJECT_DIR$/achievement_display/templatetags/new_filter.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/tests.py" afterPath="$PROJECT_DIR$/achievement_display/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/tor.py" afterPath="$PROJECT_DIR$/achievement_display/tor.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/views.py" afterPath="$PROJECT_DIR$/achievement_display/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_wsgi.py" afterPath="$PROJECT_DIR$/django_wsgi.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manage.py" afterPath="$PROJECT_DIR$/manage.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models.py" afterPath="$PROJECT_DIR$/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/open_source/__init__.py" afterPath="$PROJECT_DIR$/open_source/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/open_source/read.py" afterPath="$PROJECT_DIR$/open_source/read.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/open_source/settings.py" afterPath="$PROJECT_DIR$/open_source/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/open_source/test.py" afterPath="$PROJECT_DIR$/open_source/test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/open_source/urls.py" afterPath="$PROJECT_DIR$/open_source/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/open_source/view.py" afterPath="$PROJECT_DIR$/open_source/view.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/open_source/wsgi.py" afterPath="$PROJECT_DIR$/open_source/wsgi.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/open_source_uwsgi.ini" afterPath="$PROJECT_DIR$/open_source_uwsgi.ini" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/achievement_display/css/font.css" afterPath="$PROJECT_DIR$/statics/achievement_display/css/font.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/achievement_display/fonts/icon/iconfont.svg" afterPath="$PROJECT_DIR$/statics/achievement_display/fonts/icon/iconfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
     </list>
     <ignored path="open_source.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,21 +196,24 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/open_source$models.coverage" NAME="models Coverage Results" MODIFIED="1459473956246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test" />
-    <SUITE FILE_PATH="coverage/open_source$test.coverage" NAME="test Coverage Results" MODIFIED="1459837698294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/open_source" />
-    <SUITE FILE_PATH="coverage/open_source$tor.coverage" NAME="tor Coverage Results" MODIFIED="1461807570798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/achievement_display" />
+    <SUITE FILE_PATH="coverage/open_source$tests.coverage" NAME="tests Coverage Results" MODIFIED="1463832942475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/achievement_display" />
     <SUITE FILE_PATH="coverage/open_source$read.coverage" NAME="read Coverage Results" MODIFIED="1459508417978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/open_source" />
+    <SUITE FILE_PATH="coverage/open_source$Test__achievement_display_templates_achievement_display_index_html.coverage" NAME="Test: achievement_display.templates.achievement_display.index.html Coverage Results" MODIFIED="1460964258610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/open_source$test.coverage" NAME="test Coverage Results" MODIFIED="1459837698294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/open_source" />
     <SUITE FILE_PATH="coverage/open_source$settings.coverage" NAME="settings Coverage Results" MODIFIED="1459778005956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/open_source" />
     <SUITE FILE_PATH="coverage/open_source$urls.coverage" NAME="urls Coverage Results" MODIFIED="1459492623782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/open_source" />
-    <SUITE FILE_PATH="coverage/open_source$linkedin.coverage" NAME="linkedin Coverage Results" MODIFIED="1462354614245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/achievement_display" />
-    <SUITE FILE_PATH="coverage/open_source$Test__achievement_display_templates_achievement_display_index_html.coverage" NAME="Test: achievement_display.templates.achievement_display.index.html Coverage Results" MODIFIED="1460964258610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/open_source$Search.coverage" NAME="Search Coverage Results" MODIFIED="1463452974752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/achievement_display/pyclass" />
     <SUITE FILE_PATH="coverage/open_source$views.coverage" NAME="views Coverage Results" MODIFIED="1459779620346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/achievement_display" />
     <SUITE FILE_PATH="coverage/open_source$view.coverage" NAME="view Coverage Results" MODIFIED="1459419556538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/open_source" />
-    <SUITE FILE_PATH="coverage/open_source$tests.coverage" NAME="tests Coverage Results" MODIFIED="1463537501667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/achievement_display" />
+    <SUITE FILE_PATH="coverage/open_source$linkedin.coverage" NAME="linkedin Coverage Results" MODIFIED="1462354614245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/achievement_display" />
+    <SUITE FILE_PATH="coverage/open_source$Search.coverage" NAME="Search Coverage Results" MODIFIED="1463646880155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/achievement_display/pyclass" />
+    <SUITE FILE_PATH="coverage/open_source$models.coverage" NAME="models Coverage Results" MODIFIED="1459473956246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test" />
+    <SUITE FILE_PATH="coverage/open_source$tor.coverage" NAME="tor Coverage Results" MODIFIED="1461807570798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/achievement_display" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -47,35 +221,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/open_source/urls.py">
+      <file leaf-file-name="search.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/search.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="51" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="51" />
-              <folding>
-                <element signature="e#644#674#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-3.125">
+              <caret line="111" column="51" selection-start-line="111" selection-start-column="42" selection-end-line="111" selection-end-column="51" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/achievement_display/tests.py">
+      <file leaf-file-name="force_open.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/force_open.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-              <folding>
-                <element signature="e#17#28#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.2137628">
+              <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Search.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/achievement_display/pyclass/Search.py">
+      <file leaf-file-name="search.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/css/search.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+            <state vertical-scroll-proportion="-4.470588">
+              <caret line="156" column="0" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/achievement_display/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.5925927">
+              <caret line="14" column="99" selection-start-line="14" selection-start-column="99" selection-end-line="14" selection-end-column="99" />
               <folding />
             </state>
           </provider>
@@ -85,7 +265,7 @@
         <entry file="file://$PROJECT_DIR$/achievement_display/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="210" column="43" selection-start-line="210" selection-start-column="43" selection-end-line="210" selection-end-column="43" />
+              <caret line="161" column="41" selection-start-line="161" selection-start-column="25" selection-end-line="161" selection-end-column="41" />
               <folding>
                 <element signature="e#18#53#0" expanded="true" />
               </folding>
@@ -93,22 +273,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/js/search.js">
+      <file leaf-file-name="wenku.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/wenku.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6779661">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="-7.8627453">
+              <caret line="194" column="36" selection-start-line="194" selection-start-column="36" selection-end-line="194" selection-end-column="36" />
+              <folding>
+                <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/search.html">
+      <file leaf-file-name="new_filter.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/achievement_display/templatetags/new_filter.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="202" column="36" selection-start-line="202" selection-start-column="36" selection-end-line="202" selection-end-column="36" />
-              <folding />
+              <caret line="18" column="32" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="32" />
+              <folding>
+                <element signature="e#16#43#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,8 +300,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="61" selection-start-line="51" selection-start-column="61" selection-end-line="51" selection-end-column="61" />
+            <state vertical-scroll-proportion="81.625">
+              <caret line="76" column="167" selection-start-line="76" selection-start-column="167" selection-end-line="76" selection-end-column="167" />
               <folding />
             </state>
           </provider>
@@ -128,10 +312,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
         <option value="Python Script" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -141,11 +325,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/open_source/testdb.py" />
-        <option value="$PROJECT_DIR$/Test/models.py" />
-        <option value="$PROJECT_DIR$/Test/tests.py" />
-        <option value="$PROJECT_DIR$/Test/admin.py" />
-        <option value="$PROJECT_DIR$/open_source/read.py" />
         <option value="$PROJECT_DIR$/achievement_display/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/open_source/view.py" />
@@ -155,7 +334,6 @@
         <option value="$PROJECT_DIR$/achievement_display/db.router.py" />
         <option value="$PROJECT_DIR$/achievement_display/db_router.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/font.css" />
         <option value="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/highchart.js" />
         <option value="$PROJECT_DIR$/achievement_display/class/GetHighChartData" />
         <option value="$PROJECT_DIR$/achievement_display/templates/achievement_display/bm_check.html" />
@@ -167,28 +345,37 @@
         <option value="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/index.css" />
         <option value="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/bm_check.css" />
         <option value="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/wenku.css" />
-        <option value="$PROJECT_DIR$/achievement_display/templates/achievement_display/wenku.html" />
         <option value="$PROJECT_DIR$/achievement_display/templates/achievement_display/highchart.html" />
         <option value="$PROJECT_DIR$/achievement_display/statics/achievement_display/js/highchart.js" />
         <option value="$PROJECT_DIR$/django_wsgi.py" />
         <option value="$PROJECT_DIR$/open_source_uwsgi.ini" />
         <option value="$PROJECT_DIR$/achievement_display/tor.py" />
-        <option value="$PROJECT_DIR$/achievement_display/models.py" />
         <option value="$PROJECT_DIR$/open_source/settings.py" />
         <option value="$PROJECT_DIR$/../ssotest/server/server/view.py" />
         <option value="$PROJECT_DIR$/../ssotest/app1/app1/urls.py" />
         <option value="$PROJECT_DIR$/../ssotest/server/server/urls.py" />
-        <option value="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/search.css" />
         <option value="$PROJECT_DIR$/achievement_display/pyclass/GetHighChartData.py" />
         <option value="$PROJECT_DIR$/open_source/wsgi.py" />
-        <option value="$PROJECT_DIR$/achievement_display/templatetags/new_filter.py" />
-        <option value="$PROJECT_DIR$/achievement_display/templates/achievement_display/index.html" />
-        <option value="$PROJECT_DIR$/open_source/urls.py" />
-        <option value="$PROJECT_DIR$/achievement_display/tests.py" />
+        <option value="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/font.css" />
+        <option value="$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/zrender/src/config.js" />
+        <option value="$PROJECT_DIR$/achievement_display/templates/achievement_display/force.html" />
+        <option value="$PROJECT_DIR$/achievement_display/statics/achievement_display/js/force.js" />
+        <option value="$PROJECT_DIR$/achievement_display/templates/achievement_display/force-open.html" />
+        <option value="$PROJECT_DIR$/statics/achievement_display/css/search.css" />
         <option value="$PROJECT_DIR$/achievement_display/pyclass/Search.py" />
+        <option value="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/force.css" />
         <option value="$PROJECT_DIR$/achievement_display/statics/achievement_display/js/search.js" />
-        <option value="$PROJECT_DIR$/achievement_display/views.py" />
+        <option value="$PROJECT_DIR$/achievement_display/tests.py" />
+        <option value="$PROJECT_DIR$/open_source/urls.py" />
+        <option value="$PROJECT_DIR$/achievement_display/models.py" />
+        <option value="$PROJECT_DIR$/achievement_display/templates/achievement_display/index.html" />
         <option value="$PROJECT_DIR$/achievement_display/templates/achievement_display/search.html" />
+        <option value="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/search.css" />
+        <option value="$PROJECT_DIR$/achievement_display/statics/achievement_display/js/force-open.js" />
+        <option value="$PROJECT_DIR$/achievement_display/templates/achievement_display/force_open.html" />
+        <option value="$PROJECT_DIR$/achievement_display/views.py" />
+        <option value="$PROJECT_DIR$/achievement_display/templatetags/new_filter.py" />
+        <option value="$PROJECT_DIR$/achievement_display/templates/achievement_display/wenku.html" />
       </list>
     </option>
   </component>
@@ -200,7 +387,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1440" />
-    <option name="height" value="805" />
+    <option name="height" value="804" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -243,6 +430,162 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="open_source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="open_source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="open_source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="statics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="open_source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="open_source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="statics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="achievement_display" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="open_source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="open_source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="statics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="achievement_display" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="echarts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="open_source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="open_source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="statics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="achievement_display" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="echarts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="open_source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="open_source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="statics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="achievement_display" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="echarts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="open_source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="open_source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="statics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="achievement_display" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -362,7 +705,153 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="open_source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="open_source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="achievement_display" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="statics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="achievement_display" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="echarts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="open_source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="open_source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="achievement_display" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="statics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="achievement_display" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="open_source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="open_source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="achievement_display" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="statics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="achievement_display" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="open_source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="open_source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="achievement_display" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="statics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="achievement_display" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="open_source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="open_source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="achievement_display" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="statics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="achievement_display" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="force-icon" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -402,7 +891,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pyclass" />
+              <option name="myItemId" value="statics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="achievement_display" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -414,7 +911,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/taobao" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="ignore_missing_gitignore" value="true" />
@@ -824,27 +1321,27 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="805" extended-state="6" />
+    <frame x="0" y="22" width="1440" height="804" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20902778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21101993" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39976552" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2459239" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39976552" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -871,123 +1368,11 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharm50/python_stubs/-1856293957/time.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3321859">
-          <caret line="140" column="24" selection-start-line="140" selection-start-column="24" selection-end-line="140" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/requests/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/css/font.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/pyclass/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/juqery-background/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/juqery-background/js/jquery.particleground.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/juqery-background/js/demo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23636363">
-          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/css/datatables_iframe.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/js/datatables_iframe.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/cgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/css/wenku.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="109" column="1" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/wenku.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="211" column="38" selection-start-line="211" selection-start-column="38" selection-end-line="211" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/js/highchart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="120" column="22" selection-start-line="120" selection-start-column="22" selection-end-line="120" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="33" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1013,13 +1398,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.58536583">
           <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1079,27 +1457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/css/search.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32643312">
-          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/open_source/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="6" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/open_source/view.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/open_source/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1118,6 +1475,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="58" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1128,27 +1486,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/pyclass/GetHighChartData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="99" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/templatetags/new_filter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/achievement_display/linkedin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.0015528">
@@ -1156,35 +1493,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="61" selection-start-line="51" selection-start-column="61" selection-end-line="51" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/statics/admin/js/vendor/jquery/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3808752">
-          <caret line="110" column="26" selection-start-line="110" selection-start-column="26" selection-end-line="110" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/shortcuts.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="63" column="68" selection-start-line="63" selection-start-column="68" selection-end-line="63" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/open_source/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="51" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="51" />
-          <folding>
-            <element signature="e#644#674#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1203,12 +1515,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/tests.py">
+    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/js/echartsjs/esl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.279661">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.625">
+          <caret line="224" column="29" selection-start-line="219" selection-start-column="4" selection-end-line="224" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/css/font.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.125">
+          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/zrender/src/shape.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/zrender/src/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/js/force.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
-            <element signature="e#17#28#0" expanded="true" />
+            <element signature="n#!!doc;n#close_ele#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1216,15 +1563,141 @@
     <entry file="file://$PROJECT_DIR$/achievement_display/pyclass/Search.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/plugin/jqcloud/jqcloud.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="490" column="2" selection-start-line="490" selection-start-column="2" selection-end-line="490" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/js/search.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.053572">
+          <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/css/force.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.5882354">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/open_source/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="46" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
+          <folding>
+            <element signature="e#644#674#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/pyclass/GetHighChartData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="86" selection-start-line="58" selection-start-column="78" selection-end-line="58" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/open_source/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="6" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/force.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="82" column="6" selection-start-line="78" selection-start-column="4" selection-end-line="82" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/search.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.125">
+          <caret line="111" column="51" selection-start-line="111" selection-start-column="42" selection-end-line="111" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="81.625">
+          <caret line="76" column="167" selection-start-line="76" selection-start-column="167" selection-end-line="76" selection-end-column="167" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/js/force-open.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="202" column="36" selection-start-line="202" selection-start-column="36" selection-end-line="202" selection-end-column="36" />
+          <caret line="278" column="0" selection-start-line="278" selection-start-column="0" selection-end-line="278" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.851851">
+          <caret line="121" column="2" selection-start-line="121" selection-start-column="1" selection-end-line="121" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statics/achievement_display/plugin/echarts/build/source/echarts-all.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="128" column="7" selection-start-line="128" selection-start-column="7" selection-end-line="128" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statics/achievement_display/plugin/echarts/build/dist/echarts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.1764708">
+          <caret line="0" column="3566" selection-start-line="0" selection-start-column="3566" selection-end-line="0" selection-end-column="3566" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statics/achievement_display/plugin/echarts/build/dist/chart/force.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.1470587">
+          <caret line="0" column="3241" selection-start-line="0" selection-start-column="3241" selection-end-line="0" selection-end-column="3241" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/open_source/view.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1232,20 +1705,79 @@
     <entry file="file://$PROJECT_DIR$/achievement_display/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="210" column="43" selection-start-line="210" selection-start-column="43" selection-end-line="210" selection-end-column="43" />
+          <caret line="161" column="41" selection-start-line="161" selection-start-column="25" selection-end-line="161" selection-end-column="41" />
           <folding>
             <element signature="e#18#53#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/js/search.js">
+    <entry file="file://$PROJECT_DIR$/achievement_display/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6779661">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state vertical-scroll-proportion="-5.5925927">
+          <caret line="14" column="99" selection-start-line="14" selection-start-column="99" selection-end-line="14" selection-end-column="99" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/css/search.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.470588">
+          <caret line="156" column="0" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/template/defaulttags.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33239037">
+          <caret line="1163" column="4" selection-start-line="1163" selection-start-column="4" selection-end-line="1163" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/templatetags/new_filter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="32" />
+          <folding>
+            <element signature="e#16#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/wenku.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8627453">
+          <caret line="194" column="36" selection-start-line="194" selection-start-column="36" selection-end-line="194" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/force_open.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2137628">
+          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

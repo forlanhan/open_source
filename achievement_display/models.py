@@ -11,20 +11,21 @@ from django.db import models
 
 
 class Baidumetasource(models.Model):
-    id = models.CharField(db_column='ID', primary_key=True, max_length=36)  # Field name made lowercase.
+    wkid = models.AutoField(db_column='WKID', primary_key=True)  # Field name made lowercase.
+    id = models.CharField(db_column='ID', unique=True, max_length=36)  # Field name made lowercase.
+    originalurl = models.CharField(db_column='originalUrl', max_length=200)  # Field name made lowercase.
     filename = models.CharField(db_column='fileName', max_length=200)  # Field name made lowercase.
     storeloc = models.CharField(db_column='storeLoc', max_length=500)  # Field name made lowercase.
     crawltime = models.DateTimeField(db_column='crawlTime')  # Field name made lowercase.
     fileabstract = models.CharField(db_column='fileAbstract', max_length=2000)  # Field name made lowercase.
     filetype = models.CharField(db_column='fileType', max_length=50)  # Field name made lowercase.
-    originalurl = models.CharField(db_column='originalUrl', max_length=200)  # Field name made lowercase.
     filecategory = models.CharField(db_column='fileCategory', max_length=100)  # Field name made lowercase.
     fileauthor = models.CharField(db_column='fileAuthor', max_length=50)  # Field name made lowercase.
     downloadcount = models.IntegerField(db_column='downloadCount')  # Field name made lowercase.
     readcount = models.IntegerField(db_column='readCount')  # Field name made lowercase.
 
     class Meta:
-        managed = True
+        managed = False
         db_table = 'BaiduMetaSource'
 
 
@@ -42,9 +43,20 @@ class Docbmcheckresult(models.Model):
         db_table = 'DocBMCheckResult'
 
 
-class Docyxcheckresult(models.Model):
+class Docinfo(models.Model):
     id = models.CharField(db_column='ID', primary_key=True, max_length=36)  # Field name made lowercase.
+    docstoragepath = models.CharField(db_column='docStoragePath', max_length=1024)  # Field name made lowercase.
+
+    class Meta:
+        managed = False
+        db_table = 'DocInfo'
+
+
+class Docyxcheckresult(models.Model):
+    tid = models.AutoField(db_column='TID', primary_key=True)  # Field name made lowercase.
+    id = models.CharField(db_column='ID', unique=True, max_length=36)  # Field name made lowercase.
     processtime = models.DateTimeField(db_column='processTime')  # Field name made lowercase.
+    checkstat = models.IntegerField(db_column='checkStat')  # Field name made lowercase.
     picnum = models.IntegerField(db_column='picNum')  # Field name made lowercase.
     alertpicnum = models.IntegerField(db_column='alertPicNum')  # Field name made lowercase.
     pidlist = models.CharField(db_column='PIDList', max_length=2048, blank=True, null=True)  # Field name made lowercase.
@@ -54,15 +66,27 @@ class Docyxcheckresult(models.Model):
         db_table = 'DocYXCheckResult'
 
 
+class Hiddenfileinfo(models.Model):
+    hiddenfileid = models.AutoField(db_column='hiddenFileID', primary_key=True)  # Field name made lowercase.
+    hiddenfilesrcname = models.CharField(db_column='hiddenFileSrcName', max_length=128, blank=True, null=True)  # Field name made lowercase.
+    hiddenfilestoragename = models.CharField(db_column='hiddenFileStorageName', max_length=128)  # Field name made lowercase.
+    hiddenfilelen = models.IntegerField(db_column='hiddenFileLen')  # Field name made lowercase.
+    hiddenfilestoragepath = models.CharField(db_column='hiddenFileStoragePath', max_length=1024)  # Field name made lowercase.
+
+    class Meta:
+        managed = False
+        db_table = 'HiddenFileInfo'
+
+
 class Picyxcheckresult(models.Model):
     pid = models.AutoField(db_column='PID', primary_key=True)  # Field name made lowercase.
-    storeloc = models.CharField(db_column='storeLoc', max_length=256)  # Field name made lowercase.
     id = models.CharField(db_column='ID', max_length=36)  # Field name made lowercase.
     processtime = models.DateTimeField(db_column='processTime')  # Field name made lowercase.
     picname = models.CharField(db_column='picName', max_length=64)  # Field name made lowercase.
-    pictype = models.CharField(db_column='picType', max_length=50)  # Field name made lowercase.
-    softinfo = models.CharField(db_column='softInfo', max_length=256, blank=True, null=True)  # Field name made lowercase.
-    contenthide = models.CharField(db_column='contentHide', max_length=256, blank=True, null=True)  # Field name made lowercase.
+    pictype = models.CharField(db_column='picType', max_length=16)  # Field name made lowercase.
+    picstoragepath = models.CharField(db_column='picStoragePath', max_length=1024)  # Field name made lowercase.
+    hiddensoft = models.CharField(db_column='hiddenSoft', max_length=128, blank=True, null=True)  # Field name made lowercase.
+    hiddenfileidlist = models.CharField(db_column='hiddenFileIDList', max_length=512, blank=True, null=True)  # Field name made lowercase.
 
     class Meta:
         managed = False
@@ -79,18 +103,23 @@ class DjangoMigrations(models.Model):
         db_table = 'django_migrations'
 
 
-
-class Wanfangmetasource(models.Model):
-    id = models.CharField(db_column='ID', primary_key=True, max_length=64)  # Field name made lowercase.
-    title = models.CharField(max_length=128, blank=True, null=True)
-    detailpagecollection = models.CharField(db_column='detailPageCollection', max_length=64, blank=True, null=True)  # Field name made lowercase.
-    detailpageid = models.CharField(db_column='detailPageId', max_length=24)  # Field name made lowercase.
-    detailpageurl = models.CharField(db_column='detailPageUrl', max_length=256)  # Field name made lowercase.
+class Tmpbaidumetasource(models.Model):
+    wkid = models.AutoField(db_column='WKID', primary_key=True)  # Field name made lowercase.
+    id = models.CharField(db_column='ID', unique=True, max_length=36)  # Field name made lowercase.
+    originalurl = models.CharField(db_column='originalUrl', max_length=200)  # Field name made lowercase.
+    filename = models.CharField(db_column='fileName', max_length=200)  # Field name made lowercase.
+    storeloc = models.CharField(db_column='storeLoc', max_length=500)  # Field name made lowercase.
     crawltime = models.DateTimeField(db_column='crawlTime')  # Field name made lowercase.
+    fileabstract = models.CharField(db_column='fileAbstract', max_length=2000)  # Field name made lowercase.
+    filetype = models.CharField(db_column='fileType', max_length=50)  # Field name made lowercase.
+    filecategory = models.CharField(db_column='fileCategory', max_length=100)  # Field name made lowercase.
+    fileauthor = models.CharField(db_column='fileAuthor', max_length=50)  # Field name made lowercase.
+    downloadcount = models.IntegerField(db_column='downloadCount')  # Field name made lowercase.
+    readcount = models.IntegerField(db_column='readCount')  # Field name made lowercase.
 
     class Meta:
         managed = False
-        db_table = 'WanfangMetaSource'
+        db_table = 'tmpBaiduMetaSource'
 
 
 class Acmmetasource(models.Model):
@@ -105,17 +134,6 @@ class Acmmetasource(models.Model):
         db_table = 'ACMMetaSource'
 
 
-class Ieeemetasource(models.Model):
-    id = models.CharField(db_column='ID', primary_key=True, max_length=64)  # Field name made lowercase.
-    title = models.CharField(max_length=128, blank=True, null=True)
-    detailpageid = models.CharField(db_column='detailPageId', max_length=24)  # Field name made lowercase.
-    detailpageurl = models.CharField(db_column='detailPageUrl', max_length=256)  # Field name made lowercase.
-    crawltime = models.DateTimeField(db_column='crawlTime')  # Field name made lowercase.
-
-    class Meta:
-        managed = False
-        db_table = 'IEEEMetaSource'
-
 class Cnkimetasource(models.Model):
     id = models.CharField(db_column='ID', primary_key=True, max_length=64)  # Field name made lowercase.
     title = models.CharField(max_length=128, blank=True, null=True)
@@ -127,3 +145,26 @@ class Cnkimetasource(models.Model):
         managed = False
         db_table = 'CNKIMetaSource'
 
+
+class Ieeemetasource(models.Model):
+    id = models.CharField(db_column='ID', primary_key=True, max_length=64)  # Field name made lowercase.
+    title = models.CharField(max_length=128, blank=True, null=True)
+    detailpageid = models.CharField(db_column='detailPageId', max_length=24)  # Field name made lowercase.
+    detailpageurl = models.CharField(db_column='detailPageUrl', max_length=256)  # Field name made lowercase.
+    crawltime = models.DateTimeField(db_column='crawlTime')  # Field name made lowercase.
+
+    class Meta:
+        managed = False
+        db_table = 'IEEEMetaSource'
+
+
+class Wanfangmetasource(models.Model):
+    id = models.CharField(db_column='ID', primary_key=True, max_length=64)  # Field name made lowercase.
+    title = models.CharField(max_length=128, blank=True, null=True)
+    detailpageid = models.CharField(db_column='detailPageId', max_length=24)  # Field name made lowercase.
+    detailpageurl = models.CharField(db_column='detailPageUrl', max_length=256)  # Field name made lowercase.
+    crawltime = models.DateTimeField(db_column='crawlTime')  # Field name made lowercase.
+
+    class Meta:
+        managed = False
+        db_table = 'WanfangMetaSource'

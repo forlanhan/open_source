@@ -1,8 +1,17 @@
 # encoding:utf-8
+from django.shortcuts import render
+from achievement_display.models import *
+from django.http import HttpResponse, HttpResponseRedirect
+from achievement_display.pyclass.GetHighChartData import GetHighChartData
+from achievement_display.pyclass.Search import Search
+import time
+import linkedin
+import tor
 import json
-import requests
+import types
 
-curr = 10
-page_size = 20
-res = curr*page_size
-print isinstance(res, int)
+
+from achievement_display.models import *
+num = Docbmcheckresult.objects.all().count()
+print num
+

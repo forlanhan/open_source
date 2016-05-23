@@ -56,6 +56,10 @@ def index(request):
     #获取文库总的采集总数
     context['wenku_all_collection'] = Baidumetasource.objects.all().count()
     context['wenku_yesterday_collection'] = Baidumetasource.objects.filter(crawltime__lte=return_hour_day(1)).filter(crawltime__gte=return_hour_morning_day(1)).count()
+    context['secret_check_alert'] = Docbmcheckresult.objects.exclude(alertnum=0).all().count()
+    context['secret_check'] = Docbmcheckresult.objects.all().count()
+    context['yx_check_alert'] = Picyxcheckresult.objects.all().count()
+    context['yx_check'] = Docyxcheckresult.objects.all().count()
 
     #获取文库昨天采集总数
     yesterday = return_n_day(1)
@@ -145,6 +149,24 @@ def wenku(request):
     """
     context = {}
     name = request.GET.get('name')
+
+    context['secret_check_alert'] = Docbmcheckresult.objects.exclude(alertnum=0).all().count()
+    context['secret_check'] = Docbmcheckresult.objects.all().count()
+    context['yx_check_alert'] = Picyxcheckresult.objects.all().count()
+    context['yx_check'] = Docyxcheckresult.objects.all().count()
+    # context['secret_check_alert'] = Docbmcheckresult.objects.exclude(alertnum=0).all().count()
+    # context['secret_check'] = Docbmcheckresult.objects.all().count()
+    # context['yx_check_alert'] = Picyxcheckresult.objects.all().count()
+    # context['yx_check'] = Docyxcheckresult.objects.all().count()
+    if name == "1":
+        context['res'] = Docbmcheckresult.objects.exclude(alertnum=0).all()
+    elif name == "2":
+        context['res'] = Picyxcheckresult.objects.all()
+    elif name == "3":
+        context['res'] = Docbmcheckresult.objects.all()
+    elif name == "4":
+        context['res'] = Docyxcheckresult.objects.all()
+
     context['name'] = name
 
     return render(request, 'achievement_display/wenku.html', context)
@@ -197,7 +219,7 @@ def ajax_page(request):
             curr = 1
     except:
         curr = 1
-    pagesize = 6
+    pagesize = 20
     fromsize = (int(curr)-1) * pagesize
     s = Search()
     res = s.search(keyvalue, fromsize, pagesize)
@@ -221,3 +243,42 @@ def ajax_page(request):
 
 
     return HttpResponse(json.dumps(res))
+
+def force(request):
+    """
+    知识图谱视图函数
+    :param requesr:
+    :return:
+    """
+    context = {}
+    return render(request, "achievement_display/force.html", context)
+
+def get_node_info(request):
+    """
+    通过AJAX请求获取节点信息
+    :param get_node_info:
+    :return:
+    """
+    if "id" in request.GET:
+        s = Search()
+        res = s.search_in_id(request.GET['id'])
+        context = {}
+        context['name'] = res['result_content']['_source']['name']
+        context['id'] = res['result_content']['_id']
+        context['desc'] = res['result_content']['_source']['description']
+        return HttpResponse(json.dumps(context))
+    else:
+        return HttpResponse("none")
+
+def force_open(request):
+    """
+    知识图谱视图函数
+    :param requesr:
+    :return:
+    """
+    context = {}
+    return render(request, "achievement_display/force_open.html", context)
+
+
+def test(request):
+    return HttpResponse(Docbmcheckresult.objects.all().count())

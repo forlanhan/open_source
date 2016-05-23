@@ -32,6 +32,9 @@ urlpatterns = patterns('achievement_display.views',
                        (r'datatables_iframe/?$', 'datatables_iframe'),
                        (r'search/?$', 'search'),
                        (r'ajax_page/?$', 'ajax_page'),
+                       (r'force/?$', 'force'),
+                       (r'force_open/?$', 'force_open'),
+                       (r'test/?$', 'test'),
                        (r'', 'index')
                        )
 
