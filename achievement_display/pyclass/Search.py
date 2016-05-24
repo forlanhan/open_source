@@ -8,7 +8,7 @@ class Search:
         初始化参数
         :return:
         """
-        self.uri = 'http://192.168.120.90:9200/_search?pretty'
+        self.uri = 'http://192.168.120.90:9200/test/_search?pretty'
 
     def search(self, keyvalue, from_size, page_size):
         try:
