@@ -4,6 +4,7 @@ from achievement_display.models import *
 from django.http import HttpResponse, HttpResponseRedirect
 from achievement_display.pyclass.GetHighChartData import GetHighChartData
 from achievement_display.pyclass.Search import Search
+from achievement_display.pyclass.DataTable import OrderListJson
 import time
 import linkedin
 import tor
@@ -281,4 +282,23 @@ def force_open(request):
 
 
 def test(request):
-    return HttpResponse(Docbmcheckresult.objects.all().count())
+    #return HttpResponse(Docbmcheckresult.objects.all().count())
+    context = {}
+    return render(request, "achievement_display/wenku.html", context)
+
+def convert_id_name(request):
+    """
+    将表格中的ID转换为名称
+    :param request:
+    :return:
+    """
+    try:
+        string = request.GET['id']
+        #string = "BDWK_0000798204a1b0717ed5dd6c"
+        res = Baidumetasource.objects.get(id=string)
+        if res:
+            return HttpResponse(res.filename)
+        else:
+            return HttpResponse("无")
+    except:
+        return HttpResponse("无名称")

@@ -5,8 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>互联网信息XX检查原型系统</title>
 	<!--  css link -->
-	<!-- 动态背景 -->
-	<link rel="stylesheet" href="/statics/plugin/juqery-background/css/style.css" />
+
 	<!-- 引入 Bootstrap -->
 	<link href="/statics/achievement_display/css/font.css" rel="stylesheet">
     <link href="/statics/achievement_display/plugin/bootstrap/bootstrap3-3-0.min.css" rel="stylesheet">
@@ -36,6 +35,8 @@
     <!-- 动态背景 -->
     <script type='text/javascript' src='/statics/achievement_display/plugin/juqery-background/js/jquery.particleground.min.js'></script>
   	<script type='text/javascript' src='/statics/achievement_display/plugin/juqery-background/js/demo.js'></script>
+
+    <script src="/statics/achievement_display/js/wenku.js"></script>
 
     <script>
         var active = {{ name }};
@@ -102,18 +103,21 @@
                                  </tr>
                             </thead>
                             <tbody>
-                                {% for value in res  %}
-                                    <tr>{% load new_filter %}
-                                        <td >{{ value.id }}</td>
-                                        <td  style="width: 350px;">{{ value.id | find_name}}</td>
-                                        <td align="center"><span class="badge">{{ value.alertnum }}</span></td>
-                                        <td align="center">{{ value.score }}</td>
-                                        <td align="center">{{ value.processtime }}</td>
-                                        <td align="center"><button type="button" class="btn btn-success">详情</button></td>
-                                    </tr>
-                                {%  endfor%}
+{#                                {% for value in res  %}#}
+{#                                    <tr>{% load new_filter %}#}
+{#                                        <td >{{ value.id }}</td>#}
+{#                                        <td  style="width: 350px;">{{ value.id | find_name}}</td>#}
+{#                                        <td align="center"><span class="badge">{{ value.alertnum }}</span></td>#}
+{#                                        <td align="center">{{ value.score }}</td>#}
+{#                                        <td align="center">{{ value.processtime }}</td>#}
+{#                                        <td align="center"><button type="button" class="btn btn-success">详情</button></td>#}
+{#                                    </tr>#}
+{#                                {%  endfor%}#}
 
                             </tbody>
+                            <script type="text/javascript">
+                                datatable_1();
+                            </script>
                         {% endifequal %}
 
                         <!-- 隐写检查告警开始 -->
@@ -129,7 +133,7 @@
 
                                  </tr>
                             </thead>
-{#                            <tbody>#}
+                            <tbody>
 {#                                 <tr>#}
 {#                                    <td>3F2504E04F8911D3</td>#}
 {#                                    <td>jpg</td>#}
@@ -139,28 +143,42 @@
 {#                                    <td><a href="" type="button" class="btn btn-danger">查看</a></td>#}
 {##}
 {#                                 </tr>#}
-{##}
-{#                            </tbody>#}
+
+                            </tbody>
+                            <script type="text/javascript">
+                                datatable_4();
+                            </script>
                         {% endifequal %}
 
                         <!-- 已隐写检查开始 -->
                         {% ifequal name '4' %}
                             <thead>
                                  <tr>
-                                    <th>隐藏文件原始名称</th>
-                                    <th>隐藏文件的存储名称</th>
-                                    <th>隐藏文件的长度</th>
-                                    <th>隐藏文件存储路径</th>
+                                    <th>文档编号</th>
+                                    <th>检查状态</th>
+                                    <th>图像数量</th>
+                                    <th>告警数量</th>
+                                     <th>告警图片编号</th>
+                                     <th>处理时间</th>
                                  </tr>
                             </thead>
-{#                            <tbody>#}
-{#                                 <tr>#}
-{#                                    <td>3F2504E04F8911D3</td>#}
-{#                                    <td>3F2504E04F8911D3</td>#}
-{#                                    <td>3F2504E04F8911D3</td>#}
-{#                                     <td>3F2504E04F8911D3</td>#}
-{#                                 </tr>#}
-{#                            </tbody>#}
+                             <tbody>
+{#                            {% for value in res  %}#}
+{#                                    <tr>#}
+{#                                        <td align="center" style="">{{ value.id }}</td>#}
+{#                                        <td  align="center"><span class="badge">{{ value.checkstat }}</span></td>#}
+{#                                        <td align="center">{{ value.picnum }}</td>#}
+{#                                        <td align="center">{{ value.alertpicnum }}#}
+{#                                        </td><td align="center">{{ value.pidlist }}</td>#}
+{#                                        </td><td align="center">{{ value.processtime }}</td>#}
+{##}
+{#                                    </tr>#}
+{#                                {%  endfor%}#}
+
+                            </tbody>
+                             <script type="text/javascript">
+                                datatable_3();
+                            </script>
                         {% endifequal %}
 
                         <!-- 已经保密检查开始 -->
@@ -176,27 +194,44 @@
                                  </tr>
                             </thead>
                             <tbody>
-                            {% for value in res  %}
-                                    <tr>
-                                        <td align="center" style="">{{ value.id }}</td>
-                                        <td  align="center"><span class="badge">{{ value.alertnum }}</span></td>
-                                        <td align="center">{{ value.score }}</td>
-                                        <td align="center">{{ value.processtime }}</td>
-                                        {% ifnotequal value.alertnum 0 %}
-                                            <td align="center"><button type="button" class="btn btn-danger">有问题</button></td>
-                                        {% endifnotequal %}
-                                        {% ifequal value.alertnum 0 %}
-                                            <td align="center"><button type="button" class="btn btn-success">无问题</button></td>
-                                        {% endifequal %}
-
-
-                                    </tr>
-                                {%  endfor%}
+{#                            {% for value in res  %}#}
+{#                                    <tr>#}
+{#                                        <td align="center" style="">{{ value.id }}</td>#}
+{#                                        <td  align="center"><span class="badge">{{ value.alertnum }}</span></td>#}
+{#                                        <td align="center">{{ value.score }}</td>#}
+{#                                        <td align="center">{{ value.processtime }}</td>#}
+{#                                        {% ifnotequal value.alertnum 0 %}#}
+{#                                            <td align="center"><button type="button" class="btn btn-danger">有问题</button></td>#}
+{#                                        {% endifnotequal %}#}
+{#                                        {% ifequal value.alertnum 0 %}#}
+{#                                            <td align="center"><button type="button" class="btn btn-success">无问题</button></td>#}
+{#                                        {% endifequal %}#}
+{##}
+{##}
+{#                                    </tr>#}
+{#                                {%  endfor%}#}
+                             <script type="text/javascript">
+                                datatable_2();
+                            </script>
                             </tbody>
                         {% endifequal %}
 
                         {% if not name %}
                             数据参数不对暂无数据
+                            <thead>
+                                <tr>
+                                    <th>Last name</th>
+                                    <th>名字</th>
+                                    <th>Position</th>
+                                    <th>Office</th>
+                                    <th>Start date</th>
+                                    <th>Start </th>
+                                </tr>
+                            </thead>
+                                 <tbody>
+
+                                 </tbody>
+
                         {% endif %}
 
                     </table>
@@ -209,18 +244,8 @@
 <!-- 测试  -->
 
     <!-- index.js -->
-    <script src="/statics/achievement_display/js/wenku.js"></script>
-    <script type="text/javascript">
-      $(document).ready( function () {
-            $('#table-content').DataTable({
-
-            });
 
 
 
-        } );
-
-
-    </script>
 </body>
 </html>

@@ -16,14 +16,20 @@ Including another URLconf
 from django.conf.urls import *
 from django.contrib import admin
 from django.conf.urls import url, include
-'''
-urlpatterns = [
-    url(r'^hello/$',hello),
-    url(r'^testdb/$', testdb),
-    url(r'^admin/', include(admin.site.urls)),
-    #url(r'^admin/$', Test.admin),
-]
-'''
+from achievement_display.views import *
+from achievement_display.pyclass.DataTable import OrderListJson
+from achievement_display.pyclass.BmCheckAlert import BmCheckAlert
+from achievement_display.pyclass.BmCheck import BmCheck
+from achievement_display.pyclass.YxCheck import YxCheck
+from achievement_display.pyclass.YxCheckAlert import YxCheckAlert
+
+# urlpatterns = [
+#     url(r'^data/$', OrderListJson.as_view(), name='order_list_json'),
+#     url(r'^test/$', test),
+#     url(r'^datatable/$', datatable),
+# ]
+#
+# """
 #achievement_display
 urlpatterns = patterns('achievement_display.views',
                        (r'^index/?$', 'index'),
@@ -35,6 +41,12 @@ urlpatterns = patterns('achievement_display.views',
                        (r'force/?$', 'force'),
                        (r'force_open/?$', 'force_open'),
                        (r'test/?$', 'test'),
+                       (r'convert_id_name/?$', 'convert_id_name'),
+                       (r'^data/?$', OrderListJson.as_view()),
+                       (r'^datatable_1/?$', BmCheckAlert.as_view()),
+                       (r'^datatable_2/?$', BmCheck.as_view()),
+                       (r'^datatable_3/?$', YxCheck.as_view()),
+                       (r'^datatable_4/?$', YxCheckAlert.as_view()),
                        (r'', 'index')
                        )
 
