@@ -54,59 +54,5 @@ $(function() {
 
 });
 
-////////////////////////
-// 处理返回结果数据
-function deal_data(source){
-    str = "";
-    for(i=0;i<source.length;i++){
-        //标题 name
-        str += '<div class="sr-content"><h3 class="sr-title"><a href="" class="sr-title-a" target="_blank" alt="'+ source[i]._source.name +'">'+ judge_highlight('name', source[i]) +'</a></h3>';
-        //作者+来源+年份
-        str += '<div class="sr-info"><span><a href="" target="_blank" >'+ split_name(judge_highlight('author', source[i])) +'</a></span> &nbsp;-&nbsp; <span><a href="" target="_blank"  title="'+ source[i]._source.journal +'">《'+ source[i]._source.journal +'》</a></span> &nbsp;-&nbsp; <span class="sr-time" >'+ source[i]._source.yearNumber +'</span> &nbsp; </div>'
-        //摘要
-        str += '<div class="sr-abstract">'+ source[i].highlight.abstract +' </div>'
-        //全部来源
-        str += '<div class="sc_allversion"><span class="sr-gray">全部来源：</span>'
-        str += '<span class="v_item_span"><a class="v_source" title="" target="_blank" href="'+ source[i]._source.dataSource +'" >'+ source[i]._source.tag +'</a></span>'
 
-        str += '</div>'
 
-        str += '</div>';
-    }
-}
-
-//Pers/1000900418|凌荣辉   -> 凌荣辉
-function split_name(data){
-    if(data){
-        if(typeof(data)  == "string"){
-            return data.split('|')[1];
-        }else if(typeof(data)  == "object") {
-            return data[0].split('|')[1];
-            //return data[0];
-        }else{
-            return typeof(data[0]);
-        }
-    }else{
-        return "无";
-    }
-
-}
-
-function judge_highlight(field, source_i){
-    switch(field){
-        case "name":
-            if(source_i.highlight.name)
-                return source_i.highlight.name;
-            else
-                return source_i._source.name;
-            break;
-
-        case "author":
-            if(source_i.highlight.author)
-                return source_i.highlight.author;
-            else
-                return source_i._source.author;
-            break;
-
-    }
-}

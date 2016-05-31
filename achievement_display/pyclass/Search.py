@@ -2,24 +2,31 @@
 import json
 import requests
 
+
 class Search:
     def __init__(self):
         """
         初始化参数
         :return:
         """
-        self.uri = 'http://192.168.120.90:9200/test/_search?pretty'
+        self.uri = 'http://192.168.120.90:9200/zjp-index:scholarkr/Thesis/_search?pretty'
 
     def search(self, keyvalue, from_size, page_size):
         try:
             query = json.dumps({
                 "from": from_size,
                 "size": page_size,
-                "query": {
-                    "match":{
-                        "name": keyvalue
+                 "query": {
+                    "match": {
+                      "_all": keyvalue
                     }
-                }
+                  },
+                "highlight": {
+                    "fields": {
+                      "*": {}
+                    },
+                    "require_field_match": False
+                  }
             })
             response = requests.post(self.uri, data=query)
             results = response.content
@@ -59,6 +66,8 @@ class Search:
 if __name__ == "__main__":
     uri = 'http://192.168.120.90:9200/test/_search?pretty'
     s = Search()
-    print s.search_in_id("Educational_1000000001")
+    s = Search()
+    res = s.search("信息安全策略研究", 1,  100)
+    print res
     # now-1d/d now/d
 

@@ -1,139 +1,111 @@
-/* CSS used here will be applied after bootstrap.css */
-
-html{
-	margin:0px;
-	font-size: 16px;
-	font-size:100%;
-    font-family: arial;
-
-}
 body{
-
+	font-family: Arial, "Microsoft YaHei", 微软雅黑;
 }
-/* header */
+#header-zero{
+	background-color:#565656;
+	width: 100%;
+	height: 32px;
+}
 #header{
 	width: 100%;
-	height: 55px;
-	background-color: white;
+	height: 100px;
+	background-color: #f8fafc;
+	padding-top: 10px;
 }
-#nav-wrap{
-    background-color: white;
-    border-radius: 0px;
-}
-.navbar-header{
-
+#header-main{
+	width: 75%;
+	margin: auto;
 
 }
-.navbar-header a{
-
-    margin-top: -5px;
-}
-.navbar-header img{
-    width: 70px;
+#header-logo{
+	/*background-color: navy;*/
 
 }
-#input1 {
-    height: 34px;
-    width: 460px;
-    font-family: arial;
-    font-size: 16px;
-    line-height: 18px;
-    border-radius: 0px;
+#header-form{
+	/*background-color: #cccccc;*/
+	padding-top: 10px;
+
+}
+#form-select{
+	height: 20px;
+	line-height: 20px;
+	padding-left: 15px;
+
+}
+.tab{
+	color: #0000cc;
+	font-size: 14px;
+	cursor: pointer;
+	margin-right:5px;
+	padding: 5px  3px;
+}
+.selected{
+	background: #7b7b7b;
+	color: #fff;
+	border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+#form-bd{
+
+}
+#input1{
+	width: 500px;
+	border-radius: 0px;
 }
 #button1{
-	height: 100px;
-	height: 34px;
+	border-radius: 0px;
 	background-color: rgb(91, 192, 222);
-    background-color: #38f;
+	/*background-color: rgb(246, 171, 50);*/
 	color: white;
-	font-family: 'heiti-normal';
-	font-size: 14px;
-    border-radius: 0px;
+	font-weight: 900;
+}
+#form-option{
+	border-radius: 0px;
+}
+#form-option option{
+	border-radius: 0px;
+}
+#logo-img{
+	height: 80px;
+}
+/*content－－－－－－－－－－－－－－－－－*/
+#content{
+	width: 100%;
+}
+#content-main{
+	width: 75%;
+	margin: auto;
 
 }
-#sousuo{
-     font-weight: 700;
-}
-.glyphicon-search::before{/*为了使搜索框前面的图标去掉*/
-	content: "";
-
-}
-/*  search  */
-/*.app-usagovsearch .result-container{*/
-	/*position:relative;*/
-	/*display:block;*/
-/*}*/
-/*.app-usagovsearch .result-area .list-unstyled a{*/
-	/*font-size:initial;*/
-	/*line-height:inherit;*/
-	/*margin-bottom:0;*/
-	/*font-weight:normal;*/
-	/*text-decoration:underline;*/
-/*}*/
-/*.app-usagovsearch .result-area p {*/
-	/*color:#333;*/
-/*}*/
-
-/*.app-usagovsearch .result-area cite {*/
-	/*display:block;*/
-	/*color:#093;*/
-/*}*/
-/*.app-usagovsearch .result-area {*/
-	/*min-height:600px;*/
-	/*padding:0px 10px;*/
-/*}*/
-/*.app-usagovsearch .results-window {*/
-	/*margin-bottom:15px;*/
-/*}*/
-
-/*.app-usagovsearch .highlight {*/
-	/*font-weight:bold;*/
-/*}*/
-#main{
-    width: 100%;
-    height:auto;
-    /*background-color: #f8ffff;*/
-    margin: auto;
-}
-#main-contain{
-    width: 90%;
-    margin: auto;
-    background-color: white;
-
-}
-#search-review{
-    color: rgb(153, 153, 153);
-    font-size: 12px;
-    height: 42px;
-    line-height: 42px;
-    width: 100%;
-}
-#main-condition{
+/*main-left-----------------------*/
+#main-left{
     /*height: 200px;*/
     padding: 0px;
     border: 0px;
     margin: 0px;
-    padding-right: 30px;
+
+
 }
-#con_blank{
+.con_blank{
     width: 100%;
     height:20px;
 }
 .condition-panel{
     border-radius: 0px;
     border: 0px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 15px 1px;
+    /*box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 15px 1px;*/
 }
 .condition-heading{
     border-radius: 0px;
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 13px;
+
+    color: #222;
 
 }
 .panel-info>.panel-heading{/*条件查询的名称*/
-    background-color: #bebfc2;
-    border-color: #bebfc2;
-    color: rgb(255, 255, 255);
+    background-color: #eaedf1;
+    border-color: #eaedf1;
+    color: rgb(34, 34, 34);
 
 }
 .condition-ul{
@@ -156,44 +128,154 @@ body{
     float: right;
 
 }
-#main-left{
-    border-right: rgb(225, 225, 225) 1px solid;
+/*main-left结束－－－－－－－－－－－－－－－－－－－－－－－*/
+/*main-middle 开始－－－－－－－－－－－－－－－－－－－－－－－*/
+#main-middle{
+	padding-right: 0px;
+    margin: 0px;
+}
+#middle-up{
+	background-color: rgb(244, 246, 248);
+	border-bottom: rgb(228, 231, 234) 1px solid;
+	color: #333;
+	width: 100%;
+	height: 39px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#search-review{
+	line-height: 39px;
+	color: #646f7a;
+	font-size: 12px;
+}
+#so-so-fun{
+	float: right;
+}
+#search-so{
+	color: #646f7a;
+	font-size: 12px;
+	line-height: 39px;
+	padding: 0px;
+}
+#search-so{
+
+}
+#sort-function{
+	float: right;
+	color: #646f7a;
+	font-size: 12px;
+	line-height: 39px;
+	border-radius: 0px;
+
+}
+#drop-button{
+	height: 30px;
+	font-size: 12px;
+	line-height: 18px;
+	border-radius: 0px;
+	background-color:rgb(237, 238, 240);
+	background-image: -webkit-linear-gradient(top, rgb(255, 255, 255) 0%, rgb(227, 229, 232) 100%);
+	border: solid 1px rgb(185, 185, 186);
+
+}
+#dropdown-menu{
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	padding: 0px;
+	min-width:25px;
+	margin-top: -5px;
+	text-align: left;
+	border-radius: 0px;
+	width: 80px;
+}
+#dropdown-menu li {
+	padding: 0px;
+	display: block;
+}
+#dropdown-menu li a{
+	color: rgb(51, 51, 51);
+	display: block;
+	font-size: 12px;
+	display: block;
+}
+#dropdown-menu li a:hover{
+	background-color: rgb(91, 192, 222);
+	color: #ffffff;
+}
 
 
+
+/*查询结果修订*/
+.sr-content{
+	margin-top: 10px;
 }
-.search-content{
-    margin-top: 15px;
-}
-.s-t a{
-    font-family: arial;
-    font-weight: 400;
-    font-size: 16px;
-    color: rgb(0, 0, 204);
-    line-height: 24.6333px;
-    text-decoration: underline;
-}
-.s-c{
-    color: rgb(51, 51, 51);
-    font-size: 13px;
-    line-height: 20.0167px;
+.sr-title{
+	display: block;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 0px;
+	margin: 0px;
+	height: 35px;
+	line-height: 35px;
 
 }
-.s-s a{
-    color: rgb(0, 128, 0);
-    font-size: 13px;
-    line-height: 20.0167px;
-    text-decoration: none;
+.sr-title-a{
+	color: rgb(0, 92, 217);
+	text-decoration: underline;
 
 }
+.sr-title-a em{
+	color: rgb(211, 1, 1);
+	font-style: normal;
+}
+
+.sr-info{
+	font-size: 13px;
+	margin: 0px;
+	padding: 0px;
+	height: 20px;
+	line-height: 20px;
+
+}
+.sr-info span{
+	color: #666;
+
+}
+.sr-info span a{
+	color: #666;
+	text-decoration: none;
+}
+.sr-abstract{
+	color:rgb(51, 51, 51);
+	font-size: 13px;
+	line-height: 20px;
+
+}
+.sr-abstract em{
+	color: rgb(211, 1, 1);
+	font-style: normal;
+}
+.sc_allversion{
+	height: 20px;
+	line-height: 20px;
+	font-size: 13px;
+}
+.sr-gray{
+	color: rgb(102, 102, 102);
+
+}
+.v_source{
+	color: rgb(0, 92, 217);
+	text-decoration: none;
+}
+/*右侧开始－－－－－－－－－－－－－－－－－－*/
+
 #main-right{
     /*border-left: rgb(225, 225, 225) 1px solid;*/
-    height: 700px;
-    padding-left: 50px;
-    padding-right: 0px;
-
+    padding: 0px;
+	padding-left: 20px;
 }
 #rel-crap{
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 15px 1px;
+   /* box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 15px 1px;*/
     padding: 0px;
 }
 #rel{
@@ -201,8 +283,8 @@ body{
     padding: 0px;
 }
 .rel-title{
-    background-color: #bebfc2;
-    border-color: #bebfc2;
+    background-color: #eaedf1;
+    border: solid 1px #eaedf1;
     height: 40px;
     text-align: left;
     margin-top: 20px;
@@ -212,15 +294,15 @@ body{
 }
 .rel-title span{
     line-height: 40px;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
+    font-size: 13px;
+
+    color: #222;
 }
 .rel-content{
     width: 100%;
     height: 200px;
     padding: 0px;
-
+    border: solid 1px #eaedf1;
 }
 /*  search  */
 /*#######################################################右边卡片开始###########################################*/
@@ -233,7 +315,7 @@ body{
     width: 100%;
     border:1px solid rgb(233, 233, 233);
     border-bottom: 1px solid #cccccc;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 15px 1px;
+    /*box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 15px 1px;*/
 
 }
 

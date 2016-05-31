@@ -3,6 +3,7 @@
  */
 
 
+
 function close_ele(id){
     var obj = document.getElementById(id);
     obj.style.display = "none";
@@ -276,8 +277,3 @@ function test(){
         });
 }
 
-
-function b(){
-    var options;
-    alert(myChart.getOption());
-}

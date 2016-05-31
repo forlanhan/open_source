@@ -205,6 +205,30 @@ def search(request):
     else:
         return HttpResponseRedirect("index")
 
+def search2(request):
+    """
+    搜索界面
+    """
+    from_size = 0
+    page_size = 20
+    if "keyvalue" in request.GET:
+        s = Search()
+        res = s.search(request.GET['keyvalue'], from_size,  page_size)
+        context = {}
+        source = []
+        context['input_value'] = request.GET['keyvalue']
+        for x in res['result_content']:
+            dict = x['_source']
+            dict['judge_type'] = judge_type(dict)
+            source.append(dict)
+        context['content'] = source
+        context['total'] = res['total']
+        context['time'] = res['time']
+        return render(request, 'achievement_display/search_test.html', context)
+    else:
+        return HttpResponseRedirect("index")
+
+
 def ajax_page(request):
     """
     ajax分页
@@ -220,7 +244,7 @@ def ajax_page(request):
             curr = 1
     except:
         curr = 1
-    pagesize = 20
+    pagesize = 10
     fromsize = (int(curr)-1) * pagesize
     s = Search()
     res = s.search(keyvalue, fromsize, pagesize)
@@ -302,3 +326,4 @@ def convert_id_name(request):
             return HttpResponse("无")
     except:
         return HttpResponse("无名称")
+

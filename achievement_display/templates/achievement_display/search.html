@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html>
+   <head>
+          <meta charset="UTF-8">
     <title>查询结果</title>
     <!-- 引入 Bootstrap -->
 	<link href="/statics/achievement_display/css/font.css" rel="stylesheet">
@@ -24,115 +24,207 @@
     <!-- 标签云 -->
     <script src="/statics/achievement_display/plugin/jqcloud/jqcloud.min.js"></script>
     <link rel="stylesheet" href="/statics/achievement_display/plugin/jqcloud/jqcloud.min.css">
-</head>
-<body>
-	<!--   div header -->
-	<div id="header">
-		<nav class="navbar navbar-default navbar-fixed-top" id="nav-wrap" role="navigation">
-           <div class="navbar-header">
-              <a class="navbar-brand" href="#"><img src="/statics/achievement_display/img/logo-red.png" alt=""></a>
-{#               <a class="navbar-brand" href="#">IIXXIPS</a>#}
-           </div>
-           <div>
-               <form role="form" class="form-inline navbar-form navbar-left" method="get" action="/search">
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="input1" name="keyvalue" value="{{ input_value }}"/>
-                        <span class="input-group-btn">
-                            <input type="submit" class="btn" name="submit" id="button1" value="搜索">
-                        </span>
-                        {% csrf_token %}
-                    </div>
-			    </form>
-           </div>
-        </nav>
-	</div>
+       <!--jquery-goup-master-->
+    <script src="/statics/achievement_display/plugin/jquery-goup-master/jquery.goup.min.js"></script>
+   </head>
+   <body>
+      <div id="header-zero">
 
-    <!--   div search-content -->
-    <div id="main">
-
-        <div class="container-fluid" id="main-contain">
-            <div id="search-review">为您找到相关结果约{{ total }}个,用时{{ time }}ms</div>
-
+      </div>
+      <!-- header 开始 -->
+      <div id="header">
+         <div id="header-main" class="container-fluid">
+            <!-- row start   -->
             <div class="row">
-                <div class="col-lg-2" id="main-condition">
-                    <div id="con_blank"></div>
-                    <div class="panel panel-info condition-panel" >
-                       <div class="panel-heading condition-heading">论文类型</div>
+               <!-- logo 开始 -->
+               <div class="col-lg-2" id="header-logo">
+                  <a href="#"><img src="/statics/achievement_display/img/logo.jpg" alt="" id="logo-img"></a>
+               </div>
+               <!-- form 开始 -->
+               <div class="col-lg-7" id="header-form">
+                  <div id="form-select">
+                     <span class="tab selected fore">全部文献</span>
+                     <span class="tab ">会议</span>
+                     <span class="tab ">期刊</span>
+                     <span class="tab ">学位</span>
+                  </div>
+                  <div id="form-bd">
+                     <form role="form" class="form-inline navbar-form navbar-left" method="get" action="/search">
+                          <div class="input-group">
+                              <div class="input-group-btn">
+                                 <select class="form-control" id="form-option">
+                                    <option>全文</option>
+                                    <option>标题</option>
+                                    <option>作者</option>
+                                    <option>单位</option>
+                                    <option>摘要</option>
+                                 </select>
+                              </div><!-- /btn-group -->
+                              <input type="text" class="form-control" id="input1" name="keyvalue" value="{{ input_value }}"/>
+                              <span class="input-group-btn">
+                                  <input type="submit" class="btn" name="submit" id="button1" value="搜索">
+                              </span>
+                              {% csrf_token %}
+                          </div>
+                     </form>
+                  </div>
+               </div>
+               <!-- form结束 -->
+            </div>
+            <!-- row end -->
+         </div>
+      </div>
+      <!-- header 结束－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－ -->
+      <div id="content">
+         <div id="content-main" class="container-fluid">
+            <div class="row">
+               <div class="col-lg-2" id="main-left">
+                  <div class="con_blank"></div>
+                  <div class="panel panel-info condition-panel" >
+                       <div class="panel-heading condition-heading">主题</div>
                        <ul class="list-group condition-ul" >
                           <li class="list-group-item condition-li">
                               <span class="con-li-span">202030篇</span>
-                              <a href="#" class="con-li-a">&gt;&nbsp;期刊论文</a>
+                              <a href="#" class="con-li-a"><input name="all" type="checkbox" value="" onclick="selectAllItem(this);">&nbsp;网络</a>
                           </li>
                           <li class="list-group-item condition-li" >
                               <span class="con-li-span">8130篇</span>
-                              <a href="#" class="con-li-a">&gt;&nbsp;学位论文</a>
+                              <a href="#" class="con-li-a"><input name="all" type="checkbox" value="" onclick="selectAllItem(this);">&nbsp;信息安全</a>
                           </li>
                           <li class="list-group-item condition-li">
                               <span class="con-li-span">9022篇</span>
-                              <a href="#" class="con-li-a">&gt;&nbsp;会议论文</a>
+                              <a href="#" class="con-li-a"><input name="all" type="checkbox" value="" onclick="selectAllItem(this);">&nbsp;用户</a>
                           </li>
                           <li class="list-group-item condition-li">
                               <span class="con-li-span">8765篇</span>
-                              <a href="#" class="con-li-a">&gt;&nbsp;外文期刊</a>
+                              <a href="#" class="con-li-a"><input name="all" type="checkbox" value="" onclick="selectAllItem(this);">&nbsp;网络安全</a>
                           </li>
                           <li class="list-group-item condition-li">
                               <span class="con-li-span">666篇</span>
-                              <a href="#" class="con-li-a">&gt;&nbsp;外文会议</a>
+                              <a href="#" class="con-li-a"><input name="all" type="checkbox" value="" onclick="selectAllItem(this);">&nbsp;行为模式挖掘</a>
                           </li>
                        </ul>
-                    </div>
-
-
-                    <div class="panel panel-info condition-panel" >
-                       <div class="panel-heading condition-heading">论文年份</div>
+                  </div>
+                  <div class="panel panel-info condition-panel" >
+                       <div class="panel-heading condition-heading">机构</div>
                        <ul class="list-group condition-ul" >
                           <li class="list-group-item condition-li">
                               <span class="con-li-span">202030篇</span>
-                              <a href="#" class="con-li-a">&gt;&nbsp;近一年</a>
+                              <a href="#" class="con-li-a"><input name="all" type="checkbox" value="" onclick="selectAllItem(this);">&nbsp;中国科学院</a>
                           </li>
                           <li class="list-group-item condition-li" >
                               <span class="con-li-span">8130篇</span>
-                              <a href="#" class="con-li-a">&gt;&nbsp;近两年</a>
+                              <a href="#" class="con-li-a"><input name="all" type="checkbox" value="" onclick="selectAllItem(this);">&nbsp;北京邮电大学</a>
                           </li>
                           <li class="list-group-item condition-li">
                               <span class="con-li-span">9022篇</span>
-                              <a href="#" class="con-li-a">&gt;&nbsp;近三年</a>
+                              <a href="#" class="con-li-a" title="中国科学院计算机技术研究所"><input name="all" type="checkbox" value="" onclick="selectAllItem(this);">&nbsp;中国科学...</a>
                           </li>
                           <li class="list-group-item condition-li">
                               <span class="con-li-span">8765篇</span>
-                              <a href="#" class="con-li-a">&gt;&nbsp;近四年</a>
-                          </li>
-                          <li class="list-group-item condition-li">
-                              <span class="con-li-span">666篇</span>
-                              <a href="#" class="con-li-a">&gt;&nbsp;近五年</a>
+                              <a href="#" class="con-li-a"><input name="all" type="checkbox" value="" onclick="selectAllItem(this);">&nbsp;电子科技大学</a>
                           </li>
                        </ul>
-                    </div>
+                  </div>
                 </div>
-                <div class="col-lg-7" id="main-left">
-                    <div id="s-c-all">
-                    {% for value in content %}
-                        <div class="search-content">
-                             <div class="s-t"><a href="">{{ value.name }}</a></div>
-                             {% ifequal value.judge_type 'organization' %}
-                                <div class="s-c">{{ value.description }}</div>
-                                 {% if not value.description %}
-                                     <div class="s-c">{{ value.tradeField }}</div>
-                                 {% endif %}
-                             {%else %}
-                                 {% load new_filter %}
-                                 <div class="s-c"><font color="red"> 所属机构:</font>{{ value.worksFor | workfor }}</div>
-                             {% endifequal %}
 
-{#                             <div class="s-s"><a href="">{{ value.judge_type }}</a></div>#}
+               <!-- main-left 结束－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－ -->
+
+               <div class="col-lg-7" id="main-middle">
+                  <div class="con_blank"></div>
+                  <div id="middle-up">
+                     <span id="search-review">为您找到相关结果约{{ total }}个,用时{{ time }}</span>
+                     <div id="so-so-fun">
+                        <span id="search-so">排序方式：</span>
+                        <div id="sort-function" class="dropdown">
+                           <a type="button" class="btn btn-default dropdown-toggle" id="drop-button" data-toggle="dropdown">相关性 <span class="caret"></span></a>
+                           <ul class="dropdown-menu dropdown-menu-left" id="dropdown-menu" role="menu" >
+                              <li><a href="#">相关性</a></li>
+                              <li><a href="#">敏感性</a></li>
+                           </ul>
                         </div>
-                    {% endfor %}
-                    </div>
-                     <div id="page1"></div>
-                </div>
+                     </div>
+                  </div>
+                  <!-- middle-up结束－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－ -->
+                  <div id="main-result">
+                     <div class="sr-content">
+                        <h3 class="sr-title">
+                           <a href="" class="sr-title-a" target="_blank"></a>
+                        </h3>
+                        <div class="sr-info">
+                           <span><a href="" target="_blank" ></a></span>
 
-                <div class="col-lg-3" id="main-right">
-                    <div class="container-fluid" id="rel">
+                           <span><a href="" target="_blank"  title="《保密工作》"></a></span>
+
+                           <span class="sr-time" ></span>
+
+                           <span class=""><a href="" target="_blank" class="sr-cite-cont"></a></span>
+                        </div>
+                        <div class="sr-abstract">
+
+                        </div>
+                        <div class="sc_allversion">
+                              <span class="sr-gray"></span>
+                              <span class="v_item_span">
+                                 <a class="v_source" title="知网" target="_blank" href="" ></a>
+                              </span>
+                              <span class="split"></span>
+                              <span class="v_item_span">
+                                 <a class="v_source" title="知网" target="_blank" href="" ></a>
+                              </span>
+                              <span class="split"></span>
+                              <span class="v_item_span">
+                                 <a class="v_source" title="知网" target="_blank" href="" ></a>
+                              </span>
+                        </div>
+                     </div>
+
+                     <!-- content 结束－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－ -->
+{#                     <div class="sr-content">#}
+{#                        <h3 class="sr-title">#}
+{#                           <a href="" class="sr-title-a" target="_blank">建久安之势 成长治之业——<em>中国科学院信息工程研究所</em>所长田静谈网络安全与信息化</a>#}
+{#                        </h3>#}
+{#                        <div class="sr-info">#}
+{#                           <span><a href="" target="_blank" >徐琛</a></span>#}
+{#                           &nbsp;-&nbsp;#}
+{#                           <span><a href="" target="_blank"  title="《保密工作》">《保密工作》</a></span>#}
+{#                           &nbsp;-&nbsp;#}
+{#                           <span class="sr-time" >2014</span>#}
+{#                           &nbsp;-&nbsp;#}
+{#                           <span class="">被引量:&nbsp;<a href="" target="_blank" class="sr-cite-cont">1</a></span>#}
+{#                        </div>#}
+{#                        <div class="sr-abstract">#}
+{#                           习近平总书记指出,"没有网络 安全就没有国家安全,没有信息化就没有现代化",深刻揭示了网络安全与信息化的关系。近日,本刊记者专访<em>中国科学院信息工程研究所</em>所长田...#}
+{#                        </div>#}
+{#                        <div class="sc_allversion">#}
+{#                              <span class="sr-gray">全部来源：</span>#}
+{#                              <span class="v_item_span">#}
+{#                                 <a class="v_source" title="知网" target="_blank" href="" >知网</a>#}
+{#                              </span>#}
+{#                              <span class="split">&nbsp;/&nbsp;</span>#}
+{#                              <span class="v_item_span">#}
+{#                                 <a class="v_source" title="知网" target="_blank" href="" >万方</a>#}
+{#                              </span>#}
+{#                              <span class="split">&nbsp;/&nbsp;</span>#}
+{#                              <span class="v_item_span">#}
+{#                                 <a class="v_source" title="知网" target="_blank" href="" >豆丁</a>#}
+{#                              </span>#}
+{##}
+{#                        </div>#}
+{#                     </div>#}
+
+
+                     <!-- content 结束－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－ -->
+
+                  </div>
+                   <!-- 分页开始------------------------ -->
+                      <div id="page1"></div>
+
+               </div>
+               <!-- main-middle结束－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－ -->
+               <div class="col-lg-3" id="main-right">
+                  <div class="con_blank"></div>
+                  <div class="container-fluid" id="rel">
                         <div class="row">
                             <div class="col-lg-12" >
                                 <!-- card开始  -->
@@ -156,43 +248,31 @@
                             </div>
                         </div>
                     </div>
-                </div>
+               </div>
             </div>
-        </div>
-    </div>
+         </div>
+      </div>
 
 <script src="/statics/achievement_display/js/search.js"></script>
     <script>
             //测试参数
         function demo(curr, key){
+
             var  keyvalue = key
             $.getJSON('/ajax_page', {
                 page: curr || 1 ,//向服务端传的参数，此处只是演示
                 keyvalue: key
 
             }, function(res){
+
                 //此处仅仅是为了演示变化的内容1
                 source = res.result_content;
-                str = "";
-                for(i=0;i<source.length;i++){
-                    str += '<div class="search-content"><div class="s-t"><a href="">'+ source[i]._source.name +'</a></div>';
-                    if(!source[i]._source.worksFor){
-                        if(!source[i].description) {
-                            str += '<div class="s-c">' + source[i]._source.description + '</div>';
-                        }else{
-                            if(!source[i]._source.tradeField){
-                                str += '<div class="s-c">' + source[i]._source.tradeField + '</div>';
-                            }else{
-                                str += '<div class="s-c">暂无相关信息</div>';
-                            }
-                        }
-                    }else if(source[i].worksFor){
-                            str += '<div class="s-c"><font color="red"> 所属机构:</font>' + source[i]._source.worksFor + '</div>';
-                    }
-                    str += '</div>';
-                }
 
-                document.getElementById('s-c-all').innerHTML =  str ;
+                //该函数处理返回的数据
+                deal_data(source);
+                console.log(res);
+                //console.log(str);
+                document.getElementById('main-result').innerHTML =  str ;
 
                 //显示分页
                 laypage({
@@ -219,6 +299,32 @@ demo(1, "{{ input_value }}");
         //////////////////////标签云开始
 
     </script>
+<script>
 
-</body>
+    $('#scan-course-a').click(function(){
+        $('html,body').animate({scrollTop:$('#course').offset().top}, 1000);
+        return false;
+    });
+
+    $(document).ready(function () {
+            $.goup({
+                trigger: 100,
+                bottomOffset: 150,
+                locationOffset: 120,
+                title: '回到顶部',
+                titleAsText: true,
+                arrowColor: '#fff',
+                containerColor: '#4694D1',
+                titleAsTextClass: 'go-up-title'
+
+            });
+        });
+
+
+
+
+</script>
+
+
+   </body>
 </html>
