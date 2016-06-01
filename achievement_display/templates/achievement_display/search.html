@@ -43,21 +43,21 @@
                <!-- form 开始 -->
                <div class="col-lg-7" id="header-form">
                   <div id="form-select">
-                     <span class="tab selected fore">全部文献</span>
-                     <span class="tab ">会议</span>
-                     <span class="tab ">期刊</span>
-                     <span class="tab ">学位</span>
+                     <span id="form-span-1" class="tab selected" onclick="deal_paper_class(this, 'all');">全部文献</span>
+                     <span id="form-span-2" class="tab " onclick="deal_paper_class(this, 'ConferencePaper');">会议</span>
+                     <span id="form-span-3" class="tab " onclick="deal_paper_class(this, 'JournalPaper');">期刊</span>
+                     <span id="form-span-4" class="tab " onclick="deal_paper_class(this, 'Thesis');">学位</span>
                   </div>
                   <div id="form-bd">
                      <form role="form" class="form-inline navbar-form navbar-left" method="get" action="/search">
                           <div class="input-group">
                               <div class="input-group-btn">
-                                 <select class="form-control" id="form-option">
-                                    <option>全文</option>
-                                    <option>标题</option>
-                                    <option>作者</option>
-                                    <option>单位</option>
-                                    <option>摘要</option>
+                                 <select class="form-control" id="form-option" name="form-option">
+                                    <option id="option-0" value="all">全文</option>
+                                    <option id="option-1" value="name">标题</option>
+                                    <option id="option-2" value="author">作者</option>
+                                    <option id="option-3" value="sourceOrganization">单位</option>
+                                    <option id="option-4" value="abstract">摘要</option>
                                  </select>
                               </div><!-- /btn-group -->
                               <input type="text" class="form-control" id="input1" name="keyvalue" value="{{ input_value }}"/>
@@ -66,6 +66,8 @@
                               </span>
                               {% csrf_token %}
                           </div>
+                         <!-- 隐藏输入框用于查询条件 -->
+                         <input type="hidden" id="paper-type" name="paper-type" value="all">
                      </form>
                   </div>
                </div>
@@ -255,13 +257,16 @@
 
 <script src="/statics/achievement_display/js/search.js"></script>
     <script>
-            //测试参数
-        function demo(curr, key){
 
-            var  keyvalue = key
+            //测试参数
+        function demo(curr, key, paper_type, body_type){
+
+            var  keyvalue = key;
             $.getJSON('/ajax_page', {
                 page: curr || 1 ,//向服务端传的参数，此处只是演示
-                keyvalue: key
+                keyvalue: key,
+                papertype: paper_type,
+                bodytype: body_type
 
             }, function(res){
 
@@ -294,36 +299,12 @@
             });
         };
 //运行
-demo(1, "{{ input_value }}");
+        demo(1, "{{ input_value }}", "{{ paper_type }}", "{{ form_option }}");
+        rem_form_status("{{ paper_type }}", "{{ form_option }}");
 
         //////////////////////标签云开始
 
     </script>
-<script>
-
-    $('#scan-course-a').click(function(){
-        $('html,body').animate({scrollTop:$('#course').offset().top}, 1000);
-        return false;
-    });
-
-    $(document).ready(function () {
-            $.goup({
-                trigger: 100,
-                bottomOffset: 150,
-                locationOffset: 120,
-                title: '回到顶部',
-                titleAsText: true,
-                arrowColor: '#fff',
-                containerColor: '#4694D1',
-                titleAsTextClass: 'go-up-title'
-
-            });
-        });
-
-
-
-
-</script>
 
 
    </body>

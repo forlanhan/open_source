@@ -14,6 +14,7 @@ class Search():
         self.host = "192.168.120.90"
         self.port = 9200
         self.index = "zjp-index:scholarkr"
+        self.doc_type = ['ConferencePaper', 'JournalPaper', 'Thesis']
 
 
     def generate_query(self, pap_type, body_type, keyvalue):
@@ -25,16 +26,32 @@ class Search():
         :return:返回字典 dict
         """
         dict = {}
-        if pap_type == "ConferencePaper":
-            dict['doc_type'] = "ConferencePaper"
-            dict['body'] = json.dumps({
-                "highlight":{
-                    "fields": {
-                      "*": {}
-                    },
-                    "require_field_match": False
-                }
-            })
+
+        if pap_type == "all":
+            dict['doc_type'] = self.doc_type
+        else:
+            dict['doc_type'] = pap_type
+
+        if body_type == "all":
+            highlight_field = "*"
+            match_field = "_all"
+        else:
+            match_field = body_type
+            highlight_field = body_type
+
+        dict['body'] = json.dumps({
+            'query': {
+                'match': {
+                  match_field: keyvalue
+             }
+            },
+            "highlight":{
+                "fields": {
+                  highlight_field: {}
+                },
+                "require_field_match": False
+            }
+        })
 
         return dict
 
@@ -61,7 +78,8 @@ class Search():
         dict['index'] = self.index
         dict['from_'] = from_size
         dict['size'] = page_size
-        dict['q'] = "访问控制技术的理论与方法的研究"
+        #dict['q'] = keyvalue
+
 
         """
         生成结果
@@ -80,7 +98,7 @@ class Search():
 
 if __name__ == "__main__":
     s = Search()
-    res = s.s_search("ConferencePaper", "all", "基于角色的访问控制分级授权管理的研究", 1, 2)
+    res = s.s_search("JournalPaper", "author", "金红", 1, 5)
     print res['total']
     print res['time']
     print res['result_content'][0]

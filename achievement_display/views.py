@@ -9,7 +9,7 @@ import time
 import linkedin
 import tor
 import json
-import types
+from open_source import  test2
 
 
 
@@ -189,18 +189,13 @@ def search(request):
     from_size = 0
     page_size = 20
     if "keyvalue" in request.GET:
-        s = Search()
-        res = s.search(request.GET['keyvalue'], from_size,  page_size)
         context = {}
-        source = []
         context['input_value'] = request.GET['keyvalue']
-        for x in res['result_content']:
-            dict = x['_source']
-            dict['judge_type'] = judge_type(dict)
-            source.append(dict)
-        context['content'] = source
-        context['total'] = res['total']
-        context['time'] = res['time']
+        context['paper_type'] = request.GET['paper-type']
+        context['form_option'] = request.GET['form-option']
+        # context['content'] = source
+        # context['total'] = res['total']
+        # context['time'] = res['time']
         return render(request, 'achievement_display/search.html', context)
     else:
         return HttpResponseRedirect("index")
@@ -240,14 +235,17 @@ def ajax_page(request):
         if "page" in request.GET:
             curr = request.GET['page']
             keyvalue = request.GET['keyvalue']
+            paper_type = request.GET['papertype']
+            body_type = request.GET['bodytype']
         else:
             curr = 1
     except:
         curr = 1
     pagesize = 10
     fromsize = (int(curr)-1) * pagesize
-    s = Search()
-    res = s.search(keyvalue, fromsize, pagesize)
+    s = test2.Search()
+    #res = s.search(keyvalue, fromsize, pagesize)
+    res = s.s_search(paper_type, body_type, keyvalue, fromsize, pagesize)
     res['total'] = int(res['total']) / pagesize
     """
     测试参数

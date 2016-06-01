@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba6f7428-b4d9-4030-9aa3-43e8301be553" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/pyclass/Search.py" afterPath="$PROJECT_DIR$/achievement_display/pyclass/Search.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/search.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/search.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/js/search.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/js/search.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/js/wenku.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/js/wenku.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/templates/achievement_display/index.html" afterPath="$PROJECT_DIR$/achievement_display/templates/achievement_display/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/templates/achievement_display/search.html" afterPath="$PROJECT_DIR$/achievement_display/templates/achievement_display/search.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/views.py" afterPath="$PROJECT_DIR$/achievement_display/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/open_source/test.py" afterPath="$PROJECT_DIR$/open_source/test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/open_source/urls.py" afterPath="$PROJECT_DIR$/open_source/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/achievement_display/css/wenku.css" afterPath="$PROJECT_DIR$/statics/achievement_display/css/wenku.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/achievement_display/js/force-open.js" afterPath="$PROJECT_DIR$/statics/achievement_display/js/force-open.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/achievement_display/js/wenku.js" afterPath="$PROJECT_DIR$/statics/achievement_display/js/wenku.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/open_source/test2.py" afterPath="$PROJECT_DIR$/open_source/test2.py" />
     </list>
     <ignored path="open_source.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +25,7 @@
     <SUITE FILE_PATH="coverage/open_source$urls.coverage" NAME="urls Coverage Results" MODIFIED="1459492623782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/open_source" />
     <SUITE FILE_PATH="coverage/open_source$views.coverage" NAME="views Coverage Results" MODIFIED="1459779620346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/achievement_display" />
     <SUITE FILE_PATH="coverage/open_source$view.coverage" NAME="view Coverage Results" MODIFIED="1459419556538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/open_source" />
-    <SUITE FILE_PATH="coverage/open_source$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1464702565040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/open_source" />
+    <SUITE FILE_PATH="coverage/open_source$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1464745951254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/open_source" />
     <SUITE FILE_PATH="coverage/open_source$linkedin.coverage" NAME="linkedin Coverage Results" MODIFIED="1462354614245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/achievement_display" />
     <SUITE FILE_PATH="coverage/open_source$Test__achievement_display_templates_achievement_display_search_html.coverage" NAME="Test: achievement_display.templates.achievement_display.search.html Coverage Results" MODIFIED="1464329300419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/open_source$Search.coverage" NAME="Search Coverage Results" MODIFIED="1464694353616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/achievement_display/pyclass" />
@@ -57,52 +50,8 @@
       <file leaf-file-name="search.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/css/search.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="233" column="17" selection-start-line="233" selection-start-column="17" selection-end-line="233" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/achievement_display/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24271844">
-              <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Search.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/achievement_display/pyclass/Search.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="63" selection-start-line="34" selection-start-column="12" selection-end-line="36" selection-end-column="63" />
-              <folding>
-                <element signature="e#17#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/open_source/test2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-32.77778">
-              <caret line="59" column="65" selection-start-line="59" selection-start-column="65" selection-end-line="59" selection-end-column="65" />
-              <folding>
-                <element signature="e#17#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="search.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/search.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="277" column="25" selection-start-line="277" selection-start-column="25" selection-end-line="277" selection-end-column="25" />
+            <state vertical-scroll-proportion="-3.7058823">
+              <caret line="34" column="4" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -112,11 +61,77 @@
         <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/js/search.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+              <caret line="148" column="32" selection-start-line="148" selection-start-column="32" selection-end-line="148" selection-end-column="32" />
               <folding>
-                <marker date="1464692965000" expanded="true" signature="2145:2296" placeholder="..." />
-                <marker date="1464692965000" expanded="true" signature="2166:2296" placeholder="..." />
-                <marker date="1464692965000" expanded="true" signature="2247:2291" placeholder="..." />
+                <marker date="1464747380000" expanded="true" signature="2145:2296" placeholder="..." />
+                <marker date="1464747380000" expanded="true" signature="2166:2296" placeholder="..." />
+                <marker date="1464747380000" expanded="true" signature="2247:2291" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/search.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-19.375">
+              <caret line="69" column="92" selection-start-line="69" selection-start-column="92" selection-end-line="69" selection-end-column="92" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.12626262">
+              <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/achievement_display/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="193" column="27" selection-start-line="193" selection-start-column="17" selection-end-line="193" selection-end-column="27" />
+              <folding>
+                <element signature="e#18#53#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/js/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test2.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/open_source/test2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="20.88889">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding>
+                <element signature="e#17#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Search.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/achievement_display/pyclass/Search.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+              <folding>
+                <element signature="e#17#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -142,26 +157,6 @@
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="search_test.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/search_test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="41" column="40" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wenku.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/wenku.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="68" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -210,7 +205,6 @@
         <option value="$PROJECT_DIR$/statics/achievement_display/css/search.css" />
         <option value="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/force.css" />
         <option value="$PROJECT_DIR$/achievement_display/models.py" />
-        <option value="$PROJECT_DIR$/achievement_display/templates/achievement_display/index.html" />
         <option value="$PROJECT_DIR$/achievement_display/templatetags/new_filter.py" />
         <option value="$PROJECT_DIR$/achievement_display/statics/achievement_display/js/force-open.js" />
         <option value="$PROJECT_DIR$/achievement_display/templates/achievement_display/force_open.html" />
@@ -230,11 +224,12 @@
         <option value="$PROJECT_DIR$/achievement_display/templates/achievement_display/search_test.html" />
         <option value="$PROJECT_DIR$/open_source/test.py" />
         <option value="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/search.css" />
-        <option value="$PROJECT_DIR$/achievement_display/templates/achievement_display/search.html" />
-        <option value="$PROJECT_DIR$/achievement_display/statics/achievement_display/js/search.js" />
         <option value="$PROJECT_DIR$/achievement_display/pyclass/Search.py" />
         <option value="$PROJECT_DIR$/open_source/test2.py" />
         <option value="$PROJECT_DIR$/achievement_display/views.py" />
+        <option value="$PROJECT_DIR$/achievement_display/statics/achievement_display/js/search.js" />
+        <option value="$PROJECT_DIR$/achievement_display/templates/achievement_display/search.html" />
+        <option value="$PROJECT_DIR$/achievement_display/templates/achievement_display/index.html" />
       </list>
     </option>
   </component>
@@ -332,24 +327,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templatetags" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="open_source" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="open_source" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="achievement_display" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -377,40 +354,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="achievement_display" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="open_source" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="open_source" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="achievement_display" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="statics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="achievement_display" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="media" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -461,48 +404,8 @@
               <option name="myItemId" value="achievement_display" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="open_source" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="open_source" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="achievement_display" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="statics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="achievement_display" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="open_source" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="open_source" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="achievement_display" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pyclass" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -982,7 +885,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/open_source/test2.py</url>
-          <line>68</line>
+          <line>86</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -996,14 +899,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/achievement_display/tor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/js/echartsjs/esl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.279661">
@@ -1072,13 +967,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="82" column="6" selection-start-line="78" selection-start-column="4" selection-end-line="82" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="76" column="167" selection-start-line="76" selection-start-column="167" selection-end-line="76" selection-end-column="167" />
         </state>
       </provider>
     </entry>
@@ -1320,39 +1208,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/css/search.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="233" column="17" selection-start-line="233" selection-start-column="17" selection-end-line="233" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/search_test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="41" column="40" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="40" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="277" column="25" selection-start-line="277" selection-start-column="25" selection-end-line="277" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/js/search.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
-          <folding>
-            <marker date="1464692965000" expanded="true" signature="2145:2296" placeholder="..." />
-            <marker date="1464692965000" expanded="true" signature="2166:2296" placeholder="..." />
-            <marker date="1464692965000" expanded="true" signature="2247:2291" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1376,20 +1236,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/css/search.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.7058823">
+          <caret line="34" column="4" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/achievement_display/pyclass/Search.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="63" selection-start-line="34" selection-start-column="12" selection-end-line="36" selection-end-column="63" />
+          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
           <folding>
             <element signature="e#17#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/open_source/test2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-32.77778">
-          <caret line="59" column="65" selection-start-line="59" selection-start-column="65" selection-end-line="59" selection-end-column="65" />
+        <state vertical-scroll-proportion="20.88889">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
             <element signature="e#17#28#0" expanded="true" />
           </folding>
@@ -1398,8 +1274,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/achievement_display/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24271844">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="193" column="27" selection-start-line="193" selection-start-column="17" selection-end-line="193" selection-end-column="27" />
+          <folding>
+            <element signature="e#18#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/js/search.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="148" column="32" selection-start-line="148" selection-start-column="32" selection-end-line="148" selection-end-column="32" />
+          <folding>
+            <marker date="1464747380000" expanded="true" signature="2145:2296" placeholder="..." />
+            <marker date="1464747380000" expanded="true" signature="2166:2296" placeholder="..." />
+            <marker date="1464747380000" expanded="true" signature="2247:2291" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.375">
+          <caret line="69" column="92" selection-start-line="69" selection-start-column="92" selection-end-line="69" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12626262">
+          <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
           <folding />
         </state>
       </provider>

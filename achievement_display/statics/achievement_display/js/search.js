@@ -110,3 +110,85 @@ function judge_highlight(field, source_i){
 
     }
 }
+
+/////////////////////////////
+//处理论文分类
+function deal_paper_class(obj, data){
+    var input = document.getElementById('paper-type');
+    var tab = document.getElementsByClassName("tab");
+    for(i=0;i<tab.length;i++){
+        tab[i].className = "tab";
+    }
+    obj.className = "selected tab";
+    input.value = data;
+}
+function deal_paper_class_only_paper(obj){
+    var input = document.getElementById('paper-type');
+    var tab = document.getElementsByClassName("tab");
+    for(i=0;i<tab.length;i++){
+        tab[i].className = "tab";
+    }
+    obj.className = "selected tab";
+}
+
+
+
+
+
+////////////////////////////////
+//go up
+$('#scan-course-a').click(function(){
+    $('html,body').animate({scrollTop:$('#course').offset().top}, 1000);
+    return false;
+});
+
+$(document).ready(function () {
+        $.goup({
+            trigger: 100,
+            bottomOffset: 150,
+            locationOffset: 120,
+            title: '回到顶部',
+            titleAsText: true,
+            arrowColor: '#fff',
+            containerColor: '#4694D1',
+            titleAsTextClass: 'go-up-title'
+
+        });
+    });
+
+////////////////////////////
+//记录结果状态
+function rem_form_status(paper, body){
+    if(paper == "all"){
+        var paper_obj = document.getElementById("form-span-1");
+        deal_paper_class_only_paper(paper_obj);
+    }else if(paper == "ConferencePaper"){
+        var paper_obj = document.getElementById("form-span-2");
+        deal_paper_class_only_paper(paper_obj);
+    }else if(paper == "JournalPaper"){
+        var paper_obj = document.getElementById("form-span-3");
+        deal_paper_class_only_paper(paper_obj);
+    }else if(paper == "Thesis"){
+        var paper_obj = document.getElementById("form-span-4");
+        deal_paper_class_only_paper(paper_obj);
+    }
+
+    if(body == "all"){
+        var body_obj = document.getElementById("option-0")
+        body_obj.selected = true;
+    }else if(body == "name"){
+        var body_obj = document.getElementById("option-1")
+        body_obj.selected = true;
+    }else if(body == "author"){
+        var body_obj = document.getElementById("option-2")
+        body_obj.selected = true;
+    }else if(body == "sourceOrganization"){
+        var body_obj = document.getElementById("option-3")
+        body_obj.selected = true;
+    }else if(body == "abstract"){
+        var body_obj = document.getElementById("option-4")
+        body_obj.selected = true;
+    }
+    console.log(body_obj.childNodes.length);
+    console.log(body_obj.childNodes);
+}
