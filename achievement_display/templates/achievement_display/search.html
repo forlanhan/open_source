@@ -233,10 +233,10 @@
                                 <div id="card">
                                     <div id="card-close"><i id="close-icon" onclick="close_ele('card');">&#xe616;</i></div>
                                     <div id="card-img"><i id="op-icon" >&#xe617;</i></div>
-                                    <div id="card-title"><span id="card-title-content">复旦大学软件工程实验室</span></div>
+                                    <div id="card-title"><span id="card-title-content"></span></div>
                                     <div id="card-desc">
                                         <p id="card-p">
-                                            该室是教育部软件科学与技术网上合作研究中心的成员单位，成立于1989年，长期从事软件工程方法、理论、工具与开发环境以及软件工程技术产业化应用等方面的研究和实践工作。实验室研究领域包括自适应软件、软件维护与再工程
+                                            
                                         </p>
                                     </div>
                                     <div id="card-bottom-blank"></div>
@@ -267,16 +267,13 @@
                 keyvalue: key,
                 papertype: paper_type,
                 bodytype: body_type
-
             }, function(res){
 
                 //此处仅仅是为了演示变化的内容1
                 source = res.result_content;
 
                 //该函数处理返回的数据
-                deal_data(source);
-                console.log(res);
-                //console.log(str);
+                deal_data(curr, source);
                 document.getElementById('main-result').innerHTML =  str ;
 
                 //显示分页
@@ -290,8 +287,7 @@
                     keyvalue : "{{ input_value }}",
                     jump: function(obj, first){ //触发分页后的回调
                         if(!first){ //点击跳页触发函数自身，并传递当前页：obj.curr
-
-                            demo(obj.curr, keyvalue);
+                            demo(obj.curr, keyvalue, "{{ paper_type }}", "{{ form_option }}");
                             window.location.href = "#";
                         }
                     }

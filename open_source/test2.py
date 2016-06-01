@@ -1,104 +1,73 @@
 # encoding:utf-8
 import json
-from elasticsearch import Elasticsearch
+import requests
 
-class Search():
-    """
-    ES搜索类
-    """
+
+class Search:
     def __init__(self):
         """
-        基本的配置信息
+        初始化参数
         :return:
         """
-        self.host = "192.168.120.90"
-        self.port = 9200
-        self.index = "zjp-index:scholarkr"
-        self.doc_type = ['ConferencePaper', 'JournalPaper', 'Thesis']
+        self.uri = 'http://192.168.120.90:9200/zjp-index:scholarkr/Thesis/_search?pretty'
 
+    def search(self, keyvalue, from_size, page_size):
+        try:
+            query = json.dumps({
+                "from": from_size,
+                "size": page_size,
+                 "query": {
+                    "match": {
+                      "_all": keyvalue
+                    }
+                  },
+                "highlight": {
+                    "fields": {
+                      "*": {}
+                    },
+                    "require_field_match": False
+                  }
+            })
+            response = requests.post(self.uri, data=query)
+            results = response.content
+            results = json.loads(results)
+            context = {}
+            context['total'] = results['hits']['total']
+            context['time'] = results['took']
+            context["result_content"] = results['hits']['hits']
+            return context
+        except Exception, e:
+            print 'get error : %s' % e
+            return -1
 
-    def generate_query(self, pap_type, body_type, keyvalue):
-        """
-        生成查询语句
-        :param pap_type:文献类型, 分为三类 学术 | 期刊 | 学位
-        :param body_type:文献搜索位置, 全文 | 标题 | 作者 | 单位 | 摘要
-        :param keyvalue:搜索关键字
-        :return:返回字典 dict
-        """
-        dict = {}
+    def search_in_id(self, id):
+        try:
+            query = json.dumps({
 
-        if pap_type == "all":
-            dict['doc_type'] = self.doc_type
-        else:
-            dict['doc_type'] = pap_type
-
-        if body_type == "all":
-            highlight_field = "*"
-            match_field = "_all"
-        else:
-            match_field = body_type
-            highlight_field = body_type
-
-        dict['body'] = json.dumps({
-            'query': {
-                'match': {
-                  match_field: keyvalue
-             }
-            },
-            "highlight":{
-                "fields": {
-                  highlight_field: {}
-                },
-                "require_field_match": False
-            }
-        })
-
-        return dict
-
-    def s_search(self, pap_type, body_type, keyvalue, from_size, page_size):
-        """
-        :param pap_type:文献类型, 分为三类 学术 | 期刊 | 学位
-        :param body_type:文献搜索位置, 全文 | 标题 | 作者 | 单位 | 摘要
-        :param keyvalue:搜索关键字
-        :param from_size起始数   page_size每页数量
-        :return:返回搜索结果
-        """
-
-        """
-        初始化参数
-        """
-        dict = {}  #定义查询字典
-        s = Elasticsearch([{"host": self.host, "port": self.port}])
-        context = {}   #定义返回数据
-
-        """
-        定义查询key-value
-        """
-        dict = self.generate_query(pap_type, body_type, keyvalue)
-        dict['index'] = self.index
-        dict['from_'] = from_size
-        dict['size'] = page_size
-        #dict['q'] = keyvalue
-
-
-        """
-        生成结果
-        """
-        results = s.search(**dict)
-
-        """
-        对结果进行提取
-        """
-        context['total'] = results['hits']['total']          #数据总数
-        context['time'] = results['took']                    #数据时间
-        context["result_content"] = results['hits']['hits']  #数据内容
-
-        return context
+                "query": {
+                    "match_phrase":{
+                        "_id": id
+                    }
+                }
+            })
+            response = requests.post(self.uri, data=query)
+            results = response.content
+            results = json.loads(results)
+            context = {}
+            context['total'] = results['hits']['total']
+            context['time'] = results['took']
+            context["result_content"] = results['hits']['hits']
+            return context
+        except Exception, e:
+            print 'get error : %s' % e
+            return -1
 
 
 if __name__ == "__main__":
+    uri = 'http://192.168.120.90:9200/test/_search?pretty'
     s = Search()
-    res = s.s_search("JournalPaper", "author", "金红", 1, 5)
-    print res['total']
-    print res['time']
-    print res['result_content'][0]
+    s = Search()
+    res = s.search("信息安全策略研究", 1,  100)
+    print res
+    # now-1d/d now/d
+

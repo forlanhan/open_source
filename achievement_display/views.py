@@ -9,7 +9,7 @@ import time
 import linkedin
 import tor
 import json
-from open_source import  test2
+
 
 
 
@@ -193,9 +193,11 @@ def search(request):
         context['input_value'] = request.GET['keyvalue']
         context['paper_type'] = request.GET['paper-type']
         context['form_option'] = request.GET['form-option']
-        # context['content'] = source
-        # context['total'] = res['total']
-        # context['time'] = res['time']
+        s = Search()
+        #res = s.search(keyvalue, fromsize, pagesize)
+        res = s.s_search(context['paper_type'], context['form_option'], context['input_value'], 0, 1)
+        context['total'] = res['total']
+        context['time'] = res['time']
         return render(request, 'achievement_display/search.html', context)
     else:
         return HttpResponseRedirect("index")
@@ -243,7 +245,7 @@ def ajax_page(request):
         curr = 1
     pagesize = 10
     fromsize = (int(curr)-1) * pagesize
-    s = test2.Search()
+    s = Search()
     #res = s.search(keyvalue, fromsize, pagesize)
     res = s.s_search(paper_type, body_type, keyvalue, fromsize, pagesize)
     res['total'] = int(res['total']) / pagesize

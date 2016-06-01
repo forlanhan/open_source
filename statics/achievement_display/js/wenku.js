@@ -84,7 +84,7 @@ function datatable_1(){
                         "data": 0,
                         "class": "bm_check_5",
                         "render": function(data, type, row) {
-                            return '<a type="button" target="_blank" class="btn btn-success" href="http://192.168.120.234:8888/view-detail/'+ data +'"/>详情</a>'
+                            return '<a type="button" target="_blank" class="btn btn-success" href="http://192.168.120.234:8888/view-detail/?type=1&id='+ data +'"/>详情</a>'
                         }
                     }
                 ]
