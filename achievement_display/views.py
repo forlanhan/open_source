@@ -195,9 +195,18 @@ def search(request):
         context['form_option'] = request.GET['form-option']
         s = Search()
         #res = s.search(keyvalue, fromsize, pagesize)
+        """
+        查询时间和显示数量
+        """
         res = s.s_search(context['paper_type'], context['form_option'], context['input_value'], 0, 1)
         context['total'] = res['total']
         context['time'] = res['time']
+        """
+        查询出卡片的内容
+        """
+        card_res = s.card_search("Org", context['input_value'], 0 , 4)
+        #context['card_res'] = json.dumps(card_res['result_content'])
+        context['card_res'] = json.dumps(card_res['result_content'])
         return render(request, 'achievement_display/search.html', context)
     else:
         return HttpResponseRedirect("index")
@@ -268,6 +277,22 @@ def ajax_page(request):
 
 
     return HttpResponse(json.dumps(res))
+
+def card_get_res(request):
+    """
+    该视图函数供前台ajax使用
+    :param request:
+    :return:
+    """
+    try:
+        type = request.GET['type']
+        id = request.GET['id']
+    except:
+        type = "Org"
+        id = "Educational_1000003085"
+    s = Search()
+    context = s.card_search(type, id)
+    return HttpResponse(context['result_content'])
 
 def force(request):
     """

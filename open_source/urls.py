@@ -48,6 +48,7 @@ urlpatterns = patterns('achievement_display.views',
                        (r'^datatable_3/?$', YxCheck.as_view()),
                        (r'^datatable_4/?$', YxCheckAlert.as_view()),
                        (r'search2/?$', 'search2'),
+                       (r'card_get_res/?$', 'card_get_res'),
                        (r'', 'index')
                        )
 

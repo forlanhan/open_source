@@ -16,6 +16,7 @@ class Search():
         self.index = "zjp-index:scholarkr"
         self.doc_type = ['ConferencePaper', 'JournalPaper', 'Thesis']
         self.body_type = ["name^10","abstract^5","author^2","sourceOrganization"]
+        self.s = Elasticsearch([{"host": self.host, "port": self.port}])
 
     def generate_query(self, pap_type, body_type, keyvalue):
         """
@@ -80,7 +81,6 @@ class Search():
         初始化参数
         """
         dict = {}  #定义查询字典
-        s = Elasticsearch([{"host": self.host, "port": self.port}])
         context = {}   #定义返回数据
 
         """
@@ -96,7 +96,7 @@ class Search():
         """
         生成结果
         """
-        results = s.search(**dict)
+        results = self.s.search(**dict)
 
         """
         对结果进行提取
@@ -108,11 +108,54 @@ class Search():
         return context
 
 
+    def card_search(self, doc_type, name, from_size, page_size):
+        """
+        查询到组织机构
+        :param doc_type:所查询的type
+        :param id:查询得到ID
+        :return: 查询信息的字典
+        """
+        query = json.dumps({
+                "query": {
+                    "match_phrase":{
+                        "name":{
+                            "query": name,
+                            "slop":6
+                        }
+
+                    }
+                }
+            })
+        dict = {}
+        context = {}
+        dict['index'] = self.index
+        dict['doc_type'] = doc_type
+        dict['body'] = query
+        dict['from_'] = from_size
+        dict['size'] = page_size
+
+        """
+        生成结果
+        """
+        results = self.s.search(**dict)
+
+        """
+        对结果进行提取
+        """
+        context['total'] = results['hits']['total']          #数据总数
+        context["result_content"] = results['hits']['hits']  #数据内容
+
+        return context
+
+
+
 if __name__ == "__main__":
     s = Search()
     res = s.s_search("all", "all", "中国科学院信息工程研究所", 1, 5)
-    print res['total']
-    print res['time']
-    print res['result_content'][0]
+    context = s.card_search("Org", "中国科学院信息工程研究所")
+    # print res['total']
+    # print res['time']
+    # print res['result_content'][0]
+    print context
 
 

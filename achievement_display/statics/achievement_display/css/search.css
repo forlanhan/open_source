@@ -277,6 +277,7 @@ body{
 #rel-crap{
    /* box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 15px 1px;*/
     padding: 0px;
+	margin-top: 20px;
 }
 #rel{
     width: 100%;
@@ -287,7 +288,7 @@ body{
     border: solid 1px #eaedf1;
     height: 40px;
     text-align: left;
-    margin-top: 20px;
+
     /*background-color: rgba(40, 118, 215, 0.6);*/
 
 
@@ -315,6 +316,7 @@ body{
     width: 100%;
     border:1px solid rgb(233, 233, 233);
     border-bottom: 1px solid #cccccc;
+	display: none;
     /*box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 15px 1px;*/
 
 }
@@ -356,6 +358,24 @@ body{
     font-weight: 600;
     font-size: 18px;
 }
+#card-b-desc{
+    margin-top: 10px;
+	font-size: 10px;
+	text-align: center;
+	color: #cc0c00;
+}
+.org-tips{
+	color: #663366;
+}
+.org-context{
+	color: #cc0c00;
+}
+#card-key{
+	font-size: 10px;
+}
+#org-keyDiscipline{
+
+}
 #card-desc{
     margin-top: 10px;
 }
@@ -363,6 +383,7 @@ body{
     color: rgb(0, 0, 0);
     font-size: 13px;
     line-height: 21px;
+
 }
 
 #card-bottom-blank{

@@ -72,6 +72,38 @@ function statics_data(data){//统计数组中相同的数据并记录
     }
     return arr;
 }
+function card_ajax(type_id){ //ajax 获取节点信息
+    //alert(id);
+    var txt;
+    var JSONObject;
+    var type = type_id.split("/")[0]
+    var id = type_id.split("/")[1]
+    var url = "card_get_res?type="+type+"id="+id+"&";
+    if (window.XMLHttpRequest)
+      {// code for IE7+, Firefox, Chrome, Opera, Safari
+      xmlhttp=new XMLHttpRequest();
+      }
+    else
+      {// code for IE6, IE5
+      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+      }
+    xmlhttp.onreadystatechange=function()
+      {
+      if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+
+            txt = xmlhttp.responseText;	//获取ajax请求的数据；
+            //console.log( eval(txt));
+            //JSONObject = eval ("[" + txt + "]"); //将json数据转换为js对象；
+            //document.getElementById('card-title-content').innerHTML = JSONObject;
+
+        }
+      }
+    xmlhttp.open("GET",url+"rand="+Math.random(),true);
+    xmlhttp.send();
+    return txt;
+
+}
 
 function generate_word(arr){//生成标签云的word变量
     var data_array = new Array();
@@ -108,8 +140,8 @@ function card_org_statistics(org_array){//统计出现最多的机构
 }
 ////////////////////////
 // 处理返回结果数据
-function deal_data(curr, source){
-    str = "";
+function deal_data(curr, source, card_res){
+    var str = "";
     var max_related_num = 10; //获取N篇论文的相关机构和任务;
     var n = 0;
     var m = 0;
@@ -121,7 +153,7 @@ function deal_data(curr, source){
         //标题 name
         str += '<div class="sr-content"><h3 class="sr-title"><a href="'+ source[i]._source.dataSource +'"  class="sr-title-a" target="_blank" alt="'+ source[i]._source.name +'">'+ judge_highlight('name', source[i]) +'</a></h3>';
         //作者+来源+年份
-        str += '<div class="sr-info"><span>'+ split_name(judge_highlight('author', source[i])) +'</span> &nbsp;-&nbsp; <span><a href="" target="_blank"  title="'+ source[i]._source.journal +'">《'+ judge_highlight('journal', source[i]) +'》</a></span> &nbsp;-&nbsp; <span class="sr-time" >'+ judge_highlight('yearNumber', source[i]) +'</span> &nbsp; </div>'
+        str += '<div class="sr-info"><span>'+ split_name(judge_highlight('author', source[i])) +'</span> <span><a href="" target="_blank"  title="'+ source[i]._source.journal +'">'+ judge_highlight('journal', source[i]) +'</a></span><span class="sr-time" >'+ judge_highlight('yearNumber', source[i]) +'</span></div>'
         //摘要
         str += '<div class="sr-abstract">'+ judge_highlight('abstract', source[i]) +'</div>'
         //全部来源
@@ -132,10 +164,8 @@ function deal_data(curr, source){
 
         str += '</div>';
 
-        //console.log(card_data);
-        //console.log(curr);
-        //console.log(source[i]._source.sourceOrganization);
-        //console.log(source[i]._source.author);
+        document.getElementById('main-result').innerHTML =  str ;   //将结果放入div中
+
         if(curr == 1 && i < max_related_num){ //拿前max_related_num数据集
 
             if(source[i]._source.sourceOrganization){
@@ -155,10 +185,49 @@ function deal_data(curr, source){
         }
 
     }
-    console.log(statics_data(related_data_org));
-    document.getElementById('card-title-content').innerHTML = card_org_statistics(statics_data(related_data_org)).split("|")[1]; //获取相关卡片
-    var words_arry = generate_word(statics_data(related_data_person)).concat(generate_word(statics_data(related_data_org)));
+
+    ///知识卡片
+     var words_arry = generate_word(statics_data(related_data_person)).concat(generate_word(statics_data(related_data_org)));
     jq_word(words_arry); //标签云;
+
+    if(source.length > 0 && card_res[0]){//当查询有结果是出现卡片
+        var str_card = "";  //机构基本描述
+        console.log(card_res);
+        //document.getElementById("card").style.display = "block";
+        $("#card").fadeIn("100");
+        document.getElementById("card-close").innerHTML = '<i id="close-icon" onclick="close_ele();">&#xe616;</i>';
+        document.getElementById("card-img").innerHTML = '<i id="op-icon" >&#xe617;</i>';
+        document.getElementById("card-title-content").innerHTML = card_res[0]._source.name;
+
+        if(card_res[0]._source['location']){
+            str_card += '<span class="org-tips">地点:</span><span class="org-context">'+card_res[0]._source['location']+'</span>&nbsp;&nbsp;';
+        }
+        if(card_res[0]._source.level){
+             str_card += '<span class="org-tips">等级:</span><span class="org-context">'+card_res[0]._source.level+'</span>&nbsp;&nbsp;';
+        }
+        if(card_res[0]._source.foundingDate){
+             str_card += '<span class="org-tips">成立时间:</span><span class="org-context">'+card_res[0]._source.foundingDate+'</span>';
+        }
+
+        document.getElementById("card-b-desc").innerHTML = str_card;
+
+        if(card_res[0]._source.description){
+            document.getElementById("card-p").innerHTML = card_res[0]._source.description;
+        }
+
+        if(card_res[0]._source.keyDiscipline){
+            document.getElementById("card-key").innerHTML = '研究范围: <span id="org-keyDiscipline">'+card_res[0]._source.keyDiscipline+'</span>';
+        }
+
+    }else{
+        document.getElementById("rel-crap").style.marginTop = "0px";
+    }
+
+
+
+
+    ///标签云
+
 }
 
 //Pers/1000900418|凌荣辉   -> 凌荣辉
@@ -166,18 +235,18 @@ function split_name(data){
     var string_data = "";
     if(data){
         if(typeof(data)  == "string"){
-            return data.split('|');
+            return data.split('|') ;
         }else if(typeof(data)  == "object") {
             for(n=0; n<data.length; n++){
                 string_data += data[n].split("|")[1];
-                string_data += "&nbsp;&nbsp;"
+                string_data += "&nbsp;-&nbsp;"
             }
             return string_data;
         }else{
             return typeof(data[0]);
         }
     }else{
-        return "无";
+        return "";
     }
 
 }
@@ -203,22 +272,24 @@ function judge_highlight(field, source_i){
         case "abstract":
             if(source_i.highlight.abstract)
                 return source_i.highlight.abstract;
-            else
-                return source_i._source.abstract;
+            else{
+                if(source_i._source.abstract)return source_i._source.abstract;
+                else return"";
+            };
             break;
 
         case "yearNumber":
             if(source_i._source.yearNumber)
                 return source_i._source.yearNumber;
             else
-                return "无";
+                return "";
             break;
 
         case "journal":
             if(source_i._source.journal)
-                return source_i._source.journal;
+                return '《'+source_i._source.journal+'》&nbsp;-&nbsp;';
             else
-                return "无";
+                return "";
             break;
 
     }
@@ -318,4 +389,13 @@ function jq_word(words){
         });
 
     });
+}
+
+
+function close_ele(){
+    //var dom = document.getElementById("card");
+    $("#card").hide();
+    document.getElementById("rel-crap").style.marginTop = "0px";
+
+
 }

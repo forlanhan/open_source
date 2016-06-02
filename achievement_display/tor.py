@@ -26,7 +26,6 @@ def search(uri, fromDate, toDate):
         results = json.loads(results)
         return results['hits']['total']
     except Exception, e:
-        print 'get error : %s' % e
         return -1
 
 
@@ -66,7 +65,6 @@ def get_total(uri):
         results = json.loads(results)
         return results['hits']['total']
     except Exception, e:
-        print 'post es errors and e : ' % e
         return -1
 
 
