@@ -13,7 +13,7 @@ class Search():
         """
         self.host = "192.168.120.90"
         self.port = 9200
-        self.index = "zjp-index:scholarkr"
+        self.index = "zjp-index:scholarkr_index(1)"
         self.doc_type = ['ConferencePaper', 'JournalPaper', 'Thesis']
         self.body_type = ["name^10","abstract^5","author^2","sourceOrganization"]
         self.s = Elasticsearch([{"host": self.host, "port": self.port}])
@@ -120,12 +120,20 @@ class Search():
                     "match_phrase":{
                         "name":{
                             "query": name,
-                            "slop":6
-                        }
+                            "slop":8,
+                        },
+
 
                     }
                 }
             })
+        # query = json.dumps({
+        #         "multi_match": {
+        #             "query": name,
+        #             "type":       "best_fields",
+        #             "fields":     [ "ConferencePaper" ],
+        #         }
+        #     })
         dict = {}
         context = {}
         dict['index'] = self.index
@@ -147,6 +155,41 @@ class Search():
 
         return context
 
+    def graph_search(self, name, from_size, page_size="all"):
+        """
+        查询到组织机构
+        :param doc_type:所查询的type
+        :param id:查询得到ID
+        :return: 查询信息的字典
+        """
+        query = json.dumps({
+                "query": {
+                    "match_phrase":{
+                        "_all": name
+                    }
+                }
+            })
+        dict = {}
+        context = {}
+        dict['index'] = self.index
+        #dict['doc_type'] = doc_type
+        dict['body'] = query
+        dict['from_'] = from_size
+        if page_size != "all":
+            dict['size'] = page_size
+
+        """
+        生成结果
+        """
+        results = self.s.search(**dict)
+
+        """
+        对结果进行提取
+        """
+        context['total'] = results['hits']['total']          #数据总数
+        context["result_content"] = results['hits']['hits']  #数据内容
+
+        return context
 
 
 if __name__ == "__main__":

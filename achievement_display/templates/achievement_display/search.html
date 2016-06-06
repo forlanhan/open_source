@@ -272,9 +272,12 @@
 
                 //该函数处理返回的数据
                 {% autoescape off %}
-                    deal_data(curr, source, {{ card_res }});
-
+                var card_res = {{ card_res }};
                 {% endautoescape %}
+
+                deal_data(curr, source, card_res);
+
+
 
 
 

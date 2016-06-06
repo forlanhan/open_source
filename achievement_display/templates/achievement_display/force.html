@@ -1,34 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>kforce</title>
-	<script src="/statics/achievement_display/js/echartsjs/esl.js"></script>
-     <!-- 引入 Bootstrap -->
-    <link href="/statics/achievement_display/css/font.css" rel="stylesheet">
-    <link href="/statics/achievement_display/plugin/bootstrap/bootstrap3-3-0.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/statics/achievement_display/css/force.css">
-    <script type="text/javascript" src="/statics/achievement_display/js/force.js"></script>
-	<!--  js  link -->
-	<!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
-    <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
-	<!--[if lt IE 9]>
-　　　　<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-	   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-　　<![endif]-->
-	<script src="/statics/achievement_display/plugin/jquery/jquery2.0.0min.js"></script>
-    <script src="/statics/achievement_display/plugin/bootstrap/bootstrap3.3.0.min.js"></script>
+<meta charset="UTF-8">
+<title>http://blog.csdn.net/r4NqiAn/article/details/48320487#part1-效果图展示</title>
+<!-- 引入 Bootstrap -->
+      <link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+      <link href="/statics/achievement_display/css/font.css" rel="stylesheet">
       <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
       <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
       <!--[if lt IE 9]>
          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
       <![endif]-->
+      <script src="https://code.jquery.com/jquery.js"></script>
+
+      <link rel="stylesheet" type="text/css" href="/statics/achievement_display/css/force_open.css">
 </head>
 <body>
-
-
 <div id="main">
     <div class="container" id="container">
         <div class="row">
@@ -42,9 +30,10 @@
                     <div id="card-img"><i id="op-icon" >&#xe617;</i></div>
                     <div id="card-title"><span id="card-title-content">复旦大学软件工程实验室</span></div>
                     <div id="card-desc">
-                        <p id="card-p">
+                        <p id="card-p" onclick="javascript:aa();">
                             该室是教育部软件科学与技术网上合作研究中心的成员单位，成立于1989年，长期从事软件工程方法、理论、工具与开发环境以及软件工程技术产业化应用等方面的研究和实践工作。实验室研究领域包括自适应软件、软件维护与再工程
                         </p>
+                        <span id="test"></span>
                     </div>
                     <div id="card-bottom-blank"></div>
                 </div>
@@ -53,161 +42,241 @@
     </div>
 </div>
 
-<script type="text/javascript">
-	require.config({
-        packages:[{
-            name:'echarts',
-            location:'/statics/achievement_display/plugin/echarts/src',
-            main:'echarts'
-        },{
-            name:'zrender',
-            location:'/statics/achievement_display/plugin/zrender/src',
-            main:'zrender'
-        }]
-    });
-    var  option = {
-    title : {
-        text: '',
-        subtext: '',
-        x:'right',
-        y:'bottom'
-    },
-    tooltip : {
-        trigger: 'item',
-        formatter: '{a} : {b}'
-    },
-    legend: {
-        x: 'left',
-        selected:{'朋友':true,'家人':true,'人物':true},
-        data:['家人','朋友','人物']
-    },
-    isShowScrollBar:false,
-    series: [
-        {
-            type:'kforce',
-            categories : [
-                {
-                    name: '人物',
-                    itemStyle: {
-                        normal: {
-                            color : '#ff7f50'
-                        }
-                    }
+    <script src="/statics/achievement_display/plugin/echarts/build/dist/echarts.js"></script>
+    <script type="text/javascript">
+        require.config({
+            paths : {
+                echarts : '/statics/achievement_display/plugin/echarts/build/dist/'
+            }
+        });
+        require([ "echarts", "echarts/chart/force"], function(ec) {
+            var nod = new Object();
+            nod.id = 0;
+            nod.category = 0;
+            nod.name = 'E0000012_93993993';
+            nod.label = '中国科学院信息工程研究所';
+            nod.symbolSize = 60;
+            nod.ignore = false;
+            nod.flag = false;
+            nod.symbol = 'image://statics/achievement_display/img/force-icon/org.jpg';
+            var myChart = ec.init(document.getElementById('demo1'), 'macarons');  //将变量为全局变量
+            var option = {
+                tooltip : {
+                    show : false
                 },
-                {
-                    name: '家人',
-                    itemStyle: {
-                        normal: {
-                            color : '#ff7f50'
-                        }
-                    }
-                },
-                {
-                    name:'朋友',
-                    itemStyle: {
-                        normal: {
-                            color : '#87cdfa'
-                        }
-                    }
-                }
-            ],
-            itemStyle: {
+                name: "知识图谱",
+                minRadius : 15,
+                maxRadius : 25,
+                density : 0.8,
+                attractiveness: 0.8,
+                gravity: 1,
+                roam: true,
+                steps: 1,
 
-                normal: {
-                    label: {
-                        show: true,
-                        textStyle: {
-                            color: '#000000'
+                legend: {
+                    x: 'left',
+                    selected:{'学校':true,'校区':true,'学院':true,'班级':true},
+                    data:['学校','校区','学院','班级']
+                },
+                series : [ {
+                    type : 'force',
+                    name : "Force tree",
+
+                    itemStyle: {
+
+                        normal: {
+                            label: {
+                                show: true,
+                                textStyle: {
+                                    color: '#000000',
+                                    fontWeight: 900,
+                                    align: "right",
+                                    baseline: "top",
+                                }
+                            },
+                        nodeStyle : {
+                            brushType : 'both',
+                            strokeColor : 'rgba(255,215,0,0.4)',
+                            lineWidth : 1
+                        },
+                        linkStyle:{
+                            type:"curve",
+                            width: 4
+                         }
+
+                        },emphasis:{
+                            linkStyle : { strokeColor : '#5182AB'}
                         }
                     },
-                    nodeStyle : {
-                        brushType : 'both',
-                        strokeColor : 'rgba(255,215,0,0.4)',
-                        lineWidth : 1
-                    }
+                    categories : [
+                        {
+                            name : '学校',
+                            itemStyle: {
+                                normal: {
+                                color : '#ff7f50'
+                                }
+                            }
+                        }, {
+                            name : '校区',
+                             itemStyle: {
+                                normal: {
+                                color : '#87cdfa'
+                                }
+                            }
+                        }, {
+                            name : '学院',
+                            itemStyle: {
+                                normal: {
+                                color : '#ff7f50'
+                                }
+                            }
+                        }, {
+                            name : '班级',
+                            itemStyle: {
+                                normal: {
+                                color : '#87cdfa'
+                                }
+                            }
+                        }
+                    ],
+                     nodes :
+                     [
+{#                         {#}
+{#                             id:0,#}
+{#                             category:0,#}
+{#                             name:'E0000012_93993993',#}
+{#                             label:'中国科学院',#}
+{#                             symbolSize:60,#}
+{#                             ignore:false,#}
+{#                             flag:false,#}
+{#                             symbol: 'image://statics/achievement_display/img/force-icon/org.jpg'#}
+{##}
+{#                     },#}
+                             nod,
+                     {id:1,category:1,name:'1',label:'中国科学院信息工程研究所',symbolSize:30,ignore:false,flag:true,
+                     symbol: 'heart'},
+                     {id:2,category:2,name:'2',label:'学院1',symbolSize:20,ignore:true,flag:true,
+                     symbol: 'star'},
+                     {id:3,category:2,name:'3',label:'学院2',symbolSize:20,ignore:true,flag:true},
+                     {id:4,category:1,name:'4',label:'白春礼',symbolSize:30,ignore:false,flag:true},
+                     {id:5,category:2,name:'5',label:'学院1',symbolSize:20,ignore:true,flag:true},
+                     {id:6,category:2,name:'6',label:'学院2',symbolSize:20,ignore:true,flag:true},
+                     {id:7,category:2,name:'7',label:'学院3',symbolSize:20,ignore:true,flag:true},
+                     {id:8,category:1,name:'8',label:'中科院计算技术研究所',symbolSize:30,ignore:false,flag:true},
+                     {id:9,category:2,name:'9',label:'学院1',symbolSize:20,ignore:true,flag:true},
+                     {id:10,category:2,name:'10',label:'学院2',symbolSize:20,ignore:true,flag:true},
+                     {id:11,category:2,name:'11',label:'学院3',symbolSize:20,ignore:true,flag:true},
+                     {id:12,category:2,name:'12',label:'学院4',symbolSize:20,ignore:true,flag:true},
+                     {id:13,category:3,name:'13',label:'一班',number:45,techear:'张三',symbolSize:10,ignore:true,flag:true},
+                     {id:14,category:3,name:'14',label:'二班',number:52,techear:'李四',symbolSize:10,ignore:true,flag:true}
+                     ],
+                     links : [ {source : 1,target : 0,
+                                itemStyle:{
+                                    normal:{
+                                        //lineWidth:10,
+                                        text: "隶属关系",
+                                        textColor:'red',
+                                        //textFont:'bold 15px verdana',
 
-                },emphasis:{
-                    linkStyle : { strokeColor : '#5182AB'}
+                                        textPosition:'inside'
+                                    }
+                                }},
+                              {source : 4,target : 0}, {source : 8,target : 0},
+                              {source : 2,target : 1}, {source : 3,target : 1}, {source : 5,target : 4},
+                              {source : 6,target : 4}, {source : 7,target : 4}, {source : 9,target : 8},
+                              {source : 10,target : 8}, {source : 11,target : 8}, {source : 12,target : 8},
+                              {source : 13,target : 6}, {source : 14,target : 13},{source : 14,target : 12} ]
+                } ]
+            };
+            myChart.setOption(option);
+            var ecConfig = require('echarts/config');
+            function openOrFold(param) {
+                var option = myChart.getOption();
+                var nodesOption = option.series[0].nodes;
+                var linksOption = option.series[0].links;
+                var data = param.data;
+                var linksNodes = [];
+
+                var categoryLength = option.series[0].categories.length;
+
+                //if (data.category == (categoryLength - 1)) {
+                  //  alert(data.label);
+                //}
+
+                if (data != null && data != undefined) {
+                    if (data.flag) {
+
+                        for ( var m in linksOption) {
+
+                            if (linksOption[m].target == data.id) {
+                                linksNodes.push(linksOption[m].source);
+                            }
+                        }
+                        if (linksNodes != null && linksNodes != undefined) {
+                            for ( var p in linksNodes) {
+                                nodesOption[linksNodes[p]].ignore = false;
+                                nodesOption[linksNodes[p]].flag = true;
+                            }
+                        }
+                        nodesOption[data.id].flag = false;
+                        myChart.setOption(option);
+                    } else {
+
+                        for ( var m in linksOption) {
+
+                            if (linksOption[m].target == data.id) {
+                                linksNodes.push(linksOption[m].source);
+                            }
+                            if (linksNodes != null && linksNodes != undefined) {
+                                for ( var n in linksNodes) {
+                                    if (linksOption[m].target == linksNodes[n]) {
+                                        linksNodes.push(linksOption[m].source);
+                                    }
+                                }
+                            }
+                        }
+                        if (linksNodes != null && linksNodes != undefined) {
+                            for ( var p in linksNodes) {
+                                nodesOption[linksNodes[p]].ignore = true;
+                                nodesOption[linksNodes[p]].flag = true;
+                            }
+                        }
+                        nodesOption[data.id].flag = true;
+                        myChart.setOption(option);
+                    }
                 }
-            },
-            minRadius : 15,
-            maxRadius : 25,
-            density : 0.8,
-            attractiveness: 0.8,
-            nodes:[
-                {category:0, name: '乔布斯', value : 10,shapeType:'rectangle',
-                  onclick:function(params){
-                     //alert(params.target.style.id);
-                     //params.target.style.text = "雷布斯";
-                      //ajax(params.target.style.id);
-                      show_ele("card");
-                },
-                  itemStyle:{
-                    normal:{
-                        id: "Educational_1000000001",
-                        width:100,
-                        height:80
+            }
+            myChart.on(ecConfig.EVENT.CLICK, openOrFold);
+            /////////////////////////////////////////////////
+            var show_info = function show_info(param) {
+                var option = myChart.getOption();
+                var nodesOption = option.series[0].nodes;
+                var linksOption = option.series[0].links;
+                var data = param.data;
+                var linksNodes = [];
+                var categoryLength = option.series[0].categories.length;
+                if(data.label){
+                    close_ele("card");
+                    show_ele("card", data.name);
+                }
 
-                    }
-                }},
-                {category:1, name: '克拉拉-乔布斯',value : 3},
-                {id:0,category:1, name: '丽萨-乔布斯',value : 2,shapeType:'ellipse',
-                itemStyle:{
 
-                    normal:{
-                        a:40,
-                        b:20
-                    }
-                }},
-                {category:1, name: '保罗-乔布斯',value : 3,},
-                {category:1, name: '劳伦-鲍威尔',value : 7},
-                {category:2, name: '史蒂夫-沃兹尼艾克',value : 5},
-                {category:2, name: '奥巴马',value : 8,shapeType:'rectangle'},
-                {category:2, name: '比尔-盖茨',value : 9},
-                {category:2, name: '乔纳森-艾夫',value : 4},
-                {category:2, name: '蒂姆-库克',value : 4},
-                {category:2, name: '龙-韦恩',value : 1},
-            ],
-            links : [
-                {source : 1, target : 0, weight : 1,
-                onclick:function(params){
-                     alert(params.target.style.id);
-                },
-                itemStyle:{
+               // if (data.category == (categoryLength - 1)) {
+                    //alert(data.category);
+               // }
 
-                    normal:{
-                        id: "122",
-                        lineWidth:10,
-                        text:'丽萨-乔布斯',
-                        textColor:'#030303',
-                        textFont:'bold 15px verdana',
-                        textPosition:'inside'
-                    }
-                }},
-                {source : 2, target : 0, weight : 2},
-                {source : 3, target : 0, weight : 1},
-                {source : 4, target : 0, weight : 10},
-                {source : 5, target : 0, weight : 3},
-                {source : 6, target : 0, weight : 6},
-                {source : 7, target : 0, weight : 6},
-                {source : 8, target : 0, weight : 1},
-                {source : 9, target : 0, weight : 1},
-                {source : 10, target : 0, weight : 1}
-                
-            ]
-        }
-    ]
-};
-require(
-    [
-        'echarts',
-        'echarts/chart/kforce',
-    ],
-    function(ec) {
-        var myChart = ec.init(document.getElementById('demo1'));
-        myChart.setOption(option);
-    }
-)
-</script>
+            }
+            myChart.on(ecConfig.EVENT.HOVER, show_info);
+            ////////////////////////////////////////////////
+
+
+        });
+
+
+
+
+
+    </script>
+<script type="text/javascript" src="/statics/achievement_display/js/force_open.js"></script>
 </body>
 </html>

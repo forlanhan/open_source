@@ -204,7 +204,8 @@ def search(request):
         """
         查询出卡片的内容
         """
-        card_res = s.card_search("Org", context['input_value'], 0 , 4)
+        type = ['Corporation', 'Person', 'ResearchOrganization', 'EducationalOrganization']
+        card_res = s.card_search(type, context['input_value'], 0 , 1)
         #context['card_res'] = json.dumps(card_res['result_content'])
         context['card_res'] = json.dumps(card_res['result_content'])
         return render(request, 'achievement_display/search.html', context)
@@ -278,21 +279,22 @@ def ajax_page(request):
 
     return HttpResponse(json.dumps(res))
 
-def card_get_res(request):
-    """
-    该视图函数供前台ajax使用
-    :param request:
-    :return:
-    """
-    try:
-        type = request.GET['type']
-        id = request.GET['id']
-    except:
-        type = "Org"
-        id = "Educational_1000003085"
-    s = Search()
-    context = s.card_search(type, id)
-    return HttpResponse(context['result_content'])
+# def card_get_res(request):
+#     """
+#     该视图函数供前台ajax使用
+#     :param request:
+#     :return:
+#     """
+#     try:
+#         type = request.GET['type']
+#         id = request.GET['id']
+#     except:
+#         #type = ['Corporation', 'Person', 'ResearchOrganization', 'EducationalOrganization']
+#         type ='ResearchOrganization'
+#         id = "Educational_1000003085"
+#     s = Search()
+#     context = s.card_search(type, id)
+#     return HttpResponse(context['result_content'])
 
 def force(request):
     """
@@ -326,7 +328,11 @@ def force_open(request):
     :param requesr:
     :return:
     """
+    g = Search()
+    _id = "ResearchOrganization/1000011424|中国科学院信息工程研究所"
+    res = g.graph_search(_id, 0, 10)
     context = {}
+    context['res_content'] = res['result_content']
     return render(request, "achievement_display/force_open.html", context)
 
 

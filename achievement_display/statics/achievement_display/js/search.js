@@ -57,11 +57,11 @@ var related_data_person = new Array();
 /////////////////////知识图谱 and 卡片
 function statics_data(data){//统计数组中相同的数据并记录
     var arr = new Array();
-    for(i=0; i<data.length; i++){
+    for(var i=0; i<data.length; i++){
         if(data[i].text){//数组存在
             //var n = i + 1;
             var num = 0; //初始个数
-            for(n=0; n<data.length; n++){
+            for(var n=0; n<data.length; n++){
                 if(n > i) break;
                 if(data[i]['text'] == data[n]['text']){
                     num = num + 1;
@@ -145,54 +145,70 @@ function deal_data(curr, source, card_res){
     var max_related_num = 10; //获取N篇论文的相关机构和任务;
     var n = 0;
     var m = 0;
-    for(l=0; l<max_related_num; l++){//动态初始化二位数组
+    //console.log(source);
+    for(var l=0; l<max_related_num+100; l++){//动态初始化二位数组
         related_data_org[l] = new Array();
         related_data_person[l] = new Array();
     }
-    for(i=0;i<source.length;i++){
+    for(var i=0;i<source.length;i++){
         //标题 name
         str += '<div class="sr-content"><h3 class="sr-title"><a href="'+ source[i]._source.dataSource +'"  class="sr-title-a" target="_blank" alt="'+ source[i]._source.name +'">'+ judge_highlight('name', source[i]) +'</a></h3>';
         //作者+来源+年份
-        str += '<div class="sr-info"><span>'+ split_name(judge_highlight('author', source[i])) +'</span> <span><a href="" target="_blank"  title="'+ source[i]._source.journal +'">'+ judge_highlight('journal', source[i]) +'</a></span><span class="sr-time" >'+ judge_highlight('yearNumber', source[i]) +'</span></div>'
+        if(source[i]._source.author || source[i]._source.journal || source[i]._source.yearNumber)
+            str += '<div class="sr-info"><span>'+ split_name(judge_highlight('author', source[i])) +'</span> <span><a href="" target="_blank"  title="'+ source[i]._source.journal +'">'+ judge_highlight('journal', source[i]) +'</a></span><span class="sr-time" >'+ judge_highlight('yearNumber', source[i]) +'</span></div>';
         //摘要
-        str += '<div class="sr-abstract">'+ judge_highlight('abstract', source[i]) +'</div>'
+        str += '<div class="sr-abstract">'+ judge_highlight('abstract', source[i]) +'</div>';
         //全部来源
-        str += '<div class="sc_allversion"><span class="sr-gray">全部来源：</span>'
-        str += '<span class="v_item_span"><a class="v_source" title="" target="_blank" href="'+ source[i]._source.dataSource +'" >'+ source[i]._source._source.tag +'</a></span>'
-
-        str += '</div>'
+        str += '<div class="sc_allversion"><span class="sr-gray">全部来源：</span>';
+        str += '<span class="v_item_span">'+all_source(source[i]._source._source)+'</span>';
 
         str += '</div>';
 
-        document.getElementById('main-result').innerHTML =  str ;   //将结果放入div中
+        str += '</div>';
 
-        if(curr == 1 && i < max_related_num){ //拿前max_related_num数据集
+           //将结果放入div中
 
-            if(source[i]._source.sourceOrganization){
-                related_data_org[m]['text'] = source[i]._source.sourceOrganization[0];
-                related_data_org[m]['weight'] = 1;
-                related_data_org[m]['link'] = '#';
-                //console.log(related_data_org[m]);
-                m = m + 1;
+        if(curr == 1 && i<max_related_num){ //拿前max_related_num数据集
+
+            if(source[i] && source[i]._source && source[i]._source.sourceOrganization ){
+                for(var s_o_i=0; s_o_i<source[i]._source.sourceOrganization.length; s_o_i++){
+                    if(source[i]._source.sourceOrganization[s_o_i]){
+                        related_data_org[m]['text'] = source[i]._source.sourceOrganization[s_o_i];
+                        related_data_org[m]['weight'] = 1;
+                        related_data_org[m]['link'] = '#';
+                        //console.log(related_data_org[m]);
+                        m = m + 1;
+                    }
+
+                }
+
             }
-            if(source[i]._source.author){
-                related_data_person[n]['text'] = source[i]._source.author[0] ;//split_name(source[i]._source.author);
-                related_data_person[n]['weight'] = 1;
-                related_data_person[n]['link'] = '#';
-                //console.log(related_data_person[n][0]);
-                n = n + 1;
+            if(source[i]&& source[i]._source && source[i]._source.author){
+                for(var s_o_i_2=0; s_o_i_2<source[i]._source.author.length; s_o_i_2++){
+                    if(source[i]._source.author[s_o_i_2]){
+                        related_data_person[n]['text'] = source[i]._source.author[s_o_i_2];
+                        //related_data_person[n]['text'] = 1;
+                        related_data_person[n]['weight'] = 1;
+                        related_data_person[n]['link'] = n;
+                        //console.log(related_data_person[n]);
+                        n = n + 1;
+                    }
+
+                }
             }
         }
 
     }
-
-    ///知识卡片
+    document.getElementById('main-result').innerHTML =  str ;  //将搜索结果放到页面中
+    //console.log(related_data_person);
+    //console.log(related_data_org);
      var words_arry = generate_word(statics_data(related_data_person)).concat(generate_word(statics_data(related_data_org)));
     jq_word(words_arry); //标签云;
 
+    ///知识卡片
     if(source.length > 0 && card_res[0]){//当查询有结果是出现卡片
         var str_card = "";  //机构基本描述
-        console.log(card_res);
+        //console.log(card_res);
         //document.getElementById("card").style.display = "block";
         $("#card").fadeIn("100");
         document.getElementById("card-close").innerHTML = '<i id="close-icon" onclick="close_ele();">&#xe616;</i>';
@@ -294,13 +310,21 @@ function judge_highlight(field, source_i){
 
     }
 }
+//处理全部来源 全部来源是一个列表
+function all_source(obj){
+    var str_all_source = "";
+    for(var i=0; i<obj.length; i++){
+        str_all_source += '<a class="v_source" title="" target="_blank" href="'+ obj[i].url +'" >'+ obj[i].tag +'</a>&nbsp;&nbsp;&nbsp;&nbsp;';
+    }
+    return str_all_source;
+}
 
 /////////////////////////////
 //处理论文分类
 function deal_paper_class(obj, data){
     var input = document.getElementById('paper-type');
     var tab = document.getElementsByClassName("tab");
-    for(i=0;i<tab.length;i++){
+    for(var i=0;i<tab.length;i++){
         tab[i].className = "tab";
     }
     obj.className = "selected tab";
@@ -309,7 +333,7 @@ function deal_paper_class(obj, data){
 function deal_paper_class_only_paper(obj, paper){
     var input1 = document.getElementById('paper-type');
     var tab = document.getElementsByClassName("tab");
-    for(i=0;i<tab.length;i++){
+    for(var i=0;i<tab.length;i++){
         tab[i].className = "tab";
     }
     obj.className = "selected tab";
