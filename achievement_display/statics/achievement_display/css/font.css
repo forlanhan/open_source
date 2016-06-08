@@ -6,10 +6,19 @@
     url('../fonts/heiti-normal/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
     url('../fonts/heiti-normal/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
 }
-@font-face {font-family: "iconfont";
-  src: url('../fonts/icon/iconfont.eot?t=1463628158'); /* IE9*/
-  src: url('../fonts/icon/iconfont.eot?t=1463628158#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../fonts/icon/iconfont.woff?t=1463628158') format('woff'), /* chrome, firefox */
-  url('../fonts/icon/iconfont.ttf?t=1463628158') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('../fonts/icon/iconfont.svg?t=1463628158#iconfont') format('svg'); /* iOS 4.1- */
+/*@font-face {font-family: "iconfont";*/
+  /*src: url('../fonts/icon/iconfont.eot?t=1463628158'); !* IE9*!*/
+  /*src: url('../fonts/icon/iconfont.eot?t=1463628158#iefix') format('embedded-opentype'), !* IE6-IE8 *!*/
+  /*url('../fonts/icon/iconfont.woff?t=1463628158') format('woff'), !* chrome, firefox *!*/
+  /*url('../fonts/icon/iconfont.ttf?t=1463628158') format('truetype'), !* chrome, firefox, opera, Safari, Android, iOS 4.2+*!*/
+  /*url('../fonts/icon/iconfont.svg?t=1463628158#iconfont') format('svg'); !* iOS 4.1- *!*/
+/*}*/
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_1465355189_5789413.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_1465355189_5789413.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_1465355189_5789413.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/font_1465355189_5789413.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_1465355189_5789413.svg#iconfont') format('svg'); /* iOS 4.1- */
 }

@@ -3,6 +3,14 @@
  */
 
 
+function generate_node(id, res){
+    var node = new Array();
+    var link = new Array();
+    for(var i=0; i<res+1; i++){
+        node[i] = new Array();
+    }
+    console.log(id);
+}
 
 function close_ele(id){
     var obj = document.getElementById(id);
@@ -276,4 +284,5 @@ function test(){
             ////////////////////////////////////////////////
         });
 }
+
 

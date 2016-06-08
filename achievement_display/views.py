@@ -311,16 +311,22 @@ def get_node_info(request):
     :param get_node_info:
     :return:
     """
-    if "id" in request.GET:
-        s = Search()
-        res = s.search_in_id(request.GET['id'])
-        context = {}
-        context['name'] = res['result_content']['_source']['name']
-        context['id'] = res['result_content']['_id']
-        context['desc'] = res['result_content']['_source']['description']
-        return HttpResponse(json.dumps(context))
-    else:
-        return HttpResponse("none")
+    # try:
+    #     id = request.GET['id']
+    #     type = request.GET['type']
+    #     s = Search()
+    #     res = s.search_in_id(id, type, 0, 1)
+    #     return HttpResponse(json.dumps(res['res_content']))
+    #
+    # except:
+    #     return HttpResponse("none")
+
+    id = request.GET['id']
+    type = request.GET['type']
+    s = Search()
+    res = s.search_in_id(id, type, 0, 1)
+    return HttpResponse(json.dumps(res['result_content']))
+
 
 def force_open(request):
     """
@@ -329,10 +335,27 @@ def force_open(request):
     :return:
     """
     g = Search()
-    _id = "ResearchOrganization/1000011424|中国科学院信息工程研究所"
-    res = g.graph_search(_id, 0, 10)
-    context = {}
-    context['res_content'] = res['result_content']
+    context = {}      #初始化字典
+    MAX_DISPLAY_NUM = 9     #主页显示的实体最大数量
+    _id = "ResearchOrganization/1000011424|中国科学院信息工程研究所"  #_id = "EducationalOrganization/1000010463|湖南科技大学中文系"
+    context['id'] = request.GET['id']
+
+    """
+    先从数据中取出9个
+    """
+    res = g.graph_search(context['id'], 0, MAX_DISPLAY_NUM)
+    context['total'] = res['total']
+    context['name'] = context['id'].split("|")[1]
+    """
+    判断数据库中的数据是否大于9个,如果大于则返回剩余数据
+    """
+    if(context['total'] > MAX_DISPLAY_NUM):
+        res_left = g.graph_search(context['id'], MAX_DISPLAY_NUM, context['total'])
+        context['res_content_left'] = json.dumps(res_left['result_content'])
+    else:
+        context['res_content_left'] = 0   #判断是否有数据
+
+    context['res_content'] = json.dumps(res['result_content'])
     return render(request, "achievement_display/force_open.html", context)
 
 

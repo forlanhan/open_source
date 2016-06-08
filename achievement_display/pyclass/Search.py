@@ -192,10 +192,46 @@ class Search():
         return context
 
 
+    def search_in_id(self, id, type, from_size, page_size):
+        """
+        查寻某一节点的信息
+        :param type:所查询的type
+        :param id:查询得到ID
+        :return: 查询信息的字典
+        """
+        query = json.dumps({
+                "query": {
+                    "match_phrase":{
+                        "_id": id
+                    }
+                }
+            })
+        dict = {}
+        context = {}
+        dict['index'] = self.index
+        dict['doc_type'] = type
+        dict['body'] = query
+        dict['from_'] = from_size
+        dict['size'] = page_size
+
+        """
+        生成结果
+        """
+        results = self.s.search(**dict)
+
+        """
+        对结果进行提取
+        """
+        context['total'] = results['hits']['total']          #数据总数
+        context["result_content"] = results['hits']['hits']  #数据内容
+
+        return context
+
+
 if __name__ == "__main__":
     s = Search()
     res = s.s_search("all", "all", "中国科学院信息工程研究所", 1, 5)
-    context = s.card_search("Org", "中国科学院信息工程研究所")
+    context = s.graph_search("Person/1000188669|柳厅文", 0)
     # print res['total']
     # print res['time']
     # print res['result_content'][0]

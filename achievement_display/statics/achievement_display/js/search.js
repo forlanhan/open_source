@@ -112,7 +112,10 @@ function generate_word(arr){//生成标签云的word变量
         data_array[n] = new Array();
         data_array[n]['text'] = i.split("|")[1];
         data_array[n]['weight'] = arr[i].split("**")[0] / 10;
-        data_array[n]['link'] = arr[i].split("**")[1];
+        //data_array[n]['link'] = "/force_open?id="+i;
+        data_array[n]['link'] = new Array();
+        data_array[n]['link']['href'] = "/force_open?id="+i;
+        data_array[n]['link']['target'] = "_blank";
         n = n + 1;
     }
     //console.log(data_array);
@@ -213,7 +216,8 @@ function deal_data(curr, source, card_res){
         $("#card").fadeIn("100");
         document.getElementById("card-close").innerHTML = '<i id="close-icon" onclick="close_ele();">&#xe616;</i>';
         document.getElementById("card-img").innerHTML = '<i id="op-icon" >&#xe617;</i>';
-        document.getElementById("card-title-content").innerHTML = card_res[0]._source.name;
+        var id_get = card_res[0]._type+"/"+card_res[0]._id+"|"+card_res[0]._source.name;
+        document.getElementById("card-title-content").innerHTML = '<a href="/force_open?id='+id_get+'" target="_blank">'+card_res[0]._source.name+'</a>';
 
         if(card_res[0]._source['location']){
             str_card += '<span class="org-tips">地点:</span><span class="org-context">'+card_res[0]._source['location']+'</span>&nbsp;&nbsp;';

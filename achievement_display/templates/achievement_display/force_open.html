@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>http://blog.csdn.net/r4NqiAn/article/details/48320487#part1-效果图展示</title>
+<title>{{ name }}</title>
 <!-- 引入 Bootstrap -->
       <link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
       <link href="/statics/achievement_display/css/font.css" rel="stylesheet">
@@ -13,8 +13,15 @@
          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
       <![endif]-->
       <script src="https://code.jquery.com/jquery.js"></script>
-
+      <script type="text/javascript" src="/statics/achievement_display/js/force_open.js"></script>
       <link rel="stylesheet" type="text/css" href="/statics/achievement_display/css/force_open.css">
+    <script>
+         {% autoescape off %}
+            var res_content = {{ res_content }};
+            var id = "{{ id }}";
+            var res_content_left = {{ res_content_left }};
+         {% endautoescape %}
+    </script>
 </head>
 <body>
 <div id="main">
@@ -25,25 +32,29 @@
             </div>
             <div class="col-lg-3" id="main-right">
                 <div id="card-top-blank"></div>
-                <div id="card">
+                <!-- card开始  -->
+                 <div id="card">
                     <div id="card-close"><i id="close-icon" onclick="close_ele('card');">&#xe616;</i></div>
-                    <div id="card-img"><i id="op-icon" >&#xe617;</i></div>
-                    <div id="card-title"><span id="card-title-content">复旦大学软件工程实验室</span></div>
-                    <div id="card-desc">
-                        <p id="card-p" onclick="javascript:aa();">
-                            该室是教育部软件科学与技术网上合作研究中心的成员单位，成立于1989年，长期从事软件工程方法、理论、工具与开发环境以及软件工程技术产业化应用等方面的研究和实践工作。实验室研究领域包括自适应软件、软件维护与再工程
-                        </p>
-                        <span id="test"></span>
-                    </div>
+                    <div id="card-img"></div>
+                    <div id="card-title"><span id="card-title-content"></span></div>
+                    <div id="card-b-desc"></div>
+                    <div id="card-desc"><p id="card-p"></p></div>
+                    <div id="card-key"></div>
                     <div id="card-bottom-blank"></div>
                 </div>
+                <!-- card结束  -->
             </div>
         </div>
+        <div id="more"></div>
     </div>
 </div>
 
     <script src="/statics/achievement_display/plugin/echarts/build/dist/echarts.js"></script>
     <script type="text/javascript">
+        //////////////////////////////
+        //参数配置
+        var node_link = generate_node(id, res_content, res_content_left);
+        //////////////////////////////
         require.config({
             paths : {
                 echarts : '/statics/achievement_display/plugin/echarts/build/dist/'
@@ -51,14 +62,7 @@
         });
         require([ "echarts", "echarts/chart/force"], function(ec) {
             var nod = new Object();
-            nod.id = 0;
-            nod.category = 0;
-            nod.name = 'E0000012_93993993';
-            nod.label = '中国科学院信息工程研究所';
-            nod.symbolSize = 60;
-            nod.ignore = false;
-            nod.flag = false;
-            nod.symbol = 'image://statics/achievement_display/img/force-icon/org.jpg';
+
             var myChart = ec.init(document.getElementById('demo1'), 'macarons');  //将变量为全局变量
             var option = {
                 tooltip : {
@@ -75,8 +79,8 @@
 
                 legend: {
                     x: 'left',
-                    selected:{'学校':true,'校区':true,'学院':true,'班级':true},
-                    data:['学校','校区','学院','班级']
+                    selected:{'一级':true,'二级':true},
+                    data:['一级','二级']
                 },
                 series : [ {
                     type : 'force',
@@ -88,10 +92,11 @@
                             label: {
                                 show: true,
                                 textStyle: {
-                                    color: '#000000',
+                                    color: '#000',
                                     fontWeight: 900,
                                     align: "right",
                                     baseline: "top",
+                                    fontSize: 14
                                 }
                             },
                         nodeStyle : {
@@ -101,7 +106,7 @@
                         },
                         linkStyle:{
                             type:"curve",
-                            width: 4
+                            width: 2.2
                          }
 
                         },emphasis:{
@@ -110,82 +115,23 @@
                     },
                     categories : [
                         {
-                            name : '学校',
+                            name : '一级',
                             itemStyle: {
                                 normal: {
-                                color : '#ff7f50'
+                                color : '#87cdfa'
                                 }
                             }
                         }, {
-                            name : '校区',
+                            name : '二级',
                              itemStyle: {
                                 normal: {
-                                color : '#87cdfa'
-                                }
-                            }
-                        }, {
-                            name : '学院',
-                            itemStyle: {
-                                normal: {
                                 color : '#ff7f50'
-                                }
-                            }
-                        }, {
-                            name : '班级',
-                            itemStyle: {
-                                normal: {
-                                color : '#87cdfa'
                                 }
                             }
                         }
                     ],
-                     nodes :
-                     [
-{#                         {#}
-{#                             id:0,#}
-{#                             category:0,#}
-{#                             name:'E0000012_93993993',#}
-{#                             label:'中国科学院',#}
-{#                             symbolSize:60,#}
-{#                             ignore:false,#}
-{#                             flag:false,#}
-{#                             symbol: 'image://statics/achievement_display/img/force-icon/org.jpg'#}
-{##}
-{#                     },#}
-                         nod,
-                     {id:1,category:1,name:'1',label:'中国科学院信息工程研究所',symbolSize:30,ignore:false,flag:true,
-                     symbol: 'heart'},
-                     {id:2,category:2,name:'2',label:'学院1',symbolSize:20,ignore:true,flag:true,
-                     symbol: 'star'},
-                     {id:3,category:2,name:'3',label:'学院2',symbolSize:20,ignore:true,flag:true},
-                     {id:4,category:1,name:'4',label:'白春礼',symbolSize:30,ignore:false,flag:true},
-                     {id:5,category:2,name:'5',label:'学院1',symbolSize:20,ignore:true,flag:true},
-                     {id:6,category:2,name:'6',label:'学院2',symbolSize:20,ignore:true,flag:true},
-                     {id:7,category:2,name:'7',label:'学院3',symbolSize:20,ignore:true,flag:true},
-                     {id:8,category:1,name:'8',label:'中科院计算技术研究所',symbolSize:30,ignore:false,flag:true},
-                     {id:9,category:2,name:'9',label:'学院1',symbolSize:20,ignore:true,flag:true},
-                     {id:10,category:2,name:'10',label:'学院2',symbolSize:20,ignore:true,flag:true},
-                     {id:11,category:2,name:'11',label:'学院3',symbolSize:20,ignore:true,flag:true},
-                     {id:12,category:2,name:'12',label:'学院4',symbolSize:20,ignore:true,flag:true},
-                     {id:13,category:3,name:'13',label:'一班',number:45,techear:'张三',symbolSize:10,ignore:true,flag:true},
-                     {id:14,category:3,name:'14',label:'二班',number:52,techear:'李四',symbolSize:10,ignore:true,flag:true}
-                     ],
-                     links : [ {source : 1,target : 0,
-                                itemStyle:{
-                                    normal:{
-                                        //lineWidth:10,
-                                        text: "隶属关系",
-                                        textColor:'red',
-                                        //textFont:'bold 15px verdana',
-
-                                        textPosition:'inside'
-                                    }
-                                }},
-                              {source : 4,target : 0}, {source : 8,target : 0},
-                              {source : 2,target : 1}, {source : 3,target : 1}, {source : 5,target : 4},
-                              {source : 6,target : 4}, {source : 7,target : 4}, {source : 9,target : 8},
-                              {source : 10,target : 8}, {source : 11,target : 8}, {source : 12,target : 8},
-                              {source : 13,target : 6}, {source : 14,target : 13},{source : 14,target : 12} ]
+                     nodes : node_link['node'],
+                     links : node_link['link']
                 } ]
             };
             myChart.setOption(option);
@@ -257,7 +203,7 @@
                 var categoryLength = option.series[0].categories.length;
                 if(data.label){
                     close_ele("card");
-                    show_ele("card", data.name);
+                    show_ele("card", data.name, res_content_left);
                 }
 
 
@@ -273,11 +219,7 @@
         });
 
 
-
-
-
     </script>
-<script type="text/javascript" src="/statics/achievement_display/js/force_open.js"></script>
-{#{{ res_content }}#}
+
 </body>
 </html>
