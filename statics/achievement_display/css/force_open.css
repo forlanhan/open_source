@@ -3,7 +3,8 @@
 
 }
 #container{
-
+    /*background-color: #FEFFFF;*/
+    border: 1px solid navy;
 
 }
 #main-left{
@@ -16,7 +17,8 @@
 }
 #demo1{
 	width: 100%;
-	height: 800px;
+	height: 750px;
+
 }
 /*#######################################################右边卡片开始###########################################*/
 #card-top-blank{
@@ -28,9 +30,8 @@
     width: 100%;
     border:1px solid rgb(233, 233, 233);
     border-bottom: 1px solid #cccccc;
-	display: none;
     /*box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 15px 1px;*/
-
+    display: none;
 }
 
 #card-close{
@@ -61,32 +62,13 @@
     -webkit-font-smoothing: antialiased;
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;
-    color: #cccccc;
-    color: #2e8ded;
+    color: navy;
 }
 #card-title{
     width: 100%;
     text-align: center;
     font-weight: 600;
     font-size: 18px;
-}
-#card-b-desc{
-    margin-top: 10px;
-	font-size: 10px;
-	text-align: center;
-	color: #cc0c00;
-}
-.org-tips{
-	color: #663366;
-}
-.org-context{
-	color: #cc0c00;
-}
-#card-key{
-	font-size: 10px;
-}
-#org-keyDiscipline{
-
 }
 #card-desc{
     margin-top: 10px;
@@ -95,10 +77,20 @@
     color: rgb(0, 0, 0);
     font-size: 13px;
     line-height: 21px;
-
 }
 
 #card-bottom-blank{
     width: 100%;
     height: 10px;
+}
+#card-b-desc{
+    text-align: center;
+}
+.org-tips{
+	color: #663366;
+    font-size: 12px;
+}
+.org-context{
+	color: #cc0c00;
+    font-size: 12px;
 }

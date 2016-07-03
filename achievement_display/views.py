@@ -193,12 +193,22 @@ def search(request):
         context['input_value'] = request.GET['keyvalue']
         context['paper_type'] = request.GET['paper-type']
         context['form_option'] = request.GET['form-option']
+        context['sort_en'] = request.GET['sort']
         s = Search()
-        #res = s.search(keyvalue, fromsize, pagesize)
+
+        """
+        判断是否有敏感性排序
+        """
+        if context['sort_en'] == "sensitiveness":
+            context['sort'] = "敏感性"
+        else:
+            context['sort'] = "相关性"
+
+
         """
         查询时间和显示数量
         """
-        res = s.s_search(context['paper_type'], context['form_option'], context['input_value'], 0, 1)
+        res = s.s_search(context['paper_type'], context['form_option'], context['input_value'], 0, 1,  context['sort_en'])
         context['total'] = res['total']
         context['time'] = res['time']
         """
@@ -208,32 +218,18 @@ def search(request):
         card_res = s.card_search(type, context['input_value'], 0 , 1)
         #context['card_res'] = json.dumps(card_res['result_content'])
         context['card_res'] = json.dumps(card_res['result_content'])
+        """
+        获取请求路径
+        """
+        # context['request_path'] = request.get_full_path()
+        context['request_path'] = request.GET
+
+
         return render(request, 'achievement_display/search.html', context)
     else:
         return HttpResponseRedirect("index")
 
-def search2(request):
-    """
-    搜索界面
-    """
-    from_size = 0
-    page_size = 20
-    if "keyvalue" in request.GET:
-        s = Search()
-        res = s.search(request.GET['keyvalue'], from_size,  page_size)
-        context = {}
-        source = []
-        context['input_value'] = request.GET['keyvalue']
-        for x in res['result_content']:
-            dict = x['_source']
-            dict['judge_type'] = judge_type(dict)
-            source.append(dict)
-        context['content'] = source
-        context['total'] = res['total']
-        context['time'] = res['time']
-        return render(request, 'achievement_display/search_test.html', context)
-    else:
-        return HttpResponseRedirect("index")
+
 
 
 def ajax_page(request):
@@ -249,15 +245,18 @@ def ajax_page(request):
             keyvalue = request.GET['keyvalue']
             paper_type = request.GET['papertype']
             body_type = request.GET['bodytype']
+            sort = request.GET['sort']
         else:
             curr = 1
+
+
     except:
         curr = 1
     pagesize = 10
     fromsize = (int(curr)-1) * pagesize
     s = Search()
     #res = s.search(keyvalue, fromsize, pagesize)
-    res = s.s_search(paper_type, body_type, keyvalue, fromsize, pagesize)
+    res = s.s_search(paper_type, body_type, keyvalue, fromsize, pagesize, sort)
     res['total'] = int(res['total']) / pagesize
     """
     测试参数
@@ -279,22 +278,6 @@ def ajax_page(request):
 
     return HttpResponse(json.dumps(res))
 
-# def card_get_res(request):
-#     """
-#     该视图函数供前台ajax使用
-#     :param request:
-#     :return:
-#     """
-#     try:
-#         type = request.GET['type']
-#         id = request.GET['id']
-#     except:
-#         #type = ['Corporation', 'Person', 'ResearchOrganization', 'EducationalOrganization']
-#         type ='ResearchOrganization'
-#         id = "Educational_1000003085"
-#     s = Search()
-#     context = s.card_search(type, id)
-#     return HttpResponse(context['result_content'])
 
 def force(request):
     """

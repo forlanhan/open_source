@@ -13,12 +13,13 @@ class Search():
         """
         self.host = "192.168.120.90"
         self.port = 9200
-        self.index = "zjp-index:scholarkr_index(1)"
+        # self.index = "zjp-index:scholarkr_index(1)"
+        self.index = "scholarkr"
         self.doc_type = ['ConferencePaper', 'JournalPaper', 'Thesis']
         self.body_type = ["name^10","abstract^5","author^2","sourceOrganization"]
         self.s = Elasticsearch([{"host": self.host, "port": self.port}])
 
-    def generate_query(self, pap_type, body_type, keyvalue):
+    def generate_query(self, pap_type, body_type, keyvalue, sort):
         """
         生成查询语句
         :param pap_type:文献类型, 分为三类 学术 | 期刊 | 学位
@@ -27,10 +28,10 @@ class Search():
         :return:返回字典 dict
         """
         dict = {}
-
         """
         如果为all则在['ConferencePaper', 'JournalPaper', 'Thesis']中查找,否则只在单个type中查找
         """
+
         if pap_type == "all":
             dict['doc_type'] = self.doc_type
         else:
@@ -49,26 +50,58 @@ class Search():
         """
         查询结构体
         """
-        dict['body'] = json.dumps({
-            "query": {
-                "multi_match" : {
-                    "query" : keyvalue,
-                    "fields" : match_field,
-                    "type" : "phrase",
-                    "slop":10
-                }
-            },
-            "highlight":{
-                "fields": {
-                  highlight_field: {}
+        print sort
+        if sort == "none":
+            """
+            没有什么排序
+            """
+            dict['body'] = json.dumps({
+                "query": {
+                    "multi_match" : {
+                        "query" : keyvalue,
+                        "fields" : match_field,
+                        "type" : "phrase",
+                        "slop":10
+                    }
                 },
-                "require_field_match": False
-            }
-        })
+
+                "highlight":{
+                    "fields": {
+                      highlight_field: {}
+                    },
+                    "require_field_match": False
+                }
+            })
+        elif sort == "sensitiveness":
+            """
+            敏感性排序
+            """
+            dict['body'] = json.dumps({
+                "query": {
+                    "multi_match" : {
+                        "query" : keyvalue,
+                        "fields" : match_field,
+                        "type" : "phrase",
+                        "slop":10
+                    }
+                },
+                "sort": {
+                    "sensibility":
+                        { "order": "desc" }
+                },
+                "highlight":{
+                    "fields": {
+                      highlight_field: {}
+                    },
+                    "require_field_match": False
+                }
+            })
+        print dict['body']
+
 
         return dict
 
-    def s_search(self, pap_type, body_type, keyvalue, from_size, page_size):
+    def s_search(self, pap_type, body_type, keyvalue, from_size, page_size, sort):
         """
         :param pap_type:文献类型, 分为三类 学术 | 期刊 | 学位
         :param body_type:文献搜索位置, 全文 | 标题 | 作者 | 单位 | 摘要
@@ -86,7 +119,7 @@ class Search():
         """
         定义查询key-value
         """
-        dict = self.generate_query(pap_type, body_type, keyvalue)
+        dict = self.generate_query(pap_type, body_type, keyvalue, sort)
         dict['index'] = self.index
         dict['from_'] = from_size
         dict['size'] = page_size
@@ -230,11 +263,10 @@ class Search():
 
 if __name__ == "__main__":
     s = Search()
-    res = s.s_search("all", "all", "中国科学院信息工程研究所", 1, 5)
-    context = s.graph_search("Person/1000188669|柳厅文", 0)
-    # print res['total']
-    # print res['time']
-    # print res['result_content'][0]
-    print context
+    res = s.s_search("all", "all", "中国科学院信息工程研究所", 1, 5, "none")
+    #context = s.graph_search("Person/1000188669|柳厅文", 0)
+    print res['total']
+    print res['time']
+    #print res['result_content'][0]
 
 

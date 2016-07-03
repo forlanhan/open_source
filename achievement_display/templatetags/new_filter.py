@@ -28,3 +28,18 @@ def find_name(string):
         return res.filename
     else:
         return "无"
+
+@register.filter(name="sort")
+def sort(string, sort):
+    """
+    替换路径中sort参数得值
+    :param string: 要替换得值
+    :return: 路径
+    """
+    str = "/search?"
+    for key, value in string.items():
+        if key == "sort":
+            str += key + '=' + sort + '&'
+        else:
+            str += key + '=' + value + '&'
+    return str

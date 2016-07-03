@@ -37,6 +37,7 @@ var card_data_org ;
 var card_data_person;
 var related_data_org = new Array();
 var related_data_person = new Array();
+
 //var words = 1 ;
 
  //var words = [
@@ -206,7 +207,9 @@ function deal_data(curr, source, card_res){
     //console.log(related_data_person);
     //console.log(related_data_org);
      var words_arry = generate_word(statics_data(related_data_person)).concat(generate_word(statics_data(related_data_org)));
+    console.log(words_arry);
     jq_word(words_arry); //标签云;
+
 
     ///知识卡片
     if(source.length > 0 && card_res[0]){//当查询有结果是出现卡片
@@ -405,8 +408,22 @@ function rem_form_status(paper, body){
 }
 ////////////////////////////////////
 //标签云
+//function jq_word(words){
+//    //console.log(words);
+//    $(function() {
+//        $('#rel-content').jQCloud(words,{
+//             autoResize: true,
+//            fontSize: {
+//                from: 0.10,
+//                to: 0.01
+//            }
+//        });
+//
+//    });
+//}
 function jq_word(words){
-    //console.log(words);
+
+
     $(function() {
         $('#rel-content').jQCloud(words,{
              autoResize: true,
@@ -417,6 +434,9 @@ function jq_word(words){
         });
 
     });
+
+
+
 }
 
 
