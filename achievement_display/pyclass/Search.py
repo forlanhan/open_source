@@ -19,9 +19,9 @@ class Search():
         self.body_type = ["name^10","abstract^5","author^2","sourceOrganization"]
         self.s = Elasticsearch([{"host": self.host, "port": self.port}])
 
-    def generate_query(self, pap_type, body_type, keyvalue, sort):
+    def generate_query(self, pap_type, body_type, keyvalue, sort, filter_condition=""):
         """
-        生成查询语句
+        生成查询语句(此查询语句仅供查询结果使用)
         :param pap_type:文献类型, 分为三类 学术 | 期刊 | 学位
         :param body_type:文献搜索位置, 全文 | 标题 | 作者 | 单位 | 摘要
         :param keyvalue:搜索关键字
@@ -50,58 +50,115 @@ class Search():
         """
         查询结构体
         """
-        print sort
-        if sort == "none":
-            """
-            没有什么排序
-            """
-            dict['body'] = json.dumps({
-                "query": {
-                    "multi_match" : {
-                        "query" : keyvalue,
-                        "fields" : match_field,
-                        "type" : "phrase",
-                        "slop":10
-                    }
-                },
 
-                "highlight":{
-                    "fields": {
-                      highlight_field: {}
+        # filter_condition = '{"term": {"relatedResearchTopic.raw": "数据挖掘"}},{"term": {"relatedResearchTopic.raw": "机器学习"}},{"term": {"relatedResearchTopic.raw": "数据挖掘"}},{"term": {"sourceOrganization.raw": "EducationalOrganization/1000003909|中国科学院大学"}}'
+        if filter_condition:
+            org_con = filter_condition.split("$+$")[0]
+            subject_con = filter_condition.split("$+$")[1]
+            if sort == "none":
+                """
+                没有什么排序
+                """
+                dict['body'] = json.dumps({
+                    "query": {
+                        "multi_match" : {
+                            "query" : keyvalue,
+                            "fields" : match_field,
+                            "type" : "phrase",
+                            "slop":10
+                        }
                     },
-                    "require_field_match": False
-                }
-            })
-        elif sort == "sensitiveness":
-            """
-            敏感性排序
-            """
-            dict['body'] = json.dumps({
-                "query": {
-                    "multi_match" : {
-                        "query" : keyvalue,
-                        "fields" : match_field,
-                        "type" : "phrase",
-                        "slop":10
+                    "filter": {
+                    "bool": {
+                      "should":[
+                        org_con
+                      ],
+                        "should":[
+                        subject_con
+                      ]
                     }
                 },
-                "sort": {
-                    "sensibility":
-                        { "order": "desc" }
-                },
-                "highlight":{
-                    "fields": {
-                      highlight_field: {}
+                    "highlight":{
+                        "fields": {
+                          highlight_field: {}
+                        },
+                        "require_field_match": False
+                    }
+                })
+            elif sort == "sensitiveness":
+                """
+                敏感性排序
+                """
+                dict['body'] = json.dumps({
+                    "query": {
+                        "multi_match" : {
+                            "query" : keyvalue,
+                            "fields" : match_field,
+                            "type" : "phrase",
+                            "slop":10
+                        }
                     },
-                    "require_field_match": False
-                }
-            })
-        print dict['body']
+                    "sort": {
+                        "sensibility":
+                            { "order": "desc" }
+                    },
+                    "highlight":{
+                        "fields": {
+                          highlight_field: {}
+                        },
+                        "require_field_match": False
+                    }
+                })
+        else:
+            if sort == "none":
+                """
+                没有什么排序
+                """
+                dict['body'] = json.dumps({
+                    "query": {
+                        "multi_match" : {
+                            "query" : keyvalue,
+                            "fields" : match_field,
+                            "type" : "phrase",
+                            "slop":10
+                        }
+                    },
+                    "highlight":{
+                        "fields": {
+                          highlight_field: {}
+                        },
+                        "require_field_match": False
+                    }
+                })
+            elif sort == "sensitiveness":
+                """
+                敏感性排序
+                """
+                dict['body'] = json.dumps({
+                    "query": {
+                        "multi_match" : {
+                            "query" : keyvalue,
+                            "fields" : match_field,
+                            "type" : "phrase",
+                            "slop":10
+                        }
+                    },
+                    "sort": {
+                        "sensibility":
+                            { "order": "desc" }
+                    },
+                    "highlight":{
+                        "fields": {
+                          highlight_field: {}
+                        },
+                        "require_field_match": False
+                    }
+                })
 
 
         return dict
 
-    def s_search(self, pap_type, body_type, keyvalue, from_size, page_size, sort):
+    def s_search(self, pap_type, body_type, keyvalue, from_size, page_size, sort, filter_condition=""):
         """
         :param pap_type:文献类型, 分为三类 学术 | 期刊 | 学位
         :param body_type:文献搜索位置, 全文 | 标题 | 作者 | 单位 | 摘要
@@ -124,6 +181,7 @@ class Search():
         dict['from_'] = from_size
         dict['size'] = page_size
         #dict['q'] = keyvalue
+        print dict['body']
 
 
         """
@@ -260,13 +318,79 @@ class Search():
 
         return context
 
+    def list_agg_search(self, pap_type, body_type, keyvalue, agg_fields):
+        """
+        聚合查询
+        :param pap_type:文献类型, 分为三类 学术 | 期刊 | 学位
+        :param body_type:文献搜索位置, 全文 | 标题 | 作者 | 单位 | 摘要
+        :param keyvalue:搜索关键字
+        :param agg_fields: 聚合字段 主题|机构
+        :return: 聚合结果 字典
+        """
+        dict = {}
+        """
+        如果为all则在['ConferencePaper', 'JournalPaper', 'Thesis']中查找,否则只在单个type中查找
+        """
+        dict['index'] = self.index
+
+        if pap_type == "all":
+            dict['doc_type'] = self.doc_type
+        else:
+            dict['doc_type'] = pap_type
+
+        """
+        如果为all则在["name","abstract","author","sourceOrganization"]中查找,否则只在单个field中查找
+        """
+        if body_type == "all":
+            highlight_field = "*"
+            match_field = self.body_type
+        else:
+            match_field = body_type
+            highlight_field = body_type
+
+        """
+        查询语句
+        """
+        agg_fields = agg_fields + ".raw"
+
+        dict['body'] = json.dumps({
+                "query": {
+                    "multi_match" : {
+                        "query" : keyvalue,
+                        "fields" : match_field,
+                        "type" : "phrase",
+                        "slop":10
+                    }
+                },
+                  "aggs": {
+                    "all_journals": {
+                      "terms": {
+                        "field": agg_fields,
+                        "size": 5
+                      }
+                    }
+                  }
+            })
+
+
+        """
+        生成结果
+        """
+        results = self.s.search(**dict)
+
+        return results
+
+
+
+
 
 if __name__ == "__main__":
     s = Search()
     res = s.s_search("all", "all", "中国科学院信息工程研究所", 1, 5, "none")
     #context = s.graph_search("Person/1000188669|柳厅文", 0)
-    print res['total']
-    print res['time']
+    # print res['total']
+    # print res['time']
     #print res['result_content'][0]
-
+    # res = s.list_agg_search("all", "all", "大数据", "sourceOrganization")
+    # print res['aggregations']
 

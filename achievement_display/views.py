@@ -9,6 +9,7 @@ import time
 import linkedin
 import tor
 import json
+import sys
 
 
 
@@ -28,8 +29,22 @@ def return_hour_day(n=0):
 
 def return_hour_morning_day(n=0):
     return time.strftime('%Y-%m-%d 00:00:00',time.localtime(time.time()-86400*n))
-# Create your views here.
 
+def sub_string(string, num):
+    """
+    截取字符串函数
+    :param string: 传入字符串
+    :param num: 截取数量
+    :return:
+    """
+    sub_str = string.decode('utf8')[0:num].encode('utf8')
+    if(len(string.decode('utf8'))>num):
+        return sub_str+'...'
+    else:
+        return sub_str
+
+
+# Create your views here.
 
 """
 视图型函数
@@ -211,6 +226,7 @@ def search(request):
         res = s.s_search(context['paper_type'], context['form_option'], context['input_value'], 0, 1,  context['sort_en'])
         context['total'] = res['total']
         context['time'] = res['time']
+
         """
         查询出卡片的内容
         """
@@ -277,6 +293,32 @@ def ajax_page(request):
 
 
     return HttpResponse(json.dumps(res))
+
+def ajax_agg(request):
+    """
+    ajax聚合查询
+    :param request:
+    :return:
+    """
+    reload(sys)
+    sys.setdefaultencoding('utf8')
+    s = Search()
+    if "fields" in request.GET:
+        keyvalue = request.GET['keyvalue']
+        paper_type = request.GET['papertype']
+        body_type = request.GET['bodytype']
+        fields = request.GET['fields']
+        res = s.list_agg_search(paper_type, body_type, keyvalue, fields)
+        dict_res = res['aggregations']['all_journals']['buckets']
+        string = ''
+        if fields == 'sourceOrganization':
+            for x in dict_res:
+                string += '<li class="list-group-item condition-li"><span class="con-li-span">'+str(x['doc_count'])+'篇</span><a href="#" title="'+str(x['key'].split('|')[1])+'" class="con-li-a"><input name="filter-org" type="checkbox" value="'+str(x['key'])+'" >&nbsp;'+sub_string(str(x['key'].split('|')[1]), 7)+'</a></li>'
+        else:
+            for x in dict_res:
+                string += '<li class="list-group-item condition-li"><span class="con-li-span">'+str(x['doc_count'])+'篇</span><a href="#" title="'+str(x['key'])+'" class="con-li-a"><input name="filter-subject" type="checkbox" value="'+str(x['key'])+'" >&nbsp;'+sub_string(str(x['key']), 7)+'</a></li>'
+
+        return HttpResponse(string)
 
 
 def force(request):

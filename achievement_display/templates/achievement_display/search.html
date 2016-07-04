@@ -96,50 +96,61 @@
                   <div class="con_blank"></div>
                   <div class="panel panel-info condition-panel" >
                        <div class="panel-heading condition-heading">主题</div>
-                       <ul class="list-group condition-ul" >
-                          <li class="list-group-item condition-li">
-                              <span class="con-li-span">202030篇</span>
-                              <a href="#" class="con-li-a"><input name="all" type="checkbox" value="" onclick="selectAllItem(this);">&nbsp;网络</a>
+                       <ul class="list-group condition-ul" id="relatedresearchtopic">
+                          <li class="list-group-item condition-li" style="border: none">
+                              <span class="con-li-span"></span>
+                              <a href="#" class="con-li-a">&nbsp;</a>
                           </li>
-                          <li class="list-group-item condition-li" >
-                              <span class="con-li-span">8130篇</span>
-                              <a href="#" class="con-li-a"><input name="all" type="checkbox" value="" onclick="selectAllItem(this);">&nbsp;信息安全</a>
+                          <li class="list-group-item condition-li" style="border: none">
+                              <span class="con-li-span"></span>
+                              <a href="#" class="con-li-a">&nbsp;</a>
                           </li>
-                          <li class="list-group-item condition-li">
-                              <span class="con-li-span">9022篇</span>
-                              <a href="#" class="con-li-a"><input name="all" type="checkbox" value="" onclick="selectAllItem(this);">&nbsp;用户</a>
+                           <li class="list-group-item condition-li" style="border: none">
+                              <span class="con-li-span"></span>
+                              <a href="#" class="con-li-a">&nbsp;</a>
                           </li>
-                          <li class="list-group-item condition-li">
-                              <span class="con-li-span">8765篇</span>
-                              <a href="#" class="con-li-a"><input name="all" type="checkbox" value="" onclick="selectAllItem(this);">&nbsp;网络安全</a>
+                           <li class="list-group-item condition-li" style="border: none">
+                              <span class="con-li-span"></span>
+                              <a href="#" class="con-li-a">&nbsp;</a>
                           </li>
-                          <li class="list-group-item condition-li">
-                              <span class="con-li-span">666篇</span>
-                              <a href="#" class="con-li-a"><input name="all" type="checkbox" value="" onclick="selectAllItem(this);">&nbsp;行为模式挖掘</a>
+                           <li class="list-group-item condition-li" style="border: none">
+                              <span class="con-li-span"></span>
+                              <a href="#" class="con-li-a">&nbsp;</a>
                           </li>
+{#                           <li class="list-group-item condition-li">#}
+{#                              <span class="con-li-span"></span>#}
+{#                              <a href="#" class="con-li-a"><input name="all" type="checkbox" value="" onclick="selectAllItem(this);">&nbsp;</a>#}
+{#                          </li>#}
                        </ul>
                   </div>
                   <div class="panel panel-info condition-panel" >
                        <div class="panel-heading condition-heading">机构</div>
-                       <ul class="list-group condition-ul" >
-                          <li class="list-group-item condition-li">
-                              <span class="con-li-span">202030篇</span>
-                              <a href="#" class="con-li-a"><input name="all" type="checkbox" value="" onclick="selectAllItem(this);">&nbsp;中国科学院</a>
+                       <ul class="list-group condition-ul" id="sourceorganization">
+                        <li class="list-group-item condition-li" style="border: none">
+                              <span class="con-li-span"></span>
+                              <a href="#" class="con-li-a">&nbsp;</a>
                           </li>
-                          <li class="list-group-item condition-li" >
-                              <span class="con-li-span">8130篇</span>
-                              <a href="#" class="con-li-a"><input name="all" type="checkbox" value="" onclick="selectAllItem(this);">&nbsp;北京邮电大学</a>
+                           <li class="list-group-item condition-li" style="border: none">
+                              <span class="con-li-span"></span>
+                              <a href="#" class="con-li-a">&nbsp;</a>
                           </li>
-                          <li class="list-group-item condition-li">
-                              <span class="con-li-span">9022篇</span>
-                              <a href="#" class="con-li-a" title="中国科学院计算机技术研究所"><input name="all" type="checkbox" value="" onclick="selectAllItem(this);">&nbsp;中国科学...</a>
+                           <li class="list-group-item condition-li" style="border: none">
+                              <span class="con-li-span"></span>
+                              <a href="#" class="con-li-a">&nbsp;</a>
                           </li>
-                          <li class="list-group-item condition-li">
-                              <span class="con-li-span">8765篇</span>
-                              <a href="#" class="con-li-a"><input name="all" type="checkbox" value="" onclick="selectAllItem(this);">&nbsp;电子科技大学</a>
+                           <li class="list-group-item condition-li" style="border: none">
+                              <span class="con-li-span"></span>
+                              <a href="#" class="con-li-a">&nbsp;</a>
+                          </li>
+                           <li class="list-group-item condition-li" style="border: none">
+                              <span class="con-li-span"></span>
+                              <a href="#" class="con-li-a">&nbsp;</a>
                           </li>
                        </ul>
                   </div>
+                   <div id="filter" style="text-align: center">
+                       <button onclick="filter_res();">过滤</button>
+                   </div>
                 </div>
 
                <!-- main-left 结束－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－ -->
@@ -154,8 +165,10 @@
                            <a type="button" class="btn btn-default dropdown-toggle" id="drop-button" data-toggle="dropdown">{{ sort }} <span class="caret"></span></a>
                            <ul class="dropdown-menu dropdown-menu-left" id="dropdown-menu" role="menu" >
                                {% load new_filter %}
-                              <li><a href="{{ request_path | sort:"none"}}">相关性</a></li>
-                              <li><a href="{{ request_path | sort:"sensitiveness"}}">敏感性</a></li>
+{#                              <li><a href="{{ request_path | sort:"none"}}">相关性</a></li>#}
+{#                              <li><a href="{{ request_path | sort:"sensitiveness"}}">敏感性</a></li>#}
+                               <li><a href="#" onclick='demo(1, "{{ input_value }}", "{{ paper_type }}", "{{ form_option }}", "none");'>相关性</a></li>
+                              <li><a href="#" onclick='demo(1, "{{ input_value }}", "{{ paper_type }}", "{{ form_option }}", "sensitiveness");'>敏感性</a></li>
                            </ul>
                         </div>
                      </div>
@@ -269,10 +282,16 @@
 <script src="/statics/achievement_display/js/search.js"></script>
     <script>
 
+
             //测试参数
         function demo(curr, key, paper_type, body_type, sort_fun){
 
             var  keyvalue = key;
+            /*
+            * 在页面上显示是相关性还是敏感性
+            * */
+            display_sort_fun(sort_fun);
+
             $.getJSON('/ajax_page', {
                 page: curr || 1 ,//向服务端传的参数，此处只是演示
                 keyvalue: key,
@@ -303,18 +322,42 @@
                     keyvalue : "{{ input_value }}",
                     jump: function(obj, first){ //触发分页后的回调
                         if(!first){ //点击跳页触发函数自身，并传递当前页：obj.curr
-                            demo(obj.curr, keyvalue, "{{ paper_type }}", "{{ form_option }}", "{{ sort_en }}");
+                            demo(obj.curr, keyvalue, "{{ paper_type }}", "{{ form_option }}", sort_fun);
                             window.location.href = "#";
                         }
                     }
                 });
             });
         };
+            ///////////
+            ///过滤
+            ///////////
+            function filter_res(){
+                var subject = document.getElementsByName('filter-subject');
+                var org = document.getElementsByName('filter-org');
+                var string = '';
+                for(var i=0; i<subject.length; i++){
+                    if(subject[i].checked){
+                        string += '{"term": {"relatedResearchTopic.raw": "'+subject[i].value+'"}},';
+                    }
+                }
+                string += '$+$';
+                for(var i=0; i<org.length; i++){
+                    if(org[i].checked){
+                        string += '{"term": {"sourceOrganization.raw": "EducationalOrganization/1000003909|中国科学院大学"}},';
+                    }
+                }
+                console.log(string)
+                demo(1, "{{ input_value }}", "{{ paper_type }}", "{{ form_option }}", "{{ sort_en }}", string);
+
+            }
 //运行
         demo(1, "{{ input_value }}", "{{ paper_type }}", "{{ form_option }}", "{{ sort_en }}");
         rem_form_status("{{ paper_type }}", "{{ form_option }}");
 
         //////////////////////标签云开始
+        get_agg("{{ input_value }}", "{{ paper_type }}", "{{ form_option }}", "relatedResearchTopic", "relatedresearchtopic");
+        get_agg("{{ input_value }}", "{{ paper_type }}", "{{ form_option }}", "sourceOrganization", "sourceorganization");
 
     </script>
 

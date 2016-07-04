@@ -50,6 +50,7 @@ urlpatterns = patterns('achievement_display.views',
                        (r'search2/?$', 'search2'),
                        (r'card_get_res/?$', 'card_get_res'),
                        (r'get_node_info/?$', 'get_node_info'),
+                       (r'ajax_agg/?$', 'ajax_agg'),
                        (r'', 'index')
                        )
 
