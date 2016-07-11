@@ -122,8 +122,15 @@ function insert_content(JSONObject){
 
 
 
-
-function generate_node(id, res, res_content_left){
+function generate_node(id, head_workfor,  head_workfor_relationship, res, res_content_left){
+    /*
+    * id 为主接点
+    *  res 为界面显示的节点
+    *  res_content_left 为更多显示的节点,如果该变量不为零则显示更多,如果为零则不显示更多节点
+    *
+    *
+    */
+    console.log(head_workfor);
     var node_link = new Array();
     var node = new Array();
     var link = new Array();
@@ -161,7 +168,7 @@ function generate_node(id, res, res_content_left){
     //node[1]['symbol'] = 'heart';
 
 
-    for(var n=0; n<res.length; n++){
+    for(var n=0; n<res.length; n++){   //规定数量的显示
 
         node[n+1].id = n+1;
         node[n+1].category = 1;
@@ -171,13 +178,12 @@ function generate_node(id, res, res_content_left){
         node[n+1].ignore = false
         node[n+1].flag = true;
         node[n+1].symbol = display_img_type(res[n]._type);
-
         link[n].source = n+1;
         link[n].target = 0;
-        console.log(node);
+
 
     }
-    if(res_content_left != "0"){
+    if(res_content_left != "0"){    //更多的数据显示在下面,但是界面上出现一个更多节点
         node[n+1].id = n+1;
         node[n+1].category = 1;
         node[n+1].name = "more";
@@ -186,7 +192,6 @@ function generate_node(id, res, res_content_left){
         node[n+1].ignore = false;
         node[n+1].flag = true;
         node[n+1].symbol = 'circle';
-
         link[n].source = n+1;
         link[n].target = 0;
     }

@@ -2,33 +2,6 @@
  * Created by changzhao619 on 5/17/16.
  */
 
-//	//以下将以jquery.ajax为例，演示一个异步分页
-//function demo(curr, key){
-//    $.getJSON('/ajax_page', {
-//        page: curr || 1 ,//向服务端传的参数，此处只是演示
-//        keyvalue: key
-//
-//    }, function(res){
-//        //此处仅仅是为了演示变化的内容1
-//
-//
-//        document.getElementById('s-c-all').innerHTML =  (res.result_content)[0]._source.description ;
-//        //显示分页
-//        laypage({
-//            cont: 'page1', //容器。值支持id名、原生dom对象，jquery对象。【如该容器为】：<div id="page1"></div>
-//            pages: res.total, //通过后台拿到的总页数
-//            curr: curr || 1, //当前页
-//            jump: function(obj, first){ //触发分页后的回调
-//                if(!first){ //点击跳页触发函数自身，并传递当前页：obj.curr
-//                    demo(obj.curr);
-//                }
-//            }
-//        });
-//    });
-//};
-////运行
-//demo(1, "中国科学院");
-
 ////////////////////////
 //定义全局变量    ///////
                 //////
@@ -38,24 +11,7 @@ var card_data_person;
 var related_data_org = new Array();
 var related_data_person = new Array();
 
-//var words = 1 ;
 
- //var words = [
- //             {text: "图谱", weight: 0.1, link: 'http://github.com/mistic100/jQCloud'},
- //             {text: "同谱图", weight: 0.2, link: 'http://www.strangeplanet.fr'},
- //             {text: "特征值", weight: 0.3, link: 'http://piwigo.org'},
- //             {text: "弯曲疲劳应力", weight: 0.4, link: 'http://piwigo.org'},
- //             {text: "laplacian谱", weight: 0.5, link: 'http://github.com/mistic100/jQCloud'},
- //             {text: "健康教育", weight: 0.6, link: 'http://www.strangeplanet.fr'},
- //             {text: "土地利用变化", weight: 0.1, link: 'http://piwigo.org'},
- //             {text: "陈兰杰", weight: 0.3, link: 'http://piwigo.org'},
- //             {text: "姜春林", weight: 0.1, link: 'http://github.com/mistic100/jQCloud'},
- //             {text: "汤建民", weight: 0.2, link: 'http://www.strangeplanet.fr'},
- //             {text: "许振亮", weight: 0.3, link: 'http://piwigo.org'},
- //             {text: "陈悦", weight: 0.3, link: 'http://piwigo.org'},
- //           ];
-
-/////////////////////知识图谱 and 卡片
 function statics_data(data){//统计数组中相同的数据并记录
     var arr = new Array();
     for(var i=0; i<data.length; i++){
@@ -74,7 +30,7 @@ function statics_data(data){//统计数组中相同的数据并记录
     return arr;
 }
 function card_ajax(type_id){ //ajax 获取节点信息
-    //alert(id);
+
     var txt;
     var JSONObject;
     var type = type_id.split("/")[0]
@@ -207,7 +163,7 @@ function deal_data(curr, source, card_res){
     //console.log(related_data_person);
     //console.log(related_data_org);
      var words_arry = generate_word(statics_data(related_data_person)).concat(generate_word(statics_data(related_data_org)));
-    console.log(words_arry);
+    //console.log(words_arry);
     jq_word(words_arry); //标签云;
 
 
@@ -406,6 +362,40 @@ function rem_form_status(paper, body){
         body_obj.selected = true;
     }
 }
+
+////////////////////
+//处理主题和机构
+///////////////////
+function get_agg(keyvalue, papertype, bodytype, fields, id){ //ajax 获取节点信息
+    var txt;
+    var url = "ajax_agg?keyvalue="+keyvalue+"&papertype="+papertype+"&bodytype="+bodytype+"&fields="+fields+"&";
+    if (window.XMLHttpRequest)
+      {// code for IE7+, Firefox, Chrome, Opera, Safari
+      xmlhttp=new XMLHttpRequest();
+      }
+    else
+      {// code for IE6, IE5
+      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+      }
+    xmlhttp.onreadystatechange=function()
+      {
+      if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+
+            txt = xmlhttp.responseText;	//获取ajax请求的数据；
+            //console.log( eval(txt));
+            //JSONObject = eval ("[" + txt + "]"); //将json数据转换为js对象；
+            //console.log(txt);
+            document.getElementById(id).innerHTML = txt;
+
+        }
+      }
+    xmlhttp.open("GET",url+"rand="+Math.random(),false);
+    xmlhttp.send();
+}
+
+
+
 ////////////////////////////////////
 //标签云
 //function jq_word(words){
@@ -447,3 +437,15 @@ function close_ele(){
 
 
 }
+
+function display_sort_fun(sorn_en){
+    /*
+    * 显示界面是哪种排序方式*/
+    var id_obj = document.getElementById("drop-button");
+    if(sorn_en == "none") {
+        id_obj.innerHTML  = '相关性<span class="caret"></span>';
+    }else{
+        id_obj.innerHTML = '敏感性<span class="caret"></span>';
+    }
+}
+

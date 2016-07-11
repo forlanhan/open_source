@@ -13,6 +13,10 @@
 }
 #main-right{
 	padding: 10px;
+    position: fixed;
+    top:10px;
+    right: 150px;
+    background-color: white;
 
 }
 #demo1{
@@ -93,4 +97,34 @@
 .org-context{
 	color: #cc0c00;
     font-size: 12px;
+}
+
+
+#more-name{
+    width: auto;
+    height:auto!important;
+}
+#more-paper{
+    margin-top: 10px;
+    width: auto;
+    height:auto!important;
+}
+#more-blank{
+    with: 1000px;
+    height: 20px;
+}
+.more-a-link{
+    display: block;
+    width: auto;
+    margin-right: 10px;
+    float: left;
+    width: 50px;
+}
+
+.more-p-link{
+    display: block;
+    margin-right: 10px;
+    float: left;
+    width: 350px;
+    height: 40px;
 }

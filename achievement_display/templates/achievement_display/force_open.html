@@ -17,9 +17,13 @@
       <link rel="stylesheet" type="text/css" href="/statics/achievement_display/css/force_open.css">
     <script>
          {% autoescape off %}
-            var res_content = {{ res_content }};
+            <!--防止将内容转义-->
+            var none_array = new Array();
+            var res_content = {{ res_content }}; //界面显示的节点
             var id = "{{ id }}";
-            var res_content_left = {{ res_content_left }};
+            var res_content_left = {{ res_content_left }}; //更多节点信息
+            var head_workfor = {{ head_workfor | default:"none_array"}};
+            var head_workfor_relationship = "{{ head_workfor_relationship | default:"'none'"}}";
          {% endautoescape %}
     </script>
 </head>
@@ -45,7 +49,10 @@
                 <!-- card结束  -->
             </div>
         </div>
-        <div id="more"></div>
+        <div id="more">
+            <div id="more-name"></div>
+            <div id="more-paper"></div>
+        </div>
     </div>
 </div>
 
@@ -53,7 +60,7 @@
     <script type="text/javascript">
         //////////////////////////////
         //参数配置
-        var node_link = generate_node(id, res_content, res_content_left);
+        var node_link = generate_node(id, head_workfor,  head_workfor_relationship, res_content, res_content_left);
         //////////////////////////////
         require.config({
             paths : {
@@ -217,7 +224,6 @@
 
 
         });
-
 
     </script>
 

@@ -15,17 +15,30 @@ function show_ele(id, par, res_content_left){
 
     $("#card").show();
     clear_card_content();
+    var more_name = document.getElementById("more-name");
+    var more_paper = document.getElementById("more-paper");
 
     if(par == "more"){//如果更多数据
         var content = document.getElementById("card-p");   //内容
         var name = document.getElementById("card-title-content");   //姓名
         var str_a = "";
+        var str_p = "";
         for(var n=0; n<res_content_left.length; n++ ){
-            var id_get = res_content_left[n]._type+"/"+res_content_left[n]._id+"|"+res_content_left[n]._source.name;
-            str_a += '<a href="/force_open?id='+id_get+'" onmouseover="more_content_display(\''+id_get+'\');" target="_blank">'+res_content_left[n]._source.name+'</a>|';
+            var id_get = res_content_left[n]._type + "/" + res_content_left[n]._id + "|" + res_content_left[n]._source.name;
+            if(head_workfor.indexOf(id_get) < 0 ) {
+                if(res_content_left[n]._type == "Person"){
+                    str_a += '<a class="more-a-link" href="/force_open?id=' + id_get + '" onmouseover="more_content_display(\'' + id_get + '\');" target="_blank">' + res_content_left[n]._source.name + '</a>';
+                }else{
+                    str_p += '<a class="more-p-link" href="/force_open?id=' + id_get + '" onmouseover="more_content_display(\'' + id_get + '\');" target="_blank">' + res_content_left[n]._source.name + '</a>';
+                }
+
+            }
         }
         document.getElementById("card-img").innerHTML = '<i id="op-icon" >&#xe61b;</i>';
-        document.getElementById("more").innerHTML = str_a;
+        more_name.innerHTML = str_a;
+        more_paper.innerHTML = str_p;
+        more_name.style.height = more_name.offsetHeight + 'px';
+        more_paper.style.height = more_paper.offsetHeight + 'px';
         name.innerHTML =  "更多相关数据";
     }else{//如果为正常显示数据
             //数据处理开始
@@ -123,17 +136,29 @@ function insert_content(JSONObject){
 
 
 
-function generate_node(id, res, res_content_left){
+function generate_node(id, head_workfor,  head_workfor_relationship, res, res_content_left){
+     /*
+        * id 为主接点
+        *  res 为界面显示的节点
+        *  res_content_left 为更多显示的节点,如果该变量不为零则显示更多,如果为零则不显示更多节点
+        *
+        *
+    */
+
+
     var node_link = new Array();
     var node = new Array();
     var link = new Array();
+
+    var head_workfor_len = head_workfor.length;
+
     if(res_content_left != "0"){
-        for(var i=0; i<res.length+2; i++){
+        for(var i=0; i<res.length+2+head_workfor_len; i++){
         node[i] = {};
         link[i] = {};
         }
     }else{
-        for(var i=0; i<res.length+1; i++){
+        for(var i=0; i<res.length+1+head_workfor_len; i++){
         node[i] = {};
         link[i] = {};
         }
@@ -161,39 +186,73 @@ function generate_node(id, res, res_content_left){
     //node[1]['symbol'] = 'heart';
 
 
-    for(var n=0; n<res.length; n++){
+    for(var n=0; n<head_workfor_len; n++){
 
         node[n+1].id = n+1;
         node[n+1].category = 1;
-        node[n+1].name = res[n]._type+"/"+res[n]._id+"|"+res[n]._source.name;
-        node[n+1].label = res[n]._source.name;
+        node[n+1].name = head_workfor[n];
+        node[n+1].label = head_workfor[n].split("|")[1]+"("+head_workfor_relationship+")";
         node[n+1].symbolSize = 25;
         node[n+1].ignore = false
         node[n+1].flag = true;
-        node[n+1].symbol = display_img_type(res[n]._type);
+        if(head_workfor[n].split("/")[0] == "Person"){
+            node[n+1].symbol = "image://statics/achievement_display/img/lead.png";
+        }else{
+            node[n+1].symbol = "image://statics/achievement_display/img/work.png";
+        }
+
+
+
 
         link[n].source = n+1;
         link[n].target = 0;
-        console.log(node);
+
+    }
+
+
+    for(var n=0; n<res.length; n++){
+        var type_id_name = res[n]._type+"/"+res[n]._id+"|"+res[n]._source.name;
+        //for(var i=0; n<head_workfor_len; n++){
+        if(head_workfor.indexOf(type_id_name) < 0 ){
+            node[n+1+head_workfor_len].id = n+1;
+            node[n+1+head_workfor_len].category = 1;
+            node[n+1+head_workfor_len].name = type_id_name;
+            node[n+1+head_workfor_len].label = res[n]._source.name;
+            node[n+1+head_workfor_len].symbolSize = 25;
+            node[n+1+head_workfor_len].ignore = false
+            node[n+1+head_workfor_len].flag = true;
+            node[n+1+head_workfor_len].symbol = display_img_type(res[n]._type);
+
+            link[n+head_workfor_len].source = n+1+head_workfor_len;
+            link[n+head_workfor_len].target = 0;
+        }else{
+            //node.splice(n+1+head_workfor_len, 1);
+            delete node[n+1+head_workfor_len];
+            //link.splice(n+head_workfor_len, 1);
+        }
+       // }
+
 
     }
     if(res_content_left != "0"){
-        node[n+1].id = n+1;
-        node[n+1].category = 1;
-        node[n+1].name = "more";
-        node[n+1].label = "更多";
-        node[n+1].symbolSize = 30;
-        node[n+1].ignore = false;
-        node[n+1].flag = true;
-        node[n+1].symbol = 'circle';
 
-        link[n].source = n+1;
-        link[n].target = 0;
+            node[n+1+head_workfor_len].id = n+1;
+            node[n+1+head_workfor_len].category = 1;
+            node[n+1+head_workfor_len].name = "more";
+            node[n+1+head_workfor_len].label = "更多";
+            node[n+1+head_workfor_len].symbolSize = 30;
+            node[n+1+head_workfor_len].ignore = false;
+            node[n+1+head_workfor_len].flag = true;
+            node[n+1+head_workfor_len].symbol = 'circle';
+
+            link[n+head_workfor_len].source = n+1+head_workfor_len;
+            link[n+head_workfor_len].target = 0;
+
     }
 
     node_link['node'] = node;
     node_link['link'] = link;
-
+    console.log(node_link);
     return node_link;
 }
 

@@ -17,6 +17,7 @@ class Search():
         self.index = "scholarkr"
         self.doc_type = ['ConferencePaper', 'JournalPaper', 'Thesis']
         self.body_type = ["name^10","abstract^5","author^2","sourceOrganization"]
+        self.preference= "primary"
         self.s = Elasticsearch([{"host": self.host, "port": self.port}])
 
     def generate_query(self, pap_type, body_type, keyvalue, sort, filter_condition=""):
@@ -232,6 +233,7 @@ class Search():
         dict['body'] = query
         dict['from_'] = from_size
         dict['size'] = page_size
+        dict['preference'] = self.preference
 
         """
         生成结果
@@ -380,13 +382,43 @@ class Search():
 
         return results
 
+    def find_one_by_id(self, doc_type, id):
+        """
+        通过ID在指定的type中查找出
+        :param doc_type:所查询的type
+        :param id:查询得到ID
+        :return: 查询信息的字典
+        """
+        query = json.dumps({
+          "query": {
+            "match": {
+              "_id": id
+            }
+          }
+        })
+        dict = {}
+        context = {}
+        dict['index'] = self.index
+        dict['doc_type'] = doc_type
+        dict['body'] = query
 
+        results = self.s.search(**dict)
+
+        """
+        对结果进行提取
+        """
+        context['total'] = results['hits']['total']          #数据总数
+        context["result_content"] = results['hits']['hits']  #数据内容
+
+        return context
 
 
 
 if __name__ == "__main__":
     s = Search()
-    res = s.s_search("all", "all", "中国科学院信息工程研究所", 1, 5, "none")
+    # res = s.s_search("all", "all", "中国科学院信息工程研究所", 1, 5, "none")
+    res = s.find_one_by_id("Person", "1000137817")
+    print res["result_content"]
     #context = s.graph_search("Person/1000188669|柳厅文", 0)
     # print res['total']
     # print res['time']

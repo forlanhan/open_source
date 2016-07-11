@@ -43,6 +43,58 @@ def sub_string(string, num):
     else:
         return sub_str
 
+def edit_distance(s1, s2):
+    """
+    编辑距离
+    :param s1: 字符串1
+    :param s2: 字符串2
+    :return:
+    """
+    def get(ii, jj):
+        if ii < 0 or jj < 0:
+            return max(ii, jj) + 1
+        return a[ii * n2 + jj]
+
+    n1, n2 = len(s1), len(s2)
+    if n1 == 0 or n2 == 0:
+        return max(n1, n2)
+    if s1 == s2:
+        return 0
+    a = [0] * (n1 * n2)
+    i = 0
+    while i < n1:
+        j = 0
+        while j < n2:
+            if s1[i] == s2[j]:
+                a[i * n2 + j] = get(i - 1, j - 1)
+            else:
+                a[i * n2 + j] = min(get(i - 1, j - 1), get(i - 1, j), get(i, j - 1)) + 1
+            j += 1
+        i += 1
+    return a[n1 * n2 - 1]
+
+def find_optimal_card(list, s_value):
+    """
+    通过编辑距离查找出最合适的匹配
+    :param list: 传入的列表
+    :param s_value: 查询的字符串
+    :return: 返回含有一个值的列表
+    """
+    opt_list = []
+    opt_list.append(list[0])
+    opt_name = list[0]['_source']['name']
+    opt_score = (edit_distance(opt_name, s_value), -len(list[0]['_source']))
+
+    for x in list:
+        score = (edit_distance(x['_source']['name'], s_value), -len(x['_source']))
+        if score < opt_score:
+            opt_list[0] = x
+            opt_score = score
+
+    return opt_list
+
+
+
 
 # Create your views here.
 
@@ -231,9 +283,14 @@ def search(request):
         查询出卡片的内容
         """
         type = ['Corporation', 'Person', 'ResearchOrganization', 'EducationalOrganization']
-        card_res = s.card_search(type, context['input_value'], 0 , 1)
-        #context['card_res'] = json.dumps(card_res['result_content'])
-        context['card_res'] = json.dumps(card_res['result_content'])
+        # card_res = s.card_search(type, context['input_value'], 0 , 1)
+        card_res_raw = s.card_search(type, context['input_value'], 0 , 5)
+        if(card_res_raw['result_content']):
+            card_res = find_optimal_card(card_res_raw['result_content'], context['input_value'])
+        else:
+            card_res = card_res_raw['result_content']
+
+        context['card_res'] = json.dumps(card_res)
         """
         获取请求路径
         """
@@ -242,6 +299,7 @@ def search(request):
 
 
         return render(request, 'achievement_display/search.html', context)
+        # return HttpResponse(card_res)
     else:
         return HttpResponseRedirect("index")
 
@@ -364,6 +422,29 @@ def force_open(request):
     MAX_DISPLAY_NUM = 9     #主页显示的实体最大数量
     _id = "ResearchOrganization/1000011424|中国科学院信息工程研究所"  #_id = "EducationalOrganization/1000010463|湖南科技大学中文系"
     context['id'] = request.GET['id']
+
+    """
+    查询出该组织的head
+    """
+    res_head = g.find_one_by_id(context['id'].split("|")[0].split("/")[0], context['id'].split("/")[1].split("|")[0])
+    if res_head:
+        # try:
+        #     if res_head['result_content']['_source'].has_key("head"):
+        #         context['head_workfor'] = res_head['result_content']['_source']['head']
+        #         context['head_workfor_relationship'] = "领导"
+        #     if res_head['result_content']['_source'].has_key("worksFor"):
+        #         context['head_workfor'] = res_head['result_content']['_source']['worksFor']
+        #         context['head_workfor_relationship'] = "工作单位"
+        # except:
+        #     pass
+        if res_head['result_content'][0]['_source'].has_key("head"):
+            context['head_workfor'] = json.dumps(res_head['result_content'][0]['_source']['head'])
+            context['head_workfor_relationship'] = "领导"
+        if res_head['result_content'][0]['_source'].has_key("worksFor"):
+            list_workfor = []
+            list_workfor.append(res_head['result_content'][0]['_source']['worksFor'])
+            context['head_workfor'] = json.dumps(list_workfor)
+            context['head_workfor_relationship'] = "工作单位"
 
     """
     先从数据中取出9个

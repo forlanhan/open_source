@@ -33,7 +33,7 @@ def find_name(string):
 def sort(string, sort):
     """
     替换路径中sort参数得值
-    :param string: 要替换得值
+    :param string: 要替换的值
     :return: 路径
     """
     str = "/search?"
