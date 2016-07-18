@@ -15,7 +15,7 @@
 	padding: 10px;
     position: fixed;
     top:10px;
-    right: 150px;
+    right: 260px;
     background-color: white;
 
 }
@@ -74,29 +74,34 @@
     font-weight: 600;
     font-size: 18px;
 }
-#card-desc{
+.card-desc{
     margin-top: 10px;
 }
-#card-p{
+.card-p{
     color: rgb(0, 0, 0);
     font-size: 13px;
     line-height: 21px;
 }
-
+#card-p{
+    border-top: 1px solid #cccccc;
+    padding-top: 10px;
+}
 #card-bottom-blank{
     width: 100%;
     height: 10px;
 }
-#card-b-desc{
+.card-b-desc{
     text-align: center;
 }
 .org-tips{
-	color: #663366;
+	color: #000;
     font-size: 12px;
+    font-weight: 900;
 }
 .org-context{
-	color: #cc0c00;
+	color: rgba(27, 8, 118, 0.82);
     font-size: 12px;
+    font-weight: 900;
 }
 
 

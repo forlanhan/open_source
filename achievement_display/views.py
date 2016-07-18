@@ -282,7 +282,7 @@ def search(request):
         """
         查询出卡片的内容
         """
-        type = ['Corporation', 'Person', 'ResearchOrganization', 'EducationalOrganization']
+        type = ['Corporation', 'Person', 'ResearchOrganization', 'EducationalOrganization', 'weapon']
         # card_res = s.card_search(type, context['input_value'], 0 , 1)
         card_res_raw = s.card_search(type, context['input_value'], 0 , 5)
         if(card_res_raw['result_content']):
@@ -439,7 +439,7 @@ def force_open(request):
         #     pass
         if res_head['result_content'][0]['_source'].has_key("head"):
             context['head_workfor'] = json.dumps(res_head['result_content'][0]['_source']['head'])
-            context['head_workfor_relationship'] = "领导"
+            context['head_workfor_relationship'] = "负责人"
         if res_head['result_content'][0]['_source'].has_key("worksFor"):
             list_workfor = []
             list_workfor.append(res_head['result_content'][0]['_source']['worksFor'])

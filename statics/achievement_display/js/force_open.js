@@ -26,7 +26,7 @@ function show_ele(id, par, res_content_left){
         for(var n=0; n<res_content_left.length; n++ ){
             var id_get = res_content_left[n]._type + "/" + res_content_left[n]._id + "|" + res_content_left[n]._source.name;
             if(head_workfor.indexOf(id_get) < 0 ) {
-                if(res_content_left[n]._type == "Person"){
+                if(res_content_left[n]._type == "Perso8n"){
                     str_a += '<a class="more-a-link" href="/force_open?id=' + id_get + '" onmouseover="more_content_display(\'' + id_get + '\');" target="_blank">' + res_content_left[n]._source.name + '</a>';
                 }else{
                     str_p += '<a class="more-p-link" href="/force_open?id=' + id_get + '" onmouseover="more_content_display(\'' + id_get + '\');" target="_blank">' + res_content_left[n]._source.name + '</a>';
@@ -60,10 +60,14 @@ function show_ele(id, par, res_content_left){
                 content.innerHTML = "<font color='red'>就职单位:</font>"+res._source.worksFor.split("|")[1];
                 img.innerHTML = '<i id="op-icon" >&#xe619;</i>';
             }
+            img.innerHTML = '<i id="op-icon" >&#xe619;</i>';
         }else if(res._type == "ResearchOrganization" || res._type == "EducationalOrganization" || res._type == "Corporation"){ //实体为机构
             if(res._source.description){
-                content.innerHTML = res._source.description;
+                content.innerHTML = "<font color='red'>简介:</font>"+res._source.description;    //组织实体简介
                 img.innerHTML = '<i id="op-icon" >&#xe617;</i>';
+            }
+            if(res._source.keyDiscipline){
+                document.getElementById("direction").innerHTML = "<font color='red'>研究方向:</font>"+res._source.keyDiscipline;    //组织实体简介
             }
 
             //细节描述
@@ -77,7 +81,58 @@ function show_ele(id, par, res_content_left){
             if(res._source.foundingDate){
                 str_card += '<span class="org-tips">成立时间:</span><span class="org-context">'+res._source.foundingDate+'</span>';
             }
+            if(res._source.head[0]){
+                document.getElementById("card-head").innerHTML = '<span class="org-tips">负责人:</span><span class="org-context"><a href="/force_open?id='+res._source.head[0]+'" target="_blank">'+res._source.head[0].split("|")[1]+'</a></span>';
+            }
             document.getElementById("card-b-desc").innerHTML = str_card;
+            img.innerHTML = '<i id="op-icon" >&#xe617;</i>';
+
+        }else if(res._type == "weapon"){
+            var str_card = "";
+            if(res._source['launchMass']){
+                str_card += '<span class="org-tips">速度:</span><span class="org-context">'+res._source['launchMass']+'</span>&nbsp;&nbsp;';
+            }
+            if(res._source.state){
+                str_card += '<span class="org-tips">状态:</span><span class="org-context">'+res._source.state+'</span>&nbsp;&nbsp;';
+            }
+            if(res._source.diameter){
+                str_card += '<span class="org-tips">直径:</span><span class="org-context">'+res._source.diameter+'</span>';
+            }
+            document.getElementById("card-b-desc").innerHTML = str_card;
+
+            var str_card = "";
+            if(res._source['militaryEquipment']){
+                str_card += '<span class="org-tips">所属军队:</span><span class="org-context">'+res._source['militaryEquipment']+'</span>&nbsp;&nbsp;';
+            }
+            if(res._source.enginePower){
+                str_card += '<span class="org-tips">马力:</span><span class="org-context">'+res._source.enginePower+'</span>&nbsp;&nbsp;';
+            }
+            document.getElementById("m-e").innerHTML = str_card;
+
+            var str_card = "";
+            if(res._source['vehicle_range']){
+                str_card += '<span class="org-tips">射程:</span><span class="org-context">'+res._source['vehicle_range']+'</span>&nbsp;&nbsp;';
+            }
+            if(res._source.category){
+                str_card += '<span class="org-tips">类别:</span><span class="org-context">'+res._source.category+'</span>&nbsp;&nbsp;';
+            }
+            if(res._source.length){
+                str_card += '<span class="org-tips">长度:</span><span class="org-context">'+res._source.length+'</span>&nbsp;&nbsp;';
+            }
+            document.getElementById("v-c").innerHTML = str_card;
+
+
+            if(res._source.guidance){
+                document.getElementById("card-gu").innerHTML = '<span class="org-tips">引导方式:</span><span class="org-context">'+res._source.guidance+'</span>&nbsp;&nbsp;';
+            }
+            if(res._source.feed){
+                document.getElementById("card-feed").innerHTML = '<span class="org-tips">子弹:</span><span class="org-context">'+res._source.feed+'</span>&nbsp;&nbsp;';
+            }
+            if(res._source.description){
+                document.getElementById("card-p").innerHTML = "<font color='red'>简介:</font>"+res._source.description;
+            }
+
+            img.innerHTML = '<i id="op-icon" >&#xe60e;</i>';
 
         }else {
             //document.getElementById("").innerHTML = "";
@@ -94,7 +149,7 @@ function show_ele(id, par, res_content_left){
                 content.innerHTML = "<font color='red'>摘要:</font>"+res._source.abstract;
                 img.innerHTML = '<i id="op-icon" >&#xe618;</i>';
             }
-
+            img.innerHTML = '<i id="op-icon" >&#xe618;</i>';
 
         }
     }
@@ -262,6 +317,8 @@ function display_img_type(type){
         return "image://statics/achievement_display/img/user.png";
     }else if(type == "ResearchOrganization" || type == "EducationalOrganization" || type == "Corporation"){
         return 'image://statics/achievement_display/img/force-icon/org.jpg';
+    }else if(type == "weapon"){
+        return 'image://statics/achievement_display/img/weapon.png';
     }else{
         return 'image://statics/achievement_display/img/paper.png';
     }
@@ -272,6 +329,8 @@ function clear_card_content(){
     document.getElementById("card-b-desc").innerHTML = "";
     document.getElementById("card-p").innerHTML = "";
     document.getElementById("card-key").innerHTML = "";
+    document.getElementById("direction").innerHTML = "";
+    document.getElementById("card-head").innerHTML = "";
 }
 
 function more_content_display(val){
