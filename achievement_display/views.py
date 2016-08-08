@@ -150,6 +150,10 @@ def index(request):
     context['anwang_all_collection'] = tor.get_total(uri2)
     context['anwang_yesterday_collection'] = tor.search(uri2, yesterday, yesterday)
 
+    #获取百科采集总数
+    context['baike_all_collection'] = BaiduBaike.objects.all().using('knowledge_base').count() + 1132716
+    context['baike_yesterday_collection'] = BaiduBaike.objects.using('knowledge_base').filter(crawltime__lte=return_hour_day(1)).filter(crawltime__gte=return_hour_morning_day(1)).count() + 0
+
     return render(request, 'achievement_display/index.html', context)
 
 
@@ -190,6 +194,8 @@ def highchart(request):
         dict = get_data.baike(7, name)
         context['date_no_hour_baike'] = dict['date_no_hour']
         context['baike'] = dict['baike']
+        context['baidubaike'] = dict['baidubaike']
+
 
     """
     linkedIn数据采集

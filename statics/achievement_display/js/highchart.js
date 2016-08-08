@@ -169,8 +169,11 @@ $(function () {
           enabled:false
         },
         series: [{
-            name: '百科采集',
+            name: '维基百科',
             data: baike1
+        },{
+            name: '百度百科',
+            data: baidubaike
         }]
     });
     //////////////////////

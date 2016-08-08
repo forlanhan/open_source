@@ -152,13 +152,22 @@ class GetHighChartData:
         dict['date_no_hour'] = date_no_hour
 
         """
-        万方数据
+        维基百科
         """
         data_list = []
         for x in date_hour:
             num = 1132716
             data_list.append(num)
         dict['baike'] = data_list
+
+        """
+        百度百科
+        """
+        data_list = []
+        for x in date_hour:
+            num = BaiduBaike.objects.using("knowledge_base").filter(crawltime__lte=x).all().count()
+            data_list.append(num)
+        dict['baidubaike'] = data_list
 
         return dict
 

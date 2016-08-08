@@ -92,6 +92,14 @@ DATABASES = {
         'PASSWORD': '123456',
         'HOST': '192.168.120.90',
         'PORT':'3306',
+    },
+    'knowledge_base': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'knowledge_base',
+        'USER': 'root',
+        'PASSWORD': '123456',
+        'HOST': '192.168.120.90',
+        'PORT':'3306',
     }
 
 }

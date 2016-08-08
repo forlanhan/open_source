@@ -136,11 +136,11 @@
 						   		<tbody>
                                   <tr >
                                      <td>昨天采集</td>
-							         <td class="wenku-td-right"><span class="badge  data-span"  >0</span></td>
+							         <td class="wenku-td-right"><span class="badge  data-span"  >{{ baike_yesterday_collection }}</span></td>
 							      </tr>
 							      <tr >
 							         <td>总采集</td>
-							         <td class="wenku-td-right"><span class="badge  data-span"  >1132716</span></td>
+							         <td class="wenku-td-right"><span class="badge  data-span"  >{{ baike_all_collection }}</span></td>
 							      </tr>
 							    </tbody>
                         </table>
@@ -224,7 +224,7 @@
              trigger: 'hover',
              html : true,
              container: "#baike-pop",
-             content: '<iframe src="/highchart/?name=baike"  id="schoolar1"  onload="document.getElementById(\'loadingMessage\').style.display=\'none\'" frameborder=0 width="620px" height="260px" ></iframe>'
+             content: '<img  id="loadingMessage" src="/statics/achievement_display/img/477.gif" /><iframe src="/highchart/?name=baike"  id="schoolar1"  onload="document.getElementById(\'loadingMessage\').style.display=\'none\'" frameborder=0 width="620px" height="260px" ></iframe>'
 
         });
          $("#homepage-pop").popover({
