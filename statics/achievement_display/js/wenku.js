@@ -55,7 +55,7 @@ function datatable_1(){
                         "data": 0,
                         "class": "bm_check_0"
                     }, {
-                        "data": 1,
+                        "data": 0,
                         "class": "bm_check_1",
                         "render": function(data, type, row) {
                             txt = ajax(data);
@@ -69,21 +69,19 @@ function datatable_1(){
                         }
                     },
                     {
-                        "data": 2,
-                        "class": "bm_check_2"
-                        //,
-                        //"render": function(data, type, row) {
-                        //    return '<span class="badge">' +data+ '</span>'
-                        //}
+                        "data": 1,
+                        "class": "bm_check_2",
+                        "render": function(data, type, row) {
+                            return '<span class="badge">' +data+ '</span>'
+                        }
                     },{
-                        "data": 3,
+                        "data": 2,
                         "class": "bm_check_3"
                     },{
-                        "data": 4,
+                        "data": 3,
                         "class": "bm_check_4"
-                    }
-                    ,{
-                        "data": 5,
+                    },{
+                        "data": 0,
                         "class": "bm_check_5",
                         "render": function(data, type, row) {
                             return '<a type="button" target="_blank" class="btn btn-success" href="http://192.168.120.234:8888/view-detail/?type=1&id='+ data +'"/>详情</a>'
