@@ -16,7 +16,8 @@ class BmCheckAlert(BaseDatatableView):
     """
     model = Docbmcheckresult
     columns = ['id', 'alertnum', 'score', 'processtime', 'processresult', 'reserverint']
-    order_columns = ['id', 'alertnum', 'score', 'processtime', 'processresult', 'reserverint']
+    order_columns = ['id', 'id', 'alertnum', 'score', 'processtime', 'reserverint']
+    # order_columns = ['id', 'alertnum', 'score', 'processtime', 'processresult', 'reserverint']
     max_display_length = 500
 
     # def render_column(self, row, column):

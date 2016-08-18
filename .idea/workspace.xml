@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba6f7428-b4d9-4030-9aa3-43e8301be553" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/models.py" afterPath="$PROJECT_DIR$/achievement_display/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/pyclass/GetHighChartData.py" afterPath="$PROJECT_DIR$/achievement_display/pyclass/GetHighChartData.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/force_open.css" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/force_open.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/statics/achievement_display/js/highchart.js" afterPath="$PROJECT_DIR$/achievement_display/statics/achievement_display/js/highchart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/templates/achievement_display/highchart.html" afterPath="$PROJECT_DIR$/achievement_display/templates/achievement_display/highchart.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/templates/achievement_display/index.html" afterPath="$PROJECT_DIR$/achievement_display/templates/achievement_display/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/views.py" afterPath="$PROJECT_DIR$/achievement_display/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models.py" afterPath="$PROJECT_DIR$/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/open_source/settings.py" afterPath="$PROJECT_DIR$/open_source/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/pyclass/BmCheckAlert.py" afterPath="$PROJECT_DIR$/achievement_display/pyclass/BmCheckAlert.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/templates/achievement_display/search.html" afterPath="$PROJECT_DIR$/achievement_display/templates/achievement_display/search.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievement_display/templates/achievement_display/wenku.html" afterPath="$PROJECT_DIR$/achievement_display/templates/achievement_display/wenku.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/achievement_display/js/wenku.js" afterPath="$PROJECT_DIR$/statics/achievement_display/js/wenku.js" />
     </list>
     <ignored path="open_source.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,11 +48,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="4.814815">
-              <caret line="234" column="48" selection-start-line="234" selection-start-column="48" selection-end-line="234" selection-end-column="48" />
+            <state vertical-scroll-proportion="-0.625">
+              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -65,86 +61,60 @@
       <file leaf-file-name="highchart.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/highchart.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.25">
+            <state vertical-scroll-proportion="-13.875">
               <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Search.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/achievement_display/pyclass/Search.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/open_source/settings.py">
+      <file leaf-file-name="wenku.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/js/wenku.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="95" column="19" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="19" />
+              <caret line="63" column="29" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models.py">
+      <file leaf-file-name="BmCheckAlert.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/achievement_display/pyclass/BmCheckAlert.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
               <folding>
-                <element signature="e#468#507#0" expanded="true" />
+                <element signature="e#17#89#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/achievement_display/views.py">
+      <file leaf-file-name="datatables_iframe.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/datatables_iframe.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="351" column="18" selection-start-line="351" selection-start-column="18" selection-end-line="351" selection-end-column="18" />
-              <folding>
-                <element signature="e#18#53#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GetHighChartData.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/achievement_display/pyclass/GetHighChartData.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="167" column="58" selection-start-line="167" selection-start-column="58" selection-end-line="167" selection-end-column="58" />
-              <folding>
-                <element signature="e#18#58#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="highchart.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/js/highchart.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="171" column="25" selection-start-line="171" selection-start-column="25" selection-end-line="171" selection-end-column="25" />
+            <state vertical-scroll-proportion="3.125">
+              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/achievement_display/models.py">
+      <file leaf-file-name="force.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/force.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="178" column="13" selection-start-line="178" selection-start-column="4" selection-end-line="178" selection-end-column="13" />
+            <state vertical-scroll-proportion="-0.625">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="force_open.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/force_open.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-36.25">
+              <caret line="58" column="30" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -153,8 +123,28 @@
       <file leaf-file-name="search.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/search.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-33.125">
-              <caret line="253" column="31" selection-start-line="253" selection-start-column="31" selection-end-line="253" selection-end-column="31" />
+            <state vertical-scroll-proportion="-21.875">
+              <caret line="51" column="50" selection-start-line="51" selection-start-column="50" selection-end-line="51" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.08264463">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wenku.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/wenku.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-21.875">
+              <caret line="66" column="81" selection-start-line="66" selection-start-column="66" selection-end-line="66" selection-end-column="81" />
               <folding />
             </state>
           </provider>
@@ -178,7 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/open_source_uwsgi.ini" />
         <option value="$PROJECT_DIR$/../ssotest/server/server/view.py" />
         <option value="$PROJECT_DIR$/../ssotest/app1/app1/urls.py" />
         <option value="$PROJECT_DIR$/../ssotest/server/server/urls.py" />
@@ -189,11 +178,8 @@
         <option value="$PROJECT_DIR$/statics/achievement_display/css/search.css" />
         <option value="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/force.css" />
         <option value="$PROJECT_DIR$/achievement_display/statics/achievement_display/js/force-open.js" />
-        <option value="$PROJECT_DIR$/statics/achievement_display/js/wenku.js" />
         <option value="$PROJECT_DIR$/statics/achievement_display/css/wenku.css" />
-        <option value="$PROJECT_DIR$/achievement_display/pyclass/DataTable.py" />
         <option value="$PROJECT_DIR$/achievement_display/pyclass/ConvertIdName.py" />
-        <option value="$PROJECT_DIR$/achievement_display/pyclass/BmCheckAlert.py" />
         <option value="$PROJECT_DIR$/achievement_display/pyclass/BmCheck.py" />
         <option value="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/wenku.css" />
         <option value="$PROJECT_DIR$/achievement_display/pyclass/YxCheck.py" />
@@ -203,7 +189,6 @@
         <option value="$PROJECT_DIR$/achievement_display/linkedin.py" />
         <option value="$PROJECT_DIR$/open_source/test.py" />
         <option value="$PROJECT_DIR$/achievement_display/templates/achievement_display/force.html" />
-        <option value="$PROJECT_DIR$/achievement_display/statics/achievement_display/js/wenku.js" />
         <option value="$PROJECT_DIR$/statics/achievement_display/css/force_open.css" />
         <option value="$PROJECT_DIR$/achievement_display/templatetags/new_filter.py" />
         <option value="$PROJECT_DIR$/open_source/urls.py" />
@@ -213,10 +198,8 @@
         <option value="$PROJECT_DIR$/achievement_display/tor.py" />
         <option value="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/search.css" />
         <option value="$PROJECT_DIR$/achievement_display/templates/achievement_display/force_open.html" />
-        <option value="$PROJECT_DIR$/achievement_display/templates/achievement_display/search.html" />
         <option value="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/font.css" />
         <option value="$PROJECT_DIR$/achievement_display/statics/achievement_display/js/search.js" />
-        <option value="$PROJECT_DIR$/achievement_display/templates/achievement_display/wenku.html" />
         <option value="$PROJECT_DIR$/achievement_display/statics/achievement_display/js/force_open.js" />
         <option value="$PROJECT_DIR$/achievement_display/statics/achievement_display/css/force_open.css" />
         <option value="$PROJECT_DIR$/achievement_display/pyclass/Search.py" />
@@ -229,6 +212,13 @@
         <option value="$PROJECT_DIR$/achievement_display/pyclass/GetHighChartData.py" />
         <option value="$PROJECT_DIR$/achievement_display/views.py" />
         <option value="$PROJECT_DIR$/achievement_display/templates/achievement_display/index.html" />
+        <option value="$PROJECT_DIR$/achievement_display/pyclass/DataTable.py" />
+        <option value="$PROJECT_DIR$/statics/achievement_display/js/wenku.js" />
+        <option value="$PROJECT_DIR$/achievement_display/statics/achievement_display/js/wenku.js" />
+        <option value="$PROJECT_DIR$/achievement_display/pyclass/BmCheckAlert.py" />
+        <option value="$PROJECT_DIR$/achievement_display/templates/achievement_display/wenku.html" />
+        <option value="$PROJECT_DIR$/achievement_display/templates/achievement_display/search.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -267,7 +257,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -561,6 +550,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -986,18 +976,18 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23329425" sideWeight="0.49722221" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39976552" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23329425" sideWeight="0.49722221" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39976552" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1029,41 +1019,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/css/wenku.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.9411764">
-          <caret line="185" column="7" selection-start-line="185" selection-start-column="7" selection-end-line="185" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/pyclass/YxCheck.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="70" selection-start-line="34" selection-start-column="70" selection-end-line="34" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/logging/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.821718">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/linkedin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="194" column="23" selection-start-line="194" selection-start-column="8" selection-end-line="194" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/open_source/test2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.6162571">
@@ -1085,13 +1040,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/js/wenku.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57768923">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/js/datatables_iframe.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1103,13 +1051,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-31.5">
           <caret line="379" column="21" selection-start-line="379" selection-start-column="21" selection-end-line="379" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/pyclass/DataTable.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1127,24 +1068,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/force.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/search_test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-96.875">
           <caret line="155" column="30" selection-start-line="155" selection-start-column="30" selection-end-line="155" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/datatables_iframe.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="14" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -1159,20 +1086,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="513" column="55" selection-start-line="513" selection-start-column="55" selection-end-line="513" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/pyclass/BmCheck.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/pyclass/BmCheckAlert.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -1226,13 +1139,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/force_open.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="30" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/css/font.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32921812">
@@ -1258,15 +1164,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/wenku.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="66" column="45" selection-start-line="66" selection-start-column="45" selection-end-line="66" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1274,7 +1171,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1282,15 +1178,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-62.5">
           <caret line="100" column="13" selection-start-line="100" selection-start-column="13" selection-end-line="100" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/open_source/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="45" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1306,7 +1193,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13944224">
           <caret line="7" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1314,17 +1200,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="e#468#507#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-33.125">
-          <caret line="253" column="31" selection-start-line="253" selection-start-column="31" selection-end-line="253" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1341,7 +1216,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
           <folding>
-            <element signature="e#468#507#0" expanded="true" />
+            <element signature="e#468#507#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1359,16 +1234,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/highchart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.25">
-          <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1393,25 +1258,159 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="167" column="58" selection-start-line="167" selection-start-column="58" selection-end-line="167" selection-end-column="58" />
           <folding>
-            <element signature="e#18#58#0" expanded="true" />
+            <element signature="e#18#58#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/pyclass/DataTable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.696429">
+          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+          <folding>
+            <element signature="e#17#89#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/achievement_display/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="351" column="18" selection-start-line="351" selection-start-column="18" selection-end-line="351" selection-end-column="18" />
+        <state vertical-scroll-proportion="-7.4444447">
+          <caret line="230" column="16" selection-start-line="230" selection-start-column="16" selection-end-line="230" selection-end-column="16" />
           <folding>
             <element signature="e#18#53#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/open_source/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django_datatables_view/base_datatable_view.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.8605576">
+          <caret line="249" column="6" selection-start-line="249" selection-start-column="6" selection-end-line="249" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/pyclass/BmCheck.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding>
+            <element signature="e#17#89#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/css/wenku.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="73.125">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statics/achievement_display/js/wenku.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="76" column="26" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/pyclass/YxCheck.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="77" selection-start-line="17" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/statics/achievement_display/js/wenku.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="63" column="29" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/pyclass/BmCheckAlert.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding>
+            <element signature="e#17#89#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/datatables_iframe.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.125">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/force.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.625">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/force_open.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-36.25">
+          <caret line="58" column="30" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/highchart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.875">
+          <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.814815">
-          <caret line="234" column="48" selection-start-line="234" selection-start-column="48" selection-end-line="234" selection-end-column="48" />
+        <state vertical-scroll-proportion="-0.625">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/wenku.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.875">
+          <caret line="66" column="81" selection-start-line="66" selection-start-column="66" selection-end-line="66" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement_display/templates/achievement_display/search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.875">
+          <caret line="51" column="50" selection-start-line="51" selection-start-column="50" selection-end-line="51" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08264463">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
