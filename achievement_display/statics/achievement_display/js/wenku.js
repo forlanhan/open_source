@@ -232,7 +232,7 @@ function datatable_4(){
                         "class": "yx_4",
                         "render": function(data, type, row) {
                             if(data){
-                                return '<a type="button" target="_blank" class="btn btn-success" href="#"/>详情</a>'
+                                return '<a type="button" target="_blank" class="btn btn-success" href="http://192.168.111.120/wenku/index.html">详情</a>'
                             }else{
                                 return '无'
                             }
