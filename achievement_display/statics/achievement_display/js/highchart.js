@@ -32,14 +32,7 @@ $(function () {
             verticalAlign: 'bottom',
             borderWidth: 0
         },
-        //plotOptions: {
-        //    line: {
-        //        dataLabels: {
-        //            enabled: true
-        //        },
-        //        enableMouseTracking: false
-        //    }
-        //},
+
         credits:{
           enabled:false
         },
@@ -119,6 +112,12 @@ $(function () {
         },{
             name: 'CNKI采集',
             data: cnki
+        },{
+            name: 'Springer采集',
+            data: springer
+        },{
+            name: 'Elsevier采集',
+            data: elsevier
         }
         ]
     });
@@ -280,4 +279,3 @@ $(function () {
     //////////////////////
 
 });
-

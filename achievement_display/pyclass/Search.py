@@ -214,8 +214,6 @@ class Search():
                             "query": name,
                             "slop":8,
                         },
-
-
                     }
                 }
             })

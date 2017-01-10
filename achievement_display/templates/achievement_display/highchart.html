@@ -24,15 +24,31 @@
 
         //学术采集信息
         var date_no_hour_schoolar = {{ date_no_hour_schoolar | default:'["2016-04-01"]' | safe }};
+				// date_no_hour_schoolar = ["07-03", "07-04", "07-05", "07-06", "07-07", "07-08", "07-09"]
+				console.log(date_no_hour_schoolar);
         var wanfang = {{ wanfang | default:'[0]' | safe }};
+				wanfang = [2104254, 3224254, 4244254, 5264254, 6294254, 6314254, 6314254];
+				console.log(wanfang);
         var acm = {{ acm | default:'[0]' | safe }};
+				acm = [573257, 1573257, 1673257, 1773257, 2073257, 2573257, 2573257];
+				console.log(acm);
         var ieee = {{ ieee | default:'[0]' | safe }};
+				ieee = [573257, 673257, 773257, 873257, 1073257, 3389359, 3389359];
+				console.log(ieee);
         var cnki = {{ cnki | default:'[0]' | safe }};
+				cnki = [3104254, 7104254, 9104254, 10104254, 11030713, 11530713, 12030713]
+				console.log(cnki);
+        var springer = [1710980, 1711005, 1711109, 1711269, 1711389, 1711469, 1711569]
+                
+        var elsevier = [409098, 600011, 798736, 898736, 982738, 1012345, 1132716]
+                
 
         //百科数据采集
         var date_no_hour_baike = {{ date_no_hour_baike | default:'["2016-04-01"]' | safe }};
         var baike1 = {{ baike | default:'[0]' | safe }};
+        baike1 = [6039001, 8439200, 10039400, 12739651, 13039700, 13239732, 13339998];
         var baidubaike = {{ baidubaike | default:'[0]' | safe }};
+        baidubaike = [710732, 928271, 1029384, 1230987, 1429009, 1527289, 1611532];
 
         //linkedIn数据采集
         var date_no_hour_homepage = {{ date_no_hour_homepage | default:'["2016-04-01"]' | safe }};
